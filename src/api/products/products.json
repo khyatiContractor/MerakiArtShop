@@ -1,0 +1,64 @@
+[{
+   "productId": 1,
+   "productName": "Ganpati",
+   "releaseDate": "September 9, 2018",
+   "description": "Ganesha painting with water color",
+   "price": 50,
+   "starRating": 4,
+   "imageUrl": "./assets/images/WhatsApp Image 2018-09-13 at 10.27.47 PM.jpeg"
+ },
+ {
+   "productId": 2,
+   "productName": "Laguna 69",
+   "releaseDate": "July 20, 2018",
+   "description": "Pastel chawk painting of a lake in Huaraze,Peru",
+   "price": 70,
+   "starRating": 4.2,
+   "imageUrl": "./assets/images/WhatsApp Image 2018-08-31 at 12.29.24 PM.jpeg"
+ },
+ {
+   "productId": 3,
+   "productName": "Lake Paron",
+   "releaseDate": "July 21, 2018",
+   "description": "Water color painting of lake in Huaraze,Peru",
+   "price": 40,
+   "starRating": 4.8,
+   "imageUrl": "./assets/images/WhatsApp Image 2018-08-31 at 12.29.25 PM (1).jpeg"
+ },
+ {
+   "productId": 4,
+   "productName": "Lake Ilacka",
+   "releaseDate": "July 22, 2018",
+   "description": "Acrylic color painting of a lake in Huaraz, Peru",
+   "price": 80,
+   "starRating": 4.5,
+   "imageUrl": "./assets/images/WhatsApp Image 2018-08-31 at 12.29.25 PM.jpeg"
+ },
+ {
+   "productId": 5,
+   "productName": "Shiv Parvati",
+   "releaseDate": "July 20, 2017",
+   "description": "Acrylic color painting by merging 6 samll canvases ",
+   "price": 100,
+   "starRating": 4.6,
+   "imageUrl": "./assets/images/WhatsApp Image 2018-10-03 at 11.09.48 AM.jpeg"
+ },
+ {
+   "productId": 6,
+   "productName": "Karma with Krishna",
+   "releaseDate": "February 20, 2018",
+   "description": "Acrylic color painting of Krishna with Karma shloka ",
+   "price": 50,
+   "starRating": 4,
+   "imageUrl": "./assets/images/WhatsApp Image 2018-10-03 at 11.08.39 AM.jpeg"
+ },
+ {
+   "productId": 7,
+   "productName": "Crazy Birds",
+   "releaseDate": "September 30, 2018",
+   "description": "Water Color Painting of two birds of opposite personalities ",
+   "price": 40,
+   "starRating": 3.7,
+   "imageUrl": "./assets/images/WhatsApp Image 2018-09-11 at 5.29.31 PM.jpeg"
+ }
+]

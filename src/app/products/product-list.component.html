@@ -1,0 +1,42 @@
+<div>
+  <div class="jumbotron">
+  <h1>Welcome to ArtSale</h1>
+  <p>Share and sale your art...</p>
+</div>
+<div class="form-group">
+  <label for="usr">Search:</label>
+  <input type="text" class="form-control" id="usr"
+        [(ngModel)]='listFilter'>
+</div>
+<table class="table table-dark table-hover"
+        *ngIf='products && products.length'>
+    <thead>
+      <tr>
+        <th>Art</th>
+        <th>Product Name</th>
+        <th>Description</th>
+        <th>Rating</th>
+        <th>
+          <button  type="button" class="btn btn-dark"(click)='togglePrice()'>
+            {{showPrice ? 'Hide' : 'Show'}} Price
+          </button>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor='let product of filterproducts'[routerLink]="['/products',product.productId]">
+        <td><img
+          [src]='product.imageUrl'
+          [style.width.px]='imagewidth'
+          [style.margin.px]='imagemargin'></td>
+        <td>{{product.productName}}</td>
+        <td>{{product.description}}</td>
+        <td><pm-star [rating]='product.starRating'></pm-star></td>
+        <td>
+          <span *ngIf= 'showPrice'>{{product.price | currency :'USD':'symbol':'1.2-2'}}</span>
+        </td>
+
+      </tr>
+    </tbody>
+  </table>
+</div>

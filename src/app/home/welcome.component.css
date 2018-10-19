@@ -1,0 +1,18 @@
+.temp{
+  width:100%;
+  background-image: url("/assets/images/WhatsApp Image 2018-10-18 at 8.06.03 PM (1).jpeg");
+  background-repeat: round;
+  min-height: 930px;
+   background-attachment: fixed;
+   background-color:rgba(255, 255, 255, 0.5);
+   opacity: 0.5;
+  }
+
+  .PageTitle{
+    padding-top: 400px;
+    opacity: 1;
+    color: White;
+    font-size:15em;
+     text-shadow: 2px 2px black;
+     min-height: 930px;
+  }
