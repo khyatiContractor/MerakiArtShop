@@ -8,6 +8,7 @@ import {CommonModule} from '@angular/common';
 import {ErrorAlertComponent} from '../shared/error-alert/error-alert.component';
 import {PasswordEqualValidator} from '../utils/password-equal-validator.directive';
 import {LoginComponent} from './login/login.component';
+import { AuthenticationGuard } from '../services/authentication.guard';
 
 
 /**
@@ -19,7 +20,6 @@ import {LoginComponent} from './login/login.component';
         CommonModule,
         AuthenticationRouting
     ],
-    
     declarations: [
         SignupComponent,
         LoginComponent,
@@ -28,7 +28,8 @@ import {LoginComponent} from './login/login.component';
     ],
     providers: [
         AuthenticationService,
-        UserService
+        UserService,
+        AuthenticationGuard
     ]
 })
 export class AuthenticationModule {

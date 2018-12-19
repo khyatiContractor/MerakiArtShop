@@ -33,8 +33,10 @@ export class UserService {
     }
 
     public getUser(uid: string): Observable<User> {
-        return this.fireDb.object<User>(`${USERS_CHILD}/${uid}`).valueChanges();
-    }
+      console.log("get user service: "+uid);
+      return this.fireDb.object<User>(`${USERS_CHILD}/${uid}`).valueChanges();
+  }
+
 
     public saveUser(user: User) {
         this.subject.next(user);

@@ -10,14 +10,14 @@ export class User {
 
     friendcount: number;
 
-    image: string;
-    
+    image: any;
+
     constructor(email: string,
                 name: string,
                 mobile: string,
                 uid: string,
                 friendcount: number,
-                image: string) {
+                image: any) {
         this.email = email;
         this.name = name;
         this.mobile = mobile;
@@ -25,5 +25,5 @@ export class User {
         this.friendcount = friendcount;
         this.image = image;
     }
-   
+
 }

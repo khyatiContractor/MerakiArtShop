@@ -19,7 +19,6 @@ export const ROUTES: Routes = [
       ROUTES
     )
   ],
-   
   exports: [
     RouterModule
   ]

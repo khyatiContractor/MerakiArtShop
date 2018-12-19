@@ -16,14 +16,12 @@ export class UserProfileComponent implements OnInit, AfterViewInit {
     profileImage: any = '../../../assets/images/person_edit.png';
 
     user: User;
-    
 
     @ViewChild(EditDialogComponent) editDialog: EditDialogComponent;
 
     constructor(private authService: AuthenticationService,
                 private userService: UserService,
                 private router: Router) {
-                    
     }
 
 
@@ -49,8 +47,8 @@ export class UserProfileComponent implements OnInit, AfterViewInit {
     }
 
     onPersonEdit(event) {
-        const selectedFiles: FileList = event.target.files;   
-        const file = selectedFiles.item(0);   
+        const selectedFiles: FileList = event.target.files;
+        const file = selectedFiles.item(0);
         this.userService.addProfileImage(this.user, file);
     }
 

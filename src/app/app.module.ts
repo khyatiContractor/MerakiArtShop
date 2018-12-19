@@ -10,7 +10,6 @@ import { ProductListComponent } from './products/product-list.component';
 import { StarComponent } from './shared/star.component';
 import { WelcomeComponent } from './home/welcome.component';
 import { ProductDetailComponent } from './products/product-detail.component';
-import { ProductDetailGuard } from './products/product-detail.guard';
 import { CommonModule } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AngularFireAuth } from 'angularfire2/auth';

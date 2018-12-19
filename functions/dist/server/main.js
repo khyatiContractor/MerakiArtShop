@@ -36,17 +36,32 @@
 /******/ 	// define getter function for harmony exports
 /******/ 	__webpack_require__.d = function(exports, name, getter) {
 /******/ 		if(!__webpack_require__.o(exports, name)) {
-/******/ 			Object.defineProperty(exports, name, {
-/******/ 				configurable: false,
-/******/ 				enumerable: true,
-/******/ 				get: getter
-/******/ 			});
+/******/ 			Object.defineProperty(exports, name, { enumerable: true, get: getter });
 /******/ 		}
 /******/ 	};
 /******/
 /******/ 	// define __esModule on exports
 /******/ 	__webpack_require__.r = function(exports) {
+/******/ 		if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 			Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 		}
 /******/ 		Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 	};
+/******/
+/******/ 	// create a fake namespace object
+/******/ 	// mode & 1: value is a module id, require it
+/******/ 	// mode & 2: merge all properties of value into the ns
+/******/ 	// mode & 4: return value when already ns object
+/******/ 	// mode & 8|1: behave like require
+/******/ 	__webpack_require__.t = function(value, mode) {
+/******/ 		if(mode & 1) value = __webpack_require__(value);
+/******/ 		if(mode & 8) return value;
+/******/ 		if((mode & 4) && typeof value === 'object' && value && value.__esModule) return value;
+/******/ 		var ns = Object.create(null);
+/******/ 		__webpack_require__.r(ns);
+/******/ 		Object.defineProperty(ns, 'default', { enumerable: true, value: value });
+/******/ 		if(mode & 2 && typeof value != 'string') for(var key in value) __webpack_require__.d(ns, key, function(key) { return value[key]; }.bind(null, key));
+/******/ 		return ns;
 /******/ 	};
 /******/
 /******/ 	// getDefaultExport function for compatibility with non-harmony modules
@@ -120,7 +135,7 @@ exports.ɵEmptyOutletComponentNgFactory = ɵEmptyOutletComponentNgFactory;
  * tslint:disable
  */ 
 Object.defineProperty(exports, "__esModule", { value: true });
-var styles = [".nav-link[_ngcontent-%COMP%] {\n  font-size: large;\n  text-align: center;\n}"];
+var styles = [".nav-link[_ngcontent-%COMP%] {\n  font-size: large;\n  text-align: center;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYXBwLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxpQkFBaUI7RUFDakIsbUJBQW1CO0NBQ3BCIiwiZmlsZSI6InNyYy9hcHAvYXBwLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIubmF2LWxpbmsge1xuICBmb250LXNpemU6IGxhcmdlO1xuICB0ZXh0LWFsaWduOiBjZW50ZXI7XG59XG4iXX0= */"];
 exports.styles = styles;
 
 
@@ -164,18 +179,22 @@ function View_AppComponent_3(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, n
         var pd_0 = (i1.ɵnov(_v, 2).onClick($event.button, $event.ctrlKey, $event.metaKey, $event.shiftKey) !== false);
         ad = (pd_0 && ad);
     } return ad; }, null, null)), i1.ɵdid(2, 671744, [[8, 4]], 0, i2.RouterLinkWithHref, [i2.Router, i2.ActivatedRoute, i3.LocationStrategy], { routerLink: [0, "routerLink"] }, null), i1.ɵdid(3, 1720320, null, 2, i2.RouterLinkActive, [i2.Router, i1.ElementRef, i1.Renderer2, i1.ChangeDetectorRef], { routerLinkActive: [0, "routerLinkActive"] }, null), i1.ɵqud(603979776, 7, { links: 1 }), i1.ɵqud(603979776, 8, { linksWithHrefs: 1 }), (_l()(), i1.ɵted(-1, null, ["Login"]))], function (_ck, _v) { var currVal_2 = "/app-friends-login"; _ck(_v, 2, 0, currVal_2); var currVal_3 = "active"; _ck(_v, 3, 0, currVal_3); }, function (_ck, _v) { var currVal_0 = i1.ɵnov(_v, 2).target; var currVal_1 = i1.ɵnov(_v, 2).href; _ck(_v, 1, 0, currVal_0, currVal_1); }); }
-function View_AppComponent_0(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 25, "div", [["class", "nav-container"]], null, null, null, null, null)), (_l()(), i1.ɵeld(1, 0, null, null, 24, "nav", [["class", "navbar navbar-expand-lg navbar-light bg-color"]], null, null, null, null, null)), (_l()(), i1.ɵeld(2, 0, null, null, 23, "div", [["class", "collapse navbar-collapse"], ["id", "navbarNav"]], null, null, null, null, null)), (_l()(), i1.ɵeld(3, 0, null, null, 13, "ul", [["class", "navbar-nav"]], null, null, null, null, null)), (_l()(), i1.ɵand(16777216, null, null, 1, null, View_AppComponent_1)), i1.ɵdid(5, 16384, null, 0, i3.NgIf, [i1.ViewContainerRef, i1.TemplateRef], { ngIf: [0, "ngIf"] }, null), (_l()(), i1.ɵand(16777216, null, null, 1, null, View_AppComponent_2)), i1.ɵdid(7, 16384, null, 0, i3.NgIf, [i1.ViewContainerRef, i1.TemplateRef], { ngIf: [0, "ngIf"] }, null), (_l()(), i1.ɵeld(8, 0, null, null, 6, "li", [["class", "nav-item"]], null, null, null, null, null)), (_l()(), i1.ɵeld(9, 0, null, null, 5, "a", [["class", "nav-link"], ["routerLink", "/welcome"], ["routerLinkActive", "active"]], [[1, "target", 0], [8, "href", 4]], [[null, "click"]], function (_v, en, $event) { var ad = true; if (("click" === en)) {
+function View_AppComponent_4(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 6, "li", [["class", "nav-item"]], null, null, null, null, null)), (_l()(), i1.ɵeld(1, 0, null, null, 5, "a", [["class", "nav-link"], ["routerLink", "/app-friends-logout"], ["routerLinkActive", "active"]], [[1, "target", 0], [8, "href", 4]], [[null, "click"]], function (_v, en, $event) { var ad = true; if (("click" === en)) {
+        var pd_0 = (i1.ɵnov(_v, 2).onClick($event.button, $event.ctrlKey, $event.metaKey, $event.shiftKey) !== false);
+        ad = (pd_0 && ad);
+    } return ad; }, null, null)), i1.ɵdid(2, 671744, [[10, 4]], 0, i2.RouterLinkWithHref, [i2.Router, i2.ActivatedRoute, i3.LocationStrategy], { routerLink: [0, "routerLink"] }, null), i1.ɵdid(3, 1720320, null, 2, i2.RouterLinkActive, [i2.Router, i1.ElementRef, i1.Renderer2, i1.ChangeDetectorRef], { routerLinkActive: [0, "routerLinkActive"] }, null), i1.ɵqud(603979776, 9, { links: 1 }), i1.ɵqud(603979776, 10, { linksWithHrefs: 1 }), (_l()(), i1.ɵted(-1, null, ["Logout"]))], function (_ck, _v) { var currVal_2 = "/app-friends-logout"; _ck(_v, 2, 0, currVal_2); var currVal_3 = "active"; _ck(_v, 3, 0, currVal_3); }, function (_ck, _v) { var currVal_0 = i1.ɵnov(_v, 2).target; var currVal_1 = i1.ɵnov(_v, 2).href; _ck(_v, 1, 0, currVal_0, currVal_1); }); }
+function View_AppComponent_0(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 27, "div", [["class", "nav-container"]], null, null, null, null, null)), (_l()(), i1.ɵeld(1, 0, null, null, 26, "nav", [["class", "navbar navbar-expand-lg navbar-light bg-color"]], null, null, null, null, null)), (_l()(), i1.ɵeld(2, 0, null, null, 25, "div", [["class", "collapse navbar-collapse"], ["id", "navbarNav"]], null, null, null, null, null)), (_l()(), i1.ɵeld(3, 0, null, null, 15, "ul", [["class", "navbar-nav"]], null, null, null, null, null)), (_l()(), i1.ɵand(16777216, null, null, 1, null, View_AppComponent_1)), i1.ɵdid(5, 16384, null, 0, i3.NgIf, [i1.ViewContainerRef, i1.TemplateRef], { ngIf: [0, "ngIf"] }, null), (_l()(), i1.ɵand(16777216, null, null, 1, null, View_AppComponent_2)), i1.ɵdid(7, 16384, null, 0, i3.NgIf, [i1.ViewContainerRef, i1.TemplateRef], { ngIf: [0, "ngIf"] }, null), (_l()(), i1.ɵeld(8, 0, null, null, 6, "li", [["class", "nav-item"]], null, null, null, null, null)), (_l()(), i1.ɵeld(9, 0, null, null, 5, "a", [["class", "nav-link"], ["routerLink", "/welcome"], ["routerLinkActive", "active"]], [[1, "target", 0], [8, "href", 4]], [[null, "click"]], function (_v, en, $event) { var ad = true; if (("click" === en)) {
         var pd_0 = (i1.ɵnov(_v, 10).onClick($event.button, $event.ctrlKey, $event.metaKey, $event.shiftKey) !== false);
         ad = (pd_0 && ad);
-    } return ad; }, null, null)), i1.ɵdid(10, 671744, [[6, 4]], 0, i2.RouterLinkWithHref, [i2.Router, i2.ActivatedRoute, i3.LocationStrategy], { routerLink: [0, "routerLink"] }, null), i1.ɵdid(11, 1720320, null, 2, i2.RouterLinkActive, [i2.Router, i1.ElementRef, i1.Renderer2, i1.ChangeDetectorRef], { routerLinkActive: [0, "routerLinkActive"] }, null), i1.ɵqud(603979776, 5, { links: 1 }), i1.ɵqud(603979776, 6, { linksWithHrefs: 1 }), (_l()(), i1.ɵted(-1, null, ["Home"])), (_l()(), i1.ɵand(16777216, null, null, 1, null, View_AppComponent_3)), i1.ɵdid(16, 16384, null, 0, i3.NgIf, [i1.ViewContainerRef, i1.TemplateRef], { ngIf: [0, "ngIf"] }, null), (_l()(), i1.ɵeld(17, 0, null, null, 8, "div", [["class", "form-container"]], null, null, null, null, null)), (_l()(), i1.ɵeld(18, 0, null, null, 7, "form", [["class", "form-inline my-2 my-lg-0"], ["novalidate", ""]], [[2, "ng-untouched", null], [2, "ng-touched", null], [2, "ng-pristine", null], [2, "ng-dirty", null], [2, "ng-valid", null], [2, "ng-invalid", null], [2, "ng-pending", null]], [[null, "submit"], [null, "reset"]], function (_v, en, $event) { var ad = true; if (("submit" === en)) {
-        var pd_0 = (i1.ɵnov(_v, 20).onSubmit($event) !== false);
+    } return ad; }, null, null)), i1.ɵdid(10, 671744, [[6, 4]], 0, i2.RouterLinkWithHref, [i2.Router, i2.ActivatedRoute, i3.LocationStrategy], { routerLink: [0, "routerLink"] }, null), i1.ɵdid(11, 1720320, null, 2, i2.RouterLinkActive, [i2.Router, i1.ElementRef, i1.Renderer2, i1.ChangeDetectorRef], { routerLinkActive: [0, "routerLinkActive"] }, null), i1.ɵqud(603979776, 5, { links: 1 }), i1.ɵqud(603979776, 6, { linksWithHrefs: 1 }), (_l()(), i1.ɵted(-1, null, ["Home"])), (_l()(), i1.ɵand(16777216, null, null, 1, null, View_AppComponent_3)), i1.ɵdid(16, 16384, null, 0, i3.NgIf, [i1.ViewContainerRef, i1.TemplateRef], { ngIf: [0, "ngIf"] }, null), (_l()(), i1.ɵand(16777216, null, null, 1, null, View_AppComponent_4)), i1.ɵdid(18, 16384, null, 0, i3.NgIf, [i1.ViewContainerRef, i1.TemplateRef], { ngIf: [0, "ngIf"] }, null), (_l()(), i1.ɵeld(19, 0, null, null, 8, "div", [["class", "form-container"]], null, null, null, null, null)), (_l()(), i1.ɵeld(20, 0, null, null, 7, "form", [["class", "form-inline my-2 my-lg-0"], ["novalidate", ""]], [[2, "ng-untouched", null], [2, "ng-touched", null], [2, "ng-pristine", null], [2, "ng-dirty", null], [2, "ng-valid", null], [2, "ng-invalid", null], [2, "ng-pending", null]], [[null, "submit"], [null, "reset"]], function (_v, en, $event) { var ad = true; if (("submit" === en)) {
+        var pd_0 = (i1.ɵnov(_v, 22).onSubmit($event) !== false);
         ad = (pd_0 && ad);
     } if (("reset" === en)) {
-        var pd_1 = (i1.ɵnov(_v, 20).onReset() !== false);
+        var pd_1 = (i1.ɵnov(_v, 22).onReset() !== false);
         ad = (pd_1 && ad);
-    } return ad; }, null, null)), i1.ɵdid(19, 16384, null, 0, i4.ɵangular_packages_forms_forms_bg, [], null, null), i1.ɵdid(20, 4210688, null, 0, i4.NgForm, [[8, null], [8, null]], null, null), i1.ɵprd(2048, null, i4.ControlContainer, null, [i4.NgForm]), i1.ɵdid(22, 16384, null, 0, i4.NgControlStatusGroup, [[4, i4.ControlContainer]], null, null), (_l()(), i1.ɵeld(23, 0, null, null, 0, "input", [["aria-label", "Search"], ["class", "form-control mr-sm-2"], ["placeholder", "Search friends..."], ["type", "text"]], null, null, null, null, null)), (_l()(), i1.ɵeld(24, 0, null, null, 1, "button", [["class", "btn btn-success my-2 my-sm-0"], ["type", "submit"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["Search"])), (_l()(), i1.ɵeld(26, 0, null, null, 2, "div", [["class", "container"], ["style", "max-width:100%; height:100%;"]], null, null, null, null, null)), (_l()(), i1.ɵeld(27, 16777216, null, null, 1, "router-outlet", [], null, null, null, null, null)), i1.ɵdid(28, 212992, null, 0, i2.RouterOutlet, [i2.ChildrenOutletContexts, i1.ViewContainerRef, i1.ComponentFactoryResolver, [8, null], i1.ChangeDetectorRef], null, null)], function (_ck, _v) { var _co = _v.component; var currVal_0 = ((_co.authenticationService == null) ? null : _co.authenticationService.isAuthenticated()); _ck(_v, 5, 0, currVal_0); var currVal_1 = ((_co.authenticationService == null) ? null : _co.authenticationService.isAuthenticated()); _ck(_v, 7, 0, currVal_1); var currVal_4 = "/welcome"; _ck(_v, 10, 0, currVal_4); var currVal_5 = "active"; _ck(_v, 11, 0, currVal_5); var currVal_6 = !((_co.authenticationService == null) ? null : _co.authenticationService.isAuthenticated()); _ck(_v, 16, 0, currVal_6); _ck(_v, 28, 0); }, function (_ck, _v) { var currVal_2 = i1.ɵnov(_v, 10).target; var currVal_3 = i1.ɵnov(_v, 10).href; _ck(_v, 9, 0, currVal_2, currVal_3); var currVal_7 = i1.ɵnov(_v, 22).ngClassUntouched; var currVal_8 = i1.ɵnov(_v, 22).ngClassTouched; var currVal_9 = i1.ɵnov(_v, 22).ngClassPristine; var currVal_10 = i1.ɵnov(_v, 22).ngClassDirty; var currVal_11 = i1.ɵnov(_v, 22).ngClassValid; var currVal_12 = i1.ɵnov(_v, 22).ngClassInvalid; var currVal_13 = i1.ɵnov(_v, 22).ngClassPending; _ck(_v, 18, 0, currVal_7, currVal_8, currVal_9, currVal_10, currVal_11, currVal_12, currVal_13); }); }
+    } return ad; }, null, null)), i1.ɵdid(21, 16384, null, 0, i4.ɵangular_packages_forms_forms_bh, [], null, null), i1.ɵdid(22, 4210688, null, 0, i4.NgForm, [[8, null], [8, null]], null, null), i1.ɵprd(2048, null, i4.ControlContainer, null, [i4.NgForm]), i1.ɵdid(24, 16384, null, 0, i4.NgControlStatusGroup, [[4, i4.ControlContainer]], null, null), (_l()(), i1.ɵeld(25, 0, null, null, 0, "input", [["aria-label", "Search"], ["class", "form-control mr-sm-2"], ["placeholder", "Search friends..."], ["type", "text"]], null, null, null, null, null)), (_l()(), i1.ɵeld(26, 0, null, null, 1, "button", [["class", "btn btn-success my-2 my-sm-0"], ["type", "submit"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["Search"])), (_l()(), i1.ɵeld(28, 0, null, null, 2, "div", [["class", "container"], ["style", "max-width:100%; height:100%;"]], null, null, null, null, null)), (_l()(), i1.ɵeld(29, 16777216, null, null, 1, "router-outlet", [], null, null, null, null, null)), i1.ɵdid(30, 212992, null, 0, i2.RouterOutlet, [i2.ChildrenOutletContexts, i1.ViewContainerRef, i1.ComponentFactoryResolver, [8, null], i1.ChangeDetectorRef], null, null)], function (_ck, _v) { var _co = _v.component; var currVal_0 = ((_co.authenticationService == null) ? null : _co.authenticationService.isAuthenticated()); _ck(_v, 5, 0, currVal_0); var currVal_1 = ((_co.authenticationService == null) ? null : _co.authenticationService.isAuthenticated()); _ck(_v, 7, 0, currVal_1); var currVal_4 = "/welcome"; _ck(_v, 10, 0, currVal_4); var currVal_5 = "active"; _ck(_v, 11, 0, currVal_5); var currVal_6 = !((_co.authenticationService == null) ? null : _co.authenticationService.isAuthenticated()); _ck(_v, 16, 0, currVal_6); var currVal_7 = ((_co.authenticationService == null) ? null : _co.authenticationService.isAuthenticated()); _ck(_v, 18, 0, currVal_7); _ck(_v, 30, 0); }, function (_ck, _v) { var currVal_2 = i1.ɵnov(_v, 10).target; var currVal_3 = i1.ɵnov(_v, 10).href; _ck(_v, 9, 0, currVal_2, currVal_3); var currVal_8 = i1.ɵnov(_v, 24).ngClassUntouched; var currVal_9 = i1.ɵnov(_v, 24).ngClassTouched; var currVal_10 = i1.ɵnov(_v, 24).ngClassPristine; var currVal_11 = i1.ɵnov(_v, 24).ngClassDirty; var currVal_12 = i1.ɵnov(_v, 24).ngClassValid; var currVal_13 = i1.ɵnov(_v, 24).ngClassInvalid; var currVal_14 = i1.ɵnov(_v, 24).ngClassPending; _ck(_v, 20, 0, currVal_8, currVal_9, currVal_10, currVal_11, currVal_12, currVal_13, currVal_14); }); }
 exports.View_AppComponent_0 = View_AppComponent_0;
-function View_AppComponent_Host_0(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 1, "pm-root", [], null, null, null, View_AppComponent_0, RenderType_AppComponent)), i1.ɵdid(1, 49152, null, 0, i5.AppComponent, [i6.AuthenticationService], null, null)], null, null); }
+function View_AppComponent_Host_0(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 1, "pm-root", [], null, null, null, View_AppComponent_0, RenderType_AppComponent)), i1.ɵdid(1, 49152, null, 0, i5.AppComponent, [i6.AuthenticationService, i2.Router], null, null)], null, null); }
 exports.View_AppComponent_Host_0 = View_AppComponent_Host_0;
 var AppComponentNgFactory = i1.ɵccf("pm-root", i5.AppComponent, View_AppComponent_Host_0, {}, {}, []);
 exports.AppComponentNgFactory = AppComponentNgFactory;
@@ -194,12 +213,23 @@ exports.AppComponentNgFactory = AppComponentNgFactory;
 
 Object.defineProperty(exports, "__esModule", { value: true });
 var authentication_service_1 = __webpack_require__(/*! ./services/authentication.service */ "./src/app/services/authentication.service.ts");
+var router_1 = __webpack_require__(/*! @angular/router */ "@angular/router");
 var AppComponent = /** @class */ (function () {
-    function AppComponent(authService) {
+    function AppComponent(authService, router) {
         this.authService = authService;
+        this.router = router;
         this.title = 'Meraki Art';
         this.authenticationService = authService;
     }
+    AppComponent.prototype.onLogout = function () {
+        var _this = this;
+        this.authService.signout().then(function () {
+            _this.navigateToLogin();
+        });
+    };
+    AppComponent.prototype.navigateToLogin = function () {
+        this.router.navigateByUrl('/app-friends-login');
+    };
     return AppComponent;
 }());
 exports.AppComponent = AppComponent;
@@ -241,12 +271,12 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var router_1 = __webpack_require__(/*! @angular/router */ "@angular/router");
 //import {PageNotFoundComponent} from './notfound/page-not-found.component';
 var welcome_component_1 = __webpack_require__(/*! ./home/welcome.component */ "./src/app/home/welcome.component.ts");
+var product_list_component_1 = __webpack_require__(/*! ./products/product-list.component */ "./src/app/products/product-list.component.ts");
+var product_detail_component_1 = __webpack_require__(/*! ./products/product-detail.component */ "./src/app/products/product-detail.component.ts");
 exports.ROUTES = [
-    {
-        path: 'welcome',
-        component: welcome_component_1.WelcomeComponent,
-        pathMatch: 'full'
-    },
+    { path: 'welcome', component: welcome_component_1.WelcomeComponent },
+    { path: 'products', component: product_list_component_1.ProductListComponent },
+    { path: 'products/:id', component: product_detail_component_1.ProductDetailComponent },
 ];
 var AppRouting = /** @class */ (function () {
     function AppRouting() {
@@ -278,33 +308,44 @@ var i0 = __webpack_require__(/*! @angular/core */ "@angular/core");
 var i1 = __webpack_require__(/*! ./app.server.module */ "./src/app/app.server.module.ts");
 var i2 = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
 var i3 = __webpack_require__(/*! ../../node_modules/@angular/router/router.ngfactory */ "./node_modules/@angular/router/router.ngfactory.js");
-var i4 = __webpack_require__(/*! ./home/welcome.component.ngfactory */ "./src/app/home/welcome.component.ngfactory.js");
+var i4 = __webpack_require__(/*! ./authentication/login/login.component.ngfactory */ "./src/app/authentication/login/login.component.ngfactory.js");
 var i5 = __webpack_require__(/*! ./authentication/signup/signup.component.ngfactory */ "./src/app/authentication/signup/signup.component.ngfactory.js");
-var i6 = __webpack_require__(/*! ./authentication/login/login.component.ngfactory */ "./src/app/authentication/login/login.component.ngfactory.js");
-var i7 = __webpack_require__(/*! ./app.component.ngfactory */ "./src/app/app.component.ngfactory.js");
-var i8 = __webpack_require__(/*! @angular/http */ "@angular/http");
-var i9 = __webpack_require__(/*! @angular/platform-server */ "@angular/platform-server");
-var i10 = __webpack_require__(/*! @angular/common/http */ "@angular/common/http");
-var i11 = __webpack_require__(/*! @angular/common */ "@angular/common");
-var i12 = __webpack_require__(/*! @angular/platform-browser */ "@angular/platform-browser");
-var i13 = __webpack_require__(/*! @angular/animations/browser */ "@angular/animations/browser");
-var i14 = __webpack_require__(/*! @angular/platform-browser/animations */ "@angular/platform-browser/animations");
-var i15 = __webpack_require__(/*! @angular/animations */ "@angular/animations");
-var i16 = __webpack_require__(/*! @angular/forms */ "@angular/forms");
-var i17 = __webpack_require__(/*! @angular/fire */ "@angular/fire");
-var i18 = __webpack_require__(/*! @angular/router */ "@angular/router");
-var i19 = __webpack_require__(/*! @angular/fire/auth */ "@angular/fire/auth");
-var i20 = __webpack_require__(/*! ./services/authentication.service */ "./src/app/services/authentication.service.ts");
-var i21 = __webpack_require__(/*! @angular/fire/database */ "@angular/fire/database");
-var i22 = __webpack_require__(/*! ./services/user.service */ "./src/app/services/user.service.ts");
-var i23 = __webpack_require__(/*! ./home/welcome.component */ "./src/app/home/welcome.component.ts");
-var i24 = __webpack_require__(/*! ./authentication/signup/signup.component */ "./src/app/authentication/signup/signup.component.ts");
-var i25 = __webpack_require__(/*! ./authentication/login/login.component */ "./src/app/authentication/login/login.component.ts");
-var i26 = __webpack_require__(/*! ./app.routing */ "./src/app/app.routing.ts");
-var i27 = __webpack_require__(/*! ./authentication/authentication.routing */ "./src/app/authentication/authentication.routing.ts");
-var i28 = __webpack_require__(/*! ./authentication/authentication.module */ "./src/app/authentication/authentication.module.ts");
-var i29 = __webpack_require__(/*! ./app.module */ "./src/app/app.module.ts");
-var AppServerModuleNgFactory = i0.ɵcmf(i1.AppServerModule, [i2.AppComponent], function (_l) { return i0.ɵmod([i0.ɵmpd(512, i0.ComponentFactoryResolver, i0.ɵCodegenComponentFactoryResolver, [[8, [i3.ɵEmptyOutletComponentNgFactory, i4.WelcomeComponentNgFactory, i5.SignupComponentNgFactory, i6.LoginComponentNgFactory, i7.AppComponentNgFactory]], [3, i0.ComponentFactoryResolver], i0.NgModuleRef]), i0.ɵmpd(4608, i8.BrowserXhr, i9.ɵangular_packages_platform_server_platform_server_e, []), i0.ɵmpd(4608, i8.ResponseOptions, i8.BaseResponseOptions, []), i0.ɵmpd(4608, i8.XSRFStrategy, i9.ɵangular_packages_platform_server_platform_server_f, []), i0.ɵmpd(4608, i8.XHRBackend, i8.XHRBackend, [i8.BrowserXhr, i8.ResponseOptions, i8.XSRFStrategy]), i0.ɵmpd(4608, i8.RequestOptions, i8.BaseRequestOptions, []), i0.ɵmpd(5120, i8.Http, i9.ɵangular_packages_platform_server_platform_server_g, [i8.XHRBackend, i8.RequestOptions]), i0.ɵmpd(4608, i10.HttpXsrfTokenExtractor, i10.ɵangular_packages_common_http_http_g, [i11.DOCUMENT, i0.PLATFORM_ID, i10.ɵangular_packages_common_http_http_e]), i0.ɵmpd(4608, i10.ɵangular_packages_common_http_http_h, i10.ɵangular_packages_common_http_http_h, [i10.HttpXsrfTokenExtractor, i10.ɵangular_packages_common_http_http_f]), i0.ɵmpd(5120, i10.HTTP_INTERCEPTORS, function (p0_0) { return [p0_0]; }, [i10.ɵangular_packages_common_http_http_h]), i0.ɵmpd(4608, i10.XhrFactory, i9.ɵangular_packages_platform_server_platform_server_e, []), i0.ɵmpd(4608, i10.HttpXhrBackend, i10.HttpXhrBackend, [i10.XhrFactory]), i0.ɵmpd(6144, i10.HttpBackend, null, [i10.HttpXhrBackend]), i0.ɵmpd(5120, i10.HttpHandler, i9.ɵangular_packages_platform_server_platform_server_h, [i10.HttpBackend, i0.Injector]), i0.ɵmpd(4608, i10.HttpClient, i10.HttpClient, [i10.HttpHandler]), i0.ɵmpd(4608, i10.ɵangular_packages_common_http_http_d, i10.ɵangular_packages_common_http_http_d, []), i0.ɵmpd(5120, i0.LOCALE_ID, i0.ɵangular_packages_core_core_k, [[3, i0.LOCALE_ID]]), i0.ɵmpd(4608, i11.NgLocalization, i11.NgLocaleLocalization, [i0.LOCALE_ID, [2, i11.ɵangular_packages_common_common_a]]), i0.ɵmpd(5120, i0.IterableDiffers, i0.ɵangular_packages_core_core_i, []), i0.ɵmpd(5120, i0.KeyValueDiffers, i0.ɵangular_packages_core_core_j, []), i0.ɵmpd(4608, i12.DomSanitizer, i12.ɵDomSanitizerImpl, [i11.DOCUMENT]), i0.ɵmpd(6144, i0.Sanitizer, null, [i12.DomSanitizer]), i0.ɵmpd(4608, i12.HAMMER_GESTURE_CONFIG, i12.HammerGestureConfig, []), i0.ɵmpd(5120, i12.EVENT_MANAGER_PLUGINS, function (p0_0, p0_1, p0_2, p1_0, p2_0, p2_1, p2_2, p2_3, p3_0) { return [new i12.ɵDomEventsPlugin(p0_0, p0_1, p0_2), new i12.ɵKeyEventsPlugin(p1_0), new i12.ɵHammerGesturesPlugin(p2_0, p2_1, p2_2, p2_3), new i9.ɵangular_packages_platform_server_platform_server_d(p3_0)]; }, [i11.DOCUMENT, i0.NgZone, i0.PLATFORM_ID, i11.DOCUMENT, i11.DOCUMENT, i12.HAMMER_GESTURE_CONFIG, i0.ɵConsole, [2, i12.HAMMER_LOADER], i12.DOCUMENT]), i0.ɵmpd(4608, i12.EventManager, i12.EventManager, [i12.EVENT_MANAGER_PLUGINS, i0.NgZone]), i0.ɵmpd(135680, i12.ɵDomSharedStylesHost, i12.ɵDomSharedStylesHost, [i11.DOCUMENT]), i0.ɵmpd(4608, i12.ɵDomRendererFactory2, i12.ɵDomRendererFactory2, [i12.EventManager, i12.ɵDomSharedStylesHost]), i0.ɵmpd(5120, i13.AnimationDriver, i14.ɵangular_packages_platform_browser_animations_animations_b, []), i0.ɵmpd(5120, i13.ɵAnimationStyleNormalizer, i14.ɵangular_packages_platform_browser_animations_animations_c, []), i0.ɵmpd(4608, i13.ɵAnimationEngine, i14.ɵangular_packages_platform_browser_animations_animations_a, [i11.DOCUMENT, i13.AnimationDriver, i13.ɵAnimationStyleNormalizer]), i0.ɵmpd(5120, i0.RendererFactory2, i14.ɵangular_packages_platform_browser_animations_animations_d, [i12.ɵDomRendererFactory2, i13.ɵAnimationEngine, i0.NgZone]), i0.ɵmpd(4608, i9.ɵangular_packages_platform_server_platform_server_c, i9.ɵangular_packages_platform_server_platform_server_c, [i12.DOCUMENT, [2, i12.ɵTRANSITION_ID]]), i0.ɵmpd(6144, i12.ɵSharedStylesHost, null, [i9.ɵangular_packages_platform_server_platform_server_c]), i0.ɵmpd(4352, i0.Testability, null, []), i0.ɵmpd(4608, i15.AnimationBuilder, i14.ɵBrowserAnimationBuilder, [i0.RendererFactory2, i12.DOCUMENT]), i0.ɵmpd(4608, i9.ɵServerRendererFactory2, i9.ɵServerRendererFactory2, [i12.EventManager, i0.NgZone, i12.DOCUMENT, i12.ɵSharedStylesHost]), i0.ɵmpd(4608, i11.ViewportScroller, i11.ɵNullViewportScroller, []), i0.ɵmpd(4608, i16.ɵangular_packages_forms_forms_i, i16.ɵangular_packages_forms_forms_i, []), i0.ɵmpd(5120, i17.FirebaseApp, i17._firebaseAppFactory, [i17.FirebaseOptionsToken, [2, i17.FirebaseNameOrConfigToken]]), i0.ɵmpd(5120, i18.ActivatedRoute, i18.ɵangular_packages_router_router_g, [i18.Router]), i0.ɵmpd(4608, i18.NoPreloading, i18.NoPreloading, []), i0.ɵmpd(6144, i18.PreloadingStrategy, null, [i18.NoPreloading]), i0.ɵmpd(135680, i18.RouterPreloader, i18.RouterPreloader, [i18.Router, i0.NgModuleFactoryLoader, i0.Compiler, i0.Injector, i18.PreloadingStrategy]), i0.ɵmpd(4608, i18.PreloadAllModules, i18.PreloadAllModules, []), i0.ɵmpd(5120, i18.ɵangular_packages_router_router_n, i18.ɵangular_packages_router_router_c, [i18.Router, i11.ViewportScroller, i18.ROUTER_CONFIGURATION]), i0.ɵmpd(5120, i18.ROUTER_INITIALIZER, i18.ɵangular_packages_router_router_j, [i18.ɵangular_packages_router_router_h]), i0.ɵmpd(5120, i0.APP_BOOTSTRAP_LISTENER, function (p0_0) { return [p0_0]; }, [i18.ROUTER_INITIALIZER]), i0.ɵmpd(4608, i19.AngularFireAuth, i19.AngularFireAuth, [i17.FirebaseOptionsToken, [2, i17.FirebaseNameOrConfigToken], i0.PLATFORM_ID, i0.NgZone]), i0.ɵmpd(4608, i20.AuthenticationService, i20.AuthenticationService, [i19.AngularFireAuth]), i0.ɵmpd(4608, i21.AngularFireDatabase, i21.AngularFireDatabase, [i17.FirebaseOptionsToken, [2, i17.FirebaseNameOrConfigToken], [2, i17.RealtimeDatabaseURL], i0.PLATFORM_ID, i0.NgZone]), i0.ɵmpd(4608, i22.UserService, i22.UserService, [i21.AngularFireDatabase]), i0.ɵmpd(1073742336, i8.HttpModule, i8.HttpModule, []), i0.ɵmpd(1073742336, i10.HttpClientXsrfModule, i10.HttpClientXsrfModule, []), i0.ɵmpd(1073742336, i10.HttpClientModule, i10.HttpClientModule, []), i0.ɵmpd(1073742336, i11.CommonModule, i11.CommonModule, []), i0.ɵmpd(1024, i0.ErrorHandler, i12.ɵangular_packages_platform_browser_platform_browser_a, []), i0.ɵmpd(1024, i0.NgProbeToken, function () { return [i18.ɵangular_packages_router_router_b()]; }, []), i0.ɵmpd(512, i18.ɵangular_packages_router_router_h, i18.ɵangular_packages_router_router_h, [i0.Injector]), i0.ɵmpd(256, i0.APP_ID, "PhotoSale", []), i0.ɵmpd(2048, i12.ɵTRANSITION_ID, null, [i0.APP_ID]), i0.ɵmpd(1024, i0.APP_INITIALIZER, function (p0_0, p1_0, p2_0, p2_1, p2_2) { return [i12.ɵangular_packages_platform_browser_platform_browser_j(p0_0), i18.ɵangular_packages_router_router_i(p1_0), i12.ɵangular_packages_platform_browser_platform_browser_h(p2_0, p2_1, p2_2)]; }, [[2, i0.NgProbeToken], i18.ɵangular_packages_router_router_h, i12.ɵTRANSITION_ID, i11.DOCUMENT, i0.Injector]), i0.ɵmpd(512, i0.ApplicationInitStatus, i0.ApplicationInitStatus, [[2, i0.APP_INITIALIZER]]), i0.ɵmpd(131584, i0.ApplicationRef, i0.ApplicationRef, [i0.NgZone, i0.ɵConsole, i0.Injector, i0.ErrorHandler, i0.ComponentFactoryResolver, i0.ApplicationInitStatus]), i0.ɵmpd(1073742336, i0.ApplicationModule, i0.ApplicationModule, [i0.ApplicationRef]), i0.ɵmpd(1073742336, i12.BrowserModule, i12.BrowserModule, [[3, i12.BrowserModule]]), i0.ɵmpd(1073742336, i14.NoopAnimationsModule, i14.NoopAnimationsModule, []), i0.ɵmpd(1073742336, i9.ServerModule, i9.ServerModule, []), i0.ɵmpd(1073742336, i16.ɵangular_packages_forms_forms_bb, i16.ɵangular_packages_forms_forms_bb, []), i0.ɵmpd(1073742336, i16.FormsModule, i16.FormsModule, []), i0.ɵmpd(1073742336, i17.AngularFireModule, i17.AngularFireModule, []), i0.ɵmpd(1073742336, i14.BrowserAnimationsModule, i14.BrowserAnimationsModule, []), i0.ɵmpd(1024, i18.ɵangular_packages_router_router_a, i18.ɵangular_packages_router_router_e, [[3, i18.Router]]), i0.ɵmpd(512, i18.UrlSerializer, i18.DefaultUrlSerializer, []), i0.ɵmpd(512, i18.ChildrenOutletContexts, i18.ChildrenOutletContexts, []), i0.ɵmpd(256, i18.ROUTER_CONFIGURATION, {}, []), i0.ɵmpd(1024, i11.LocationStrategy, i18.ɵangular_packages_router_router_d, [i11.PlatformLocation, [2, i11.APP_BASE_HREF], i18.ROUTER_CONFIGURATION]), i0.ɵmpd(512, i11.Location, i11.Location, [i11.LocationStrategy]), i0.ɵmpd(512, i0.Compiler, i0.Compiler, []), i0.ɵmpd(512, i0.NgModuleFactoryLoader, i0.SystemJsNgModuleLoader, [i0.Compiler, [2, i0.SystemJsNgModuleLoaderConfig]]), i0.ɵmpd(1024, i18.ROUTES, function () { return [[{ path: "welcome", component: i23.WelcomeComponent, pathMatch: "full" }], [{ path: "app-friends-signup", component: i24.SignupComponent }, { path: "app-friends-login", component: i25.LoginComponent }]]; }, []), i0.ɵmpd(1024, i18.Router, i18.ɵangular_packages_router_router_f, [i0.ApplicationRef, i18.UrlSerializer, i18.ChildrenOutletContexts, i11.Location, i0.Injector, i0.NgModuleFactoryLoader, i0.Compiler, i18.ROUTES, i18.ROUTER_CONFIGURATION, [2, i18.UrlHandlingStrategy], [2, i18.RouteReuseStrategy]]), i0.ɵmpd(1073742336, i18.RouterModule, i18.RouterModule, [[2, i18.ɵangular_packages_router_router_a], [2, i18.Router]]), i0.ɵmpd(1073742336, i26.AppRouting, i26.AppRouting, []), i0.ɵmpd(1073742336, i27.AuthenticationRouting, i27.AuthenticationRouting, []), i0.ɵmpd(1073742336, i28.AuthenticationModule, i28.AuthenticationModule, []), i0.ɵmpd(1073742336, i29.AppModule, i29.AppModule, []), i0.ɵmpd(1073742336, i1.AppServerModule, i1.AppServerModule, []), i0.ɵmpd(256, i10.ɵangular_packages_common_http_http_e, "XSRF-TOKEN", []), i0.ɵmpd(256, i10.ɵangular_packages_common_http_http_f, "X-XSRF-TOKEN", []), i0.ɵmpd(256, i0.ɵAPP_ROOT, true, []), i0.ɵmpd(256, i14.ANIMATION_MODULE_TYPE, "BrowserAnimations", []), i0.ɵmpd(256, i17.FirebaseOptionsToken, { apiKey: "AIzaSyC3uoG1q_WUQV8T4Jiav-lDychrofG1FfI", authDomain: "merakiart-35689.firebaseapp.com", databaseURL: "https://merakiart-35689.firebaseio.com", projectId: "merakiart-35689", storageBucket: "", messagingSenderId: "680720830448" }, []), i0.ɵmpd(256, i17.FirebaseNameOrConfigToken, undefined, [])]); });
+var i6 = __webpack_require__(/*! ./home/welcome.component.ngfactory */ "./src/app/home/welcome.component.ngfactory.js");
+var i7 = __webpack_require__(/*! ./products/product-list.component.ngfactory */ "./src/app/products/product-list.component.ngfactory.js");
+var i8 = __webpack_require__(/*! ./products/product-detail.component.ngfactory */ "./src/app/products/product-detail.component.ngfactory.js");
+var i9 = __webpack_require__(/*! ./user/user-profile/user-profile.component.ngfactory */ "./src/app/user/user-profile/user-profile.component.ngfactory.js");
+var i10 = __webpack_require__(/*! ./app.component.ngfactory */ "./src/app/app.component.ngfactory.js");
+var i11 = __webpack_require__(/*! @angular/http */ "@angular/http");
+var i12 = __webpack_require__(/*! @angular/platform-server */ "@angular/platform-server");
+var i13 = __webpack_require__(/*! @angular/common/http */ "@angular/common/http");
+var i14 = __webpack_require__(/*! @angular/common */ "@angular/common");
+var i15 = __webpack_require__(/*! @angular/platform-browser */ "@angular/platform-browser");
+var i16 = __webpack_require__(/*! @angular/animations/browser */ "@angular/animations/browser");
+var i17 = __webpack_require__(/*! @angular/platform-browser/animations */ "@angular/platform-browser/animations");
+var i18 = __webpack_require__(/*! @angular/animations */ "@angular/animations");
+var i19 = __webpack_require__(/*! @angular/forms */ "@angular/forms");
+var i20 = __webpack_require__(/*! angularfire2 */ "angularfire2");
+var i21 = __webpack_require__(/*! angularfire2/auth */ "angularfire2/auth");
+var i22 = __webpack_require__(/*! ./services/authentication.service */ "./src/app/services/authentication.service.ts");
+var i23 = __webpack_require__(/*! angularfire2/database */ "angularfire2/database");
+var i24 = __webpack_require__(/*! ./services/user.service */ "./src/app/services/user.service.ts");
+var i25 = __webpack_require__(/*! @angular/fire/storage */ "@angular/fire/storage");
+var i26 = __webpack_require__(/*! ./services/authentication.guard */ "./src/app/services/authentication.guard.ts");
+var i27 = __webpack_require__(/*! @angular/router */ "@angular/router");
+var i28 = __webpack_require__(/*! ./products/product.service */ "./src/app/products/product.service.ts");
+var i29 = __webpack_require__(/*! ./authentication/login/login.component */ "./src/app/authentication/login/login.component.ts");
+var i30 = __webpack_require__(/*! ./authentication/signup/signup.component */ "./src/app/authentication/signup/signup.component.ts");
+var i31 = __webpack_require__(/*! ./home/welcome.component */ "./src/app/home/welcome.component.ts");
+var i32 = __webpack_require__(/*! ./products/product-list.component */ "./src/app/products/product-list.component.ts");
+var i33 = __webpack_require__(/*! ./products/product-detail.component */ "./src/app/products/product-detail.component.ts");
+var i34 = __webpack_require__(/*! ./user/user-profile/user-profile.component */ "./src/app/user/user-profile/user-profile.component.ts");
+var i35 = __webpack_require__(/*! ./authentication/authentication.routing */ "./src/app/authentication/authentication.routing.ts");
+var i36 = __webpack_require__(/*! ./authentication/authentication.module */ "./src/app/authentication/authentication.module.ts");
+var i37 = __webpack_require__(/*! ./app.routing */ "./src/app/app.routing.ts");
+var i38 = __webpack_require__(/*! ./user/user-routing.module */ "./src/app/user/user-routing.module.ts");
+var i39 = __webpack_require__(/*! ./user/user.module */ "./src/app/user/user.module.ts");
+var i40 = __webpack_require__(/*! ./app.module */ "./src/app/app.module.ts");
+var AppServerModuleNgFactory = i0.ɵcmf(i1.AppServerModule, [i2.AppComponent], function (_l) { return i0.ɵmod([i0.ɵmpd(512, i0.ComponentFactoryResolver, i0.ɵCodegenComponentFactoryResolver, [[8, [i3.ɵEmptyOutletComponentNgFactory, i4.LoginComponentNgFactory, i5.SignupComponentNgFactory, i6.WelcomeComponentNgFactory, i7.ProductListComponentNgFactory, i8.ProductDetailComponentNgFactory, i9.UserProfileComponentNgFactory, i10.AppComponentNgFactory]], [3, i0.ComponentFactoryResolver], i0.NgModuleRef]), i0.ɵmpd(4608, i11.BrowserXhr, i12.ɵangular_packages_platform_server_platform_server_e, []), i0.ɵmpd(4608, i11.ResponseOptions, i11.BaseResponseOptions, []), i0.ɵmpd(4608, i11.XSRFStrategy, i12.ɵangular_packages_platform_server_platform_server_f, []), i0.ɵmpd(4608, i11.XHRBackend, i11.XHRBackend, [i11.BrowserXhr, i11.ResponseOptions, i11.XSRFStrategy]), i0.ɵmpd(4608, i11.RequestOptions, i11.BaseRequestOptions, []), i0.ɵmpd(5120, i11.Http, i12.ɵangular_packages_platform_server_platform_server_g, [i11.XHRBackend, i11.RequestOptions]), i0.ɵmpd(4608, i13.HttpXsrfTokenExtractor, i13.ɵangular_packages_common_http_http_g, [i14.DOCUMENT, i0.PLATFORM_ID, i13.ɵangular_packages_common_http_http_e]), i0.ɵmpd(4608, i13.ɵangular_packages_common_http_http_h, i13.ɵangular_packages_common_http_http_h, [i13.HttpXsrfTokenExtractor, i13.ɵangular_packages_common_http_http_f]), i0.ɵmpd(5120, i13.HTTP_INTERCEPTORS, function (p0_0) { return [p0_0]; }, [i13.ɵangular_packages_common_http_http_h]), i0.ɵmpd(4608, i13.XhrFactory, i12.ɵangular_packages_platform_server_platform_server_e, []), i0.ɵmpd(4608, i13.HttpXhrBackend, i13.HttpXhrBackend, [i13.XhrFactory]), i0.ɵmpd(6144, i13.HttpBackend, null, [i13.HttpXhrBackend]), i0.ɵmpd(5120, i13.HttpHandler, i12.ɵangular_packages_platform_server_platform_server_h, [i13.HttpBackend, i0.Injector]), i0.ɵmpd(4608, i13.HttpClient, i13.HttpClient, [i13.HttpHandler]), i0.ɵmpd(4608, i13.ɵangular_packages_common_http_http_d, i13.ɵangular_packages_common_http_http_d, []), i0.ɵmpd(5120, i0.LOCALE_ID, i0.ɵangular_packages_core_core_o, [[3, i0.LOCALE_ID]]), i0.ɵmpd(4608, i14.NgLocalization, i14.NgLocaleLocalization, [i0.LOCALE_ID, [2, i14.ɵangular_packages_common_common_a]]), i0.ɵmpd(5120, i0.IterableDiffers, i0.ɵangular_packages_core_core_m, []), i0.ɵmpd(5120, i0.KeyValueDiffers, i0.ɵangular_packages_core_core_n, []), i0.ɵmpd(4608, i15.DomSanitizer, i15.ɵDomSanitizerImpl, [i14.DOCUMENT]), i0.ɵmpd(6144, i0.Sanitizer, null, [i15.DomSanitizer]), i0.ɵmpd(4608, i15.HAMMER_GESTURE_CONFIG, i15.HammerGestureConfig, []), i0.ɵmpd(5120, i15.EVENT_MANAGER_PLUGINS, function (p0_0, p0_1, p0_2, p1_0, p2_0, p2_1, p2_2, p2_3, p3_0) { return [new i15.ɵDomEventsPlugin(p0_0, p0_1, p0_2), new i15.ɵKeyEventsPlugin(p1_0), new i15.ɵHammerGesturesPlugin(p2_0, p2_1, p2_2, p2_3), new i12.ɵangular_packages_platform_server_platform_server_d(p3_0)]; }, [i14.DOCUMENT, i0.NgZone, i0.PLATFORM_ID, i14.DOCUMENT, i14.DOCUMENT, i15.HAMMER_GESTURE_CONFIG, i0.ɵConsole, [2, i15.HAMMER_LOADER], i15.DOCUMENT]), i0.ɵmpd(4608, i15.EventManager, i15.EventManager, [i15.EVENT_MANAGER_PLUGINS, i0.NgZone]), i0.ɵmpd(135680, i15.ɵDomSharedStylesHost, i15.ɵDomSharedStylesHost, [i14.DOCUMENT]), i0.ɵmpd(4608, i15.ɵDomRendererFactory2, i15.ɵDomRendererFactory2, [i15.EventManager, i15.ɵDomSharedStylesHost]), i0.ɵmpd(5120, i16.AnimationDriver, i17.ɵangular_packages_platform_browser_animations_animations_b, []), i0.ɵmpd(5120, i16.ɵAnimationStyleNormalizer, i17.ɵangular_packages_platform_browser_animations_animations_c, []), i0.ɵmpd(4608, i16.ɵAnimationEngine, i17.ɵangular_packages_platform_browser_animations_animations_a, [i14.DOCUMENT, i16.AnimationDriver, i16.ɵAnimationStyleNormalizer]), i0.ɵmpd(5120, i0.RendererFactory2, i17.ɵangular_packages_platform_browser_animations_animations_d, [i15.ɵDomRendererFactory2, i16.ɵAnimationEngine, i0.NgZone]), i0.ɵmpd(4608, i12.ɵangular_packages_platform_server_platform_server_c, i12.ɵangular_packages_platform_server_platform_server_c, [i15.DOCUMENT, [2, i15.ɵTRANSITION_ID]]), i0.ɵmpd(6144, i15.ɵSharedStylesHost, null, [i12.ɵangular_packages_platform_server_platform_server_c]), i0.ɵmpd(4352, i0.Testability, null, []), i0.ɵmpd(4608, i18.AnimationBuilder, i17.ɵBrowserAnimationBuilder, [i0.RendererFactory2, i15.DOCUMENT]), i0.ɵmpd(4608, i12.ɵServerRendererFactory2, i12.ɵServerRendererFactory2, [i15.EventManager, i0.NgZone, i15.DOCUMENT, i15.ɵSharedStylesHost]), i0.ɵmpd(4608, i14.ViewportScroller, i14.ɵNullViewportScroller, []), i0.ɵmpd(4608, i19.ɵangular_packages_forms_forms_j, i19.ɵangular_packages_forms_forms_j, []), i0.ɵmpd(5120, i20.FirebaseApp, i20._firebaseAppFactory, [i20.FirebaseOptionsToken, [2, i20.FirebaseNameOrConfigToken]]), i0.ɵmpd(4608, i21.AngularFireAuth, i21.AngularFireAuth, [i20.FirebaseOptionsToken, [2, i20.FirebaseNameOrConfigToken], i0.PLATFORM_ID, i0.NgZone]), i0.ɵmpd(4608, i22.AuthenticationService, i22.AuthenticationService, [i21.AngularFireAuth]), i0.ɵmpd(4608, i23.AngularFireDatabase, i23.AngularFireDatabase, [i20.FirebaseOptionsToken, [2, i20.FirebaseNameOrConfigToken], [2, i20.RealtimeDatabaseURL], i0.PLATFORM_ID, i0.NgZone]), i0.ɵmpd(4608, i24.UserService, i24.UserService, [i23.AngularFireDatabase, i25.AngularFireStorage]), i0.ɵmpd(4608, i26.AuthenticationGuard, i26.AuthenticationGuard, [i22.AuthenticationService, i27.Router]), i0.ɵmpd(5120, i27.ActivatedRoute, i27.ɵangular_packages_router_router_g, [i27.Router]), i0.ɵmpd(4608, i27.NoPreloading, i27.NoPreloading, []), i0.ɵmpd(6144, i27.PreloadingStrategy, null, [i27.NoPreloading]), i0.ɵmpd(135680, i27.RouterPreloader, i27.RouterPreloader, [i27.Router, i0.NgModuleFactoryLoader, i0.Compiler, i0.Injector, i27.PreloadingStrategy]), i0.ɵmpd(4608, i27.PreloadAllModules, i27.PreloadAllModules, []), i0.ɵmpd(5120, i27.ɵangular_packages_router_router_n, i27.ɵangular_packages_router_router_c, [i27.Router, i14.ViewportScroller, i27.ROUTER_CONFIGURATION]), i0.ɵmpd(5120, i27.ROUTER_INITIALIZER, i27.ɵangular_packages_router_router_j, [i27.ɵangular_packages_router_router_h]), i0.ɵmpd(5120, i0.APP_BOOTSTRAP_LISTENER, function (p0_0) { return [p0_0]; }, [i27.ROUTER_INITIALIZER]), i0.ɵmpd(4608, i28.ProductService, i28.ProductService, [i13.HttpClient]), i0.ɵmpd(1073742336, i11.HttpModule, i11.HttpModule, []), i0.ɵmpd(1073742336, i13.HttpClientXsrfModule, i13.HttpClientXsrfModule, []), i0.ɵmpd(1073742336, i13.HttpClientModule, i13.HttpClientModule, []), i0.ɵmpd(1073742336, i14.CommonModule, i14.CommonModule, []), i0.ɵmpd(1024, i0.ErrorHandler, i15.ɵangular_packages_platform_browser_platform_browser_a, []), i0.ɵmpd(1024, i0.NgProbeToken, function () { return [i27.ɵangular_packages_router_router_b()]; }, []), i0.ɵmpd(512, i27.ɵangular_packages_router_router_h, i27.ɵangular_packages_router_router_h, [i0.Injector]), i0.ɵmpd(256, i0.APP_ID, "PhotoSale", []), i0.ɵmpd(2048, i15.ɵTRANSITION_ID, null, [i0.APP_ID]), i0.ɵmpd(1024, i0.APP_INITIALIZER, function (p0_0, p1_0, p2_0, p2_1, p2_2) { return [i15.ɵangular_packages_platform_browser_platform_browser_j(p0_0), i27.ɵangular_packages_router_router_i(p1_0), i15.ɵangular_packages_platform_browser_platform_browser_h(p2_0, p2_1, p2_2)]; }, [[2, i0.NgProbeToken], i27.ɵangular_packages_router_router_h, i15.ɵTRANSITION_ID, i14.DOCUMENT, i0.Injector]), i0.ɵmpd(512, i0.ApplicationInitStatus, i0.ApplicationInitStatus, [[2, i0.APP_INITIALIZER]]), i0.ɵmpd(131584, i0.ApplicationRef, i0.ApplicationRef, [i0.NgZone, i0.ɵConsole, i0.Injector, i0.ErrorHandler, i0.ComponentFactoryResolver, i0.ApplicationInitStatus]), i0.ɵmpd(1073742336, i0.ApplicationModule, i0.ApplicationModule, [i0.ApplicationRef]), i0.ɵmpd(1073742336, i15.BrowserModule, i15.BrowserModule, [[3, i15.BrowserModule]]), i0.ɵmpd(1073742336, i17.NoopAnimationsModule, i17.NoopAnimationsModule, []), i0.ɵmpd(1073742336, i12.ServerModule, i12.ServerModule, []), i0.ɵmpd(1073742336, i19.ɵangular_packages_forms_forms_bc, i19.ɵangular_packages_forms_forms_bc, []), i0.ɵmpd(1073742336, i19.FormsModule, i19.FormsModule, []), i0.ɵmpd(1073742336, i20.AngularFireModule, i20.AngularFireModule, []), i0.ɵmpd(1073742336, i17.BrowserAnimationsModule, i17.BrowserAnimationsModule, []), i0.ɵmpd(1024, i27.ɵangular_packages_router_router_a, i27.ɵangular_packages_router_router_e, [[3, i27.Router]]), i0.ɵmpd(512, i27.UrlSerializer, i27.DefaultUrlSerializer, []), i0.ɵmpd(512, i27.ChildrenOutletContexts, i27.ChildrenOutletContexts, []), i0.ɵmpd(256, i27.ROUTER_CONFIGURATION, {}, []), i0.ɵmpd(1024, i14.LocationStrategy, i27.ɵangular_packages_router_router_d, [i14.PlatformLocation, [2, i14.APP_BASE_HREF], i27.ROUTER_CONFIGURATION]), i0.ɵmpd(512, i14.Location, i14.Location, [i14.LocationStrategy]), i0.ɵmpd(512, i0.Compiler, i0.Compiler, []), i0.ɵmpd(512, i0.NgModuleFactoryLoader, i0.SystemJsNgModuleLoader, [i0.Compiler, [2, i0.SystemJsNgModuleLoaderConfig]]), i0.ɵmpd(1024, i27.ROUTES, function () { return [[{ path: "app-friends-login", component: i29.LoginComponent }, { path: "app-friends-signup", component: i30.SignupComponent }], [{ path: "welcome", component: i31.WelcomeComponent }, { path: "products", component: i32.ProductListComponent }, { path: "products/:id", component: i33.ProductDetailComponent }], [{ path: "app-friends-userprofile", component: i34.UserProfileComponent, canActivate: [i26.AuthenticationGuard] }]]; }, []), i0.ɵmpd(1024, i27.Router, i27.ɵangular_packages_router_router_f, [i0.ApplicationRef, i27.UrlSerializer, i27.ChildrenOutletContexts, i14.Location, i0.Injector, i0.NgModuleFactoryLoader, i0.Compiler, i27.ROUTES, i27.ROUTER_CONFIGURATION, [2, i27.UrlHandlingStrategy], [2, i27.RouteReuseStrategy]]), i0.ɵmpd(1073742336, i27.RouterModule, i27.RouterModule, [[2, i27.ɵangular_packages_router_router_a], [2, i27.Router]]), i0.ɵmpd(1073742336, i35.AuthenticationRouting, i35.AuthenticationRouting, []), i0.ɵmpd(1073742336, i36.AuthenticationModule, i36.AuthenticationModule, []), i0.ɵmpd(1073742336, i37.AppRouting, i37.AppRouting, []), i0.ɵmpd(1073742336, i38.UserRoutingModule, i38.UserRoutingModule, []), i0.ɵmpd(1073742336, i39.UserModule, i39.UserModule, []), i0.ɵmpd(1073742336, i40.AppModule, i40.AppModule, []), i0.ɵmpd(1073742336, i1.AppServerModule, i1.AppServerModule, []), i0.ɵmpd(256, i13.ɵangular_packages_common_http_http_e, "XSRF-TOKEN", []), i0.ɵmpd(256, i13.ɵangular_packages_common_http_http_f, "X-XSRF-TOKEN", []), i0.ɵmpd(256, i0.ɵAPP_ROOT, true, []), i0.ɵmpd(256, i17.ANIMATION_MODULE_TYPE, "BrowserAnimations", []), i0.ɵmpd(256, i20.FirebaseOptionsToken, { apiKey: "AIzaSyC3uoG1q_WUQV8T4Jiav-lDychrofG1FfI", authDomain: "merakiart-35689.firebaseapp.com", databaseURL: "https://merakiart-35689.firebaseio.com", projectId: "merakiart-35689", storageBucket: "merakiart-35689.appspot.com", messagingSenderId: "680720830448" }, []), i0.ɵmpd(256, i20.FirebaseNameOrConfigToken, undefined, [])]); });
 exports.AppServerModuleNgFactory = AppServerModuleNgFactory;
 
 
@@ -367,8 +408,8 @@ var router_1 = __webpack_require__(/*! @angular/router */ "@angular/router");
 var signup_component_1 = __webpack_require__(/*! ./signup/signup.component */ "./src/app/authentication/signup/signup.component.ts");
 var login_component_1 = __webpack_require__(/*! ./login/login.component */ "./src/app/authentication/login/login.component.ts");
 exports.ROUTES = [
-    { path: 'app-friends-signup', component: signup_component_1.SignupComponent },
     { path: 'app-friends-login', component: login_component_1.LoginComponent },
+    { path: 'app-friends-signup', component: signup_component_1.SignupComponent },
 ];
 /**
  * Authentication Routing Module
@@ -399,7 +440,7 @@ exports.AuthenticationRouting = AuthenticationRouting;
  * tslint:disable
  */ 
 Object.defineProperty(exports, "__esModule", { value: true });
-var styles = [".container[_ngcontent-%COMP%]{\r\n    margin-left: 10px;\r\n}"];
+var styles = [".container[_ngcontent-%COMP%]{\r\n    margin-left: 10px;\r\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYXV0aGVudGljYXRpb24vbG9naW4vbG9naW4uY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtJQUNJLGtCQUFrQjtDQUNyQiIsImZpbGUiOiJzcmMvYXBwL2F1dGhlbnRpY2F0aW9uL2xvZ2luL2xvZ2luLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuY29udGFpbmVye1xyXG4gICAgbWFyZ2luLWxlZnQ6IDEwcHg7XHJcbn0iXX0= */"];
 exports.styles = styles;
 
 
@@ -431,7 +472,7 @@ var i6 = __webpack_require__(/*! @angular/router */ "@angular/router");
 var i7 = __webpack_require__(/*! ./login.component */ "./src/app/authentication/login/login.component.ts");
 var i8 = __webpack_require__(/*! ../../services/user.service */ "./src/app/services/user.service.ts");
 var i9 = __webpack_require__(/*! ../../services/authentication.service */ "./src/app/services/authentication.service.ts");
-var i10 = __webpack_require__(/*! @angular/fire/auth */ "@angular/fire/auth");
+var i10 = __webpack_require__(/*! angularfire2/auth */ "angularfire2/auth");
 var styles_LoginComponent = [i0.styles];
 var RenderType_LoginComponent = i1.ɵcrt({ encapsulation: 0, styles: styles_LoginComponent, data: {} });
 exports.RenderType_LoginComponent = RenderType_LoginComponent;
@@ -445,7 +486,7 @@ function View_LoginComponent_0(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0,
     } if (("ngSubmit" === en)) {
         var pd_2 = (_co.onLogin(i1.ɵnov(_v, 7)) !== false);
         ad = (pd_2 && ad);
-    } return ad; }, null, null)), i1.ɵdid(6, 16384, null, 0, i5.ɵangular_packages_forms_forms_bg, [], null, null), i1.ɵdid(7, 4210688, [["loginFormData", 4]], 0, i5.NgForm, [[8, null], [8, null]], null, { ngSubmit: "ngSubmit" }), i1.ɵprd(2048, null, i5.ControlContainer, null, [i5.NgForm]), i1.ɵdid(9, 16384, null, 0, i5.NgControlStatusGroup, [[4, i5.ControlContainer]], null, null), (_l()(), i1.ɵeld(10, 0, null, null, 19, "div", [["class", "form-group"]], null, null, null, null, null)), (_l()(), i1.ɵeld(11, 0, null, null, 1, "label", [["for", "email"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["Email"])), (_l()(), i1.ɵeld(13, 0, null, null, 8, "input", [["class", "form-control"], ["id", "email"], ["name", "email"], ["pattern", "^\\w+([\\.-]?\\w+)*@\\w+([\\.-]?\\w+)*(\\.\\w{2,3})+$"], ["required", ""], ["type", "text"]], [[1, "required", 0], [1, "pattern", 0], [2, "ng-untouched", null], [2, "ng-touched", null], [2, "ng-pristine", null], [2, "ng-dirty", null], [2, "ng-valid", null], [2, "ng-invalid", null], [2, "ng-pending", null]], [[null, "ngModel"], [null, "input"], [null, "blur"], [null, "compositionstart"], [null, "compositionend"]], function (_v, en, $event) { var ad = true; if (("input" === en)) {
+    } return ad; }, null, null)), i1.ɵdid(6, 16384, null, 0, i5.ɵangular_packages_forms_forms_bh, [], null, null), i1.ɵdid(7, 4210688, [["loginFormData", 4]], 0, i5.NgForm, [[8, null], [8, null]], null, { ngSubmit: "ngSubmit" }), i1.ɵprd(2048, null, i5.ControlContainer, null, [i5.NgForm]), i1.ɵdid(9, 16384, null, 0, i5.NgControlStatusGroup, [[4, i5.ControlContainer]], null, null), (_l()(), i1.ɵeld(10, 0, null, null, 19, "div", [["class", "form-group"]], null, null, null, null, null)), (_l()(), i1.ɵeld(11, 0, null, null, 1, "label", [["for", "email"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["Email"])), (_l()(), i1.ɵeld(13, 0, null, null, 8, "input", [["class", "form-control"], ["id", "email"], ["name", "email"], ["pattern", "^\\w+([\\.-]?\\w+)*@\\w+([\\.-]?\\w+)*(\\.\\w{2,3})+$"], ["required", ""], ["type", "text"]], [[1, "required", 0], [1, "pattern", 0], [2, "ng-untouched", null], [2, "ng-touched", null], [2, "ng-pristine", null], [2, "ng-dirty", null], [2, "ng-valid", null], [2, "ng-invalid", null], [2, "ng-pending", null]], [[null, "ngModel"], [null, "input"], [null, "blur"], [null, "compositionstart"], [null, "compositionend"]], function (_v, en, $event) { var ad = true; if (("input" === en)) {
         var pd_0 = (i1.ɵnov(_v, 14)._handleInput($event.target.value) !== false);
         ad = (pd_0 && ad);
     } if (("blur" === en)) {
@@ -487,7 +528,7 @@ function View_LoginComponent_0(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0,
     } if (("ngSubmit" === en)) {
         var pd_2 = (_co.onReset(i1.ɵnov(_v, 58)) !== false);
         ad = (pd_2 && ad);
-    } return ad; }, null, null)), i1.ɵdid(57, 16384, null, 0, i5.ɵangular_packages_forms_forms_bg, [], null, null), i1.ɵdid(58, 4210688, [["resetFormData", 4]], 0, i5.NgForm, [[8, null], [8, null]], null, { ngSubmit: "ngSubmit" }), i1.ɵprd(2048, null, i5.ControlContainer, null, [i5.NgForm]), i1.ɵdid(60, 16384, null, 0, i5.NgControlStatusGroup, [[4, i5.ControlContainer]], null, null), (_l()(), i1.ɵeld(61, 0, null, null, 25, "div", [["class", "modal-content"]], null, null, null, null, null)), (_l()(), i1.ɵeld(62, 0, null, null, 4, "div", [["class", "modal-header"]], null, null, null, null, null)), (_l()(), i1.ɵeld(63, 0, null, null, 1, "h4", [["class", "modal-title"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["Forgot Password?"])), (_l()(), i1.ɵeld(65, 0, null, null, 1, "button", [["class", "close"], ["data-dismiss", "modal"], ["type", "button"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["\u00D7"])), (_l()(), i1.ɵeld(67, 0, null, null, 14, "div", [["class", "modal-body"]], null, null, null, null, null)), (_l()(), i1.ɵeld(68, 0, null, null, 1, "p", [], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["Please enter your registered email to sent you the password reset instructions."])), (_l()(), i1.ɵeld(70, 0, null, null, 11, "div", [["class", "form-group"]], null, null, null, null, null)), (_l()(), i1.ɵeld(71, 0, null, null, 1, "label", [["for", "reset_email"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["Email"])), (_l()(), i1.ɵeld(73, 0, null, null, 8, "input", [["class", "form-control"], ["id", "reset_email"], ["name", "email"], ["pattern", "^\\w+([\\.-]?\\w+)*@\\w+([\\.-]?\\w+)*(\\.\\w{2,3})+$"], ["required", ""], ["type", "text"]], [[1, "required", 0], [1, "pattern", 0], [2, "ng-untouched", null], [2, "ng-touched", null], [2, "ng-pristine", null], [2, "ng-dirty", null], [2, "ng-valid", null], [2, "ng-invalid", null], [2, "ng-pending", null]], [[null, "ngModel"], [null, "input"], [null, "blur"], [null, "compositionstart"], [null, "compositionend"]], function (_v, en, $event) { var ad = true; if (("input" === en)) {
+    } return ad; }, null, null)), i1.ɵdid(57, 16384, null, 0, i5.ɵangular_packages_forms_forms_bh, [], null, null), i1.ɵdid(58, 4210688, [["resetFormData", 4]], 0, i5.NgForm, [[8, null], [8, null]], null, { ngSubmit: "ngSubmit" }), i1.ɵprd(2048, null, i5.ControlContainer, null, [i5.NgForm]), i1.ɵdid(60, 16384, null, 0, i5.NgControlStatusGroup, [[4, i5.ControlContainer]], null, null), (_l()(), i1.ɵeld(61, 0, null, null, 25, "div", [["class", "modal-content"]], null, null, null, null, null)), (_l()(), i1.ɵeld(62, 0, null, null, 4, "div", [["class", "modal-header"]], null, null, null, null, null)), (_l()(), i1.ɵeld(63, 0, null, null, 1, "h4", [["class", "modal-title"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["Forgot Password?"])), (_l()(), i1.ɵeld(65, 0, null, null, 1, "button", [["class", "close"], ["data-dismiss", "modal"], ["type", "button"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["\u00D7"])), (_l()(), i1.ɵeld(67, 0, null, null, 14, "div", [["class", "modal-body"]], null, null, null, null, null)), (_l()(), i1.ɵeld(68, 0, null, null, 1, "p", [], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["Please enter your registered email to sent you the password reset instructions."])), (_l()(), i1.ɵeld(70, 0, null, null, 11, "div", [["class", "form-group"]], null, null, null, null, null)), (_l()(), i1.ɵeld(71, 0, null, null, 1, "label", [["for", "reset_email"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["Email"])), (_l()(), i1.ɵeld(73, 0, null, null, 8, "input", [["class", "form-control"], ["id", "reset_email"], ["name", "email"], ["pattern", "^\\w+([\\.-]?\\w+)*@\\w+([\\.-]?\\w+)*(\\.\\w{2,3})+$"], ["required", ""], ["type", "text"]], [[1, "required", 0], [1, "pattern", 0], [2, "ng-untouched", null], [2, "ng-touched", null], [2, "ng-pristine", null], [2, "ng-dirty", null], [2, "ng-valid", null], [2, "ng-invalid", null], [2, "ng-pending", null]], [[null, "ngModel"], [null, "input"], [null, "blur"], [null, "compositionstart"], [null, "compositionend"]], function (_v, en, $event) { var ad = true; if (("input" === en)) {
         var pd_0 = (i1.ɵnov(_v, 74)._handleInput($event.target.value) !== false);
         ad = (pd_0 && ad);
     } if (("blur" === en)) {
@@ -533,8 +574,10 @@ var LoginComponent = /** @class */ (function () {
         this.router = router;
         this.authService = authService;
         this.angularFireAuth = angularFireAuth;
-        this.angularFireAuth.auth.onAuthStateChanged(function (user) {
+        angularFireAuth.auth.onAuthStateChanged(function (user) {
+            console.log("in authchange");
             if (user) {
+                console.log("on authentication:" + user.uid);
                 _this.getUserInfo(user.uid);
             }
         });
@@ -543,8 +586,10 @@ var LoginComponent = /** @class */ (function () {
         var _this = this;
         this.authService.login(loginFormData.value.email, loginFormData.value.password).then(function (user) {
             // Login user
-            var uid = user.uid;
+            var uid = user.user.uid;
+            console.log("on login:" + user.user);
             _this.getUserInfo(uid);
+            //this.router.navigate(['/welcome']);
         }).catch(function (error) {
             _this.errorMessage = error.message;
             _this.showError = true;
@@ -559,10 +604,17 @@ var LoginComponent = /** @class */ (function () {
             _this.showError = true;
         });
     };
+    LoginComponent.prototype.navigateToUserProfile = function () {
+        this.router.navigateByUrl('/app-friends-userprofile');
+    };
     LoginComponent.prototype.getUserInfo = function (uid) {
         var _this = this;
         this.userService.getUser(uid).subscribe(function (snapshot) {
             _this.user = snapshot;
+            _this.userService.saveUser(_this.user);
+            console.log("snap:");
+            console.log(snapshot);
+            _this.navigateToUserProfile();
         });
     };
     return LoginComponent;
@@ -588,7 +640,7 @@ exports.LoginComponent = LoginComponent;
  * tslint:disable
  */ 
 Object.defineProperty(exports, "__esModule", { value: true });
-var styles = ["h1[_ngcontent-%COMP%] {\r\n    color:  #0000FF;\r\n  }"];
+var styles = ["h1[_ngcontent-%COMP%] {\r\n    color:  #0000FF;\r\n  }\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYXV0aGVudGljYXRpb24vc2lnbnVwL3NpZ251cC5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0lBQ0ksZ0JBQWdCO0dBQ2pCIiwiZmlsZSI6InNyYy9hcHAvYXV0aGVudGljYXRpb24vc2lnbnVwL3NpZ251cC5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiaDEge1xyXG4gICAgY29sb3I6ICAjMDAwMEZGO1xyXG4gIH0iXX0= */"];
 exports.styles = styles;
 
 
@@ -625,13 +677,16 @@ var styles_SignupComponent = [i0.styles];
 var RenderType_SignupComponent = i1.ɵcrt({ encapsulation: 0, styles: styles_SignupComponent, data: {} });
 exports.RenderType_SignupComponent = RenderType_SignupComponent;
 function View_SignupComponent_1(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 1, "app-error-alert", [], null, null, null, i2.View_ErrorAlertComponent_0, i2.RenderType_ErrorAlertComponent)), i1.ɵdid(1, 49152, null, 0, i3.ErrorAlertComponent, [], { errorMessage: [0, "errorMessage"] }, null)], function (_ck, _v) { var _co = _v.component; var currVal_0 = _co.errorMessage; _ck(_v, 1, 0, currVal_0); }, null); }
-function View_SignupComponent_0(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 97, "div", [["class", "col-md-6 col-md-offset-3"]], null, null, null, null, null)), (_l()(), i1.ɵeld(1, 0, null, null, 1, "h2", [], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["Signup"])), (_l()(), i1.ɵand(16777216, null, null, 1, null, View_SignupComponent_1)), i1.ɵdid(4, 16384, null, 0, i4.NgIf, [i1.ViewContainerRef, i1.TemplateRef], { ngIf: [0, "ngIf"] }, null), (_l()(), i1.ɵeld(5, 0, null, null, 92, "form", [["name", "form"], ["novalidate", ""]], [[2, "ng-untouched", null], [2, "ng-touched", null], [2, "ng-pristine", null], [2, "ng-dirty", null], [2, "ng-valid", null], [2, "ng-invalid", null], [2, "ng-pending", null]], [[null, "submit"], [null, "reset"]], function (_v, en, $event) { var ad = true; if (("submit" === en)) {
+function View_SignupComponent_0(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 97, "div", [["class", "col-md-6 col-md-offset-3"]], null, null, null, null, null)), (_l()(), i1.ɵeld(1, 0, null, null, 1, "h2", [], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["Signup"])), (_l()(), i1.ɵand(16777216, null, null, 1, null, View_SignupComponent_1)), i1.ɵdid(4, 16384, null, 0, i4.NgIf, [i1.ViewContainerRef, i1.TemplateRef], { ngIf: [0, "ngIf"] }, null), (_l()(), i1.ɵeld(5, 0, null, null, 92, "form", [["name", "form"], ["novalidate", ""]], [[2, "ng-untouched", null], [2, "ng-touched", null], [2, "ng-pristine", null], [2, "ng-dirty", null], [2, "ng-valid", null], [2, "ng-invalid", null], [2, "ng-pending", null]], [[null, "ngSubmit"], [null, "submit"], [null, "reset"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("submit" === en)) {
         var pd_0 = (i1.ɵnov(_v, 7).onSubmit($event) !== false);
         ad = (pd_0 && ad);
     } if (("reset" === en)) {
         var pd_1 = (i1.ɵnov(_v, 7).onReset() !== false);
         ad = (pd_1 && ad);
-    } return ad; }, null, null)), i1.ɵdid(6, 16384, null, 0, i5.ɵangular_packages_forms_forms_bg, [], null, null), i1.ɵdid(7, 4210688, [["signupFormData", 4]], 0, i5.NgForm, [[8, null], [8, null]], null, null), i1.ɵprd(2048, null, i5.ControlContainer, null, [i5.NgForm]), i1.ɵdid(9, 16384, null, 0, i5.NgControlStatusGroup, [[4, i5.ControlContainer]], null, null), (_l()(), i1.ɵeld(10, 0, null, null, 12, "div", [["class", "form-group"]], null, null, null, null, null)), (_l()(), i1.ɵeld(11, 0, null, null, 1, "label", [["for", "name"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["Name"])), (_l()(), i1.ɵeld(13, 0, null, null, 7, "input", [["class", "form-control"], ["id", "name"], ["name", "name"], ["required", ""], ["type", "text"]], [[1, "required", 0], [2, "ng-untouched", null], [2, "ng-touched", null], [2, "ng-pristine", null], [2, "ng-dirty", null], [2, "ng-valid", null], [2, "ng-invalid", null], [2, "ng-pending", null]], [[null, "ngModel"], [null, "input"], [null, "blur"], [null, "compositionstart"], [null, "compositionend"]], function (_v, en, $event) { var ad = true; if (("input" === en)) {
+    } if (("ngSubmit" === en)) {
+        var pd_2 = (_co.onSignup(i1.ɵnov(_v, 7)) !== false);
+        ad = (pd_2 && ad);
+    } return ad; }, null, null)), i1.ɵdid(6, 16384, null, 0, i5.ɵangular_packages_forms_forms_bh, [], null, null), i1.ɵdid(7, 4210688, [["signupFormData", 4]], 0, i5.NgForm, [[8, null], [8, null]], null, { ngSubmit: "ngSubmit" }), i1.ɵprd(2048, null, i5.ControlContainer, null, [i5.NgForm]), i1.ɵdid(9, 16384, null, 0, i5.NgControlStatusGroup, [[4, i5.ControlContainer]], null, null), (_l()(), i1.ɵeld(10, 0, null, null, 12, "div", [["class", "form-group"]], null, null, null, null, null)), (_l()(), i1.ɵeld(11, 0, null, null, 1, "label", [["for", "name"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["Name"])), (_l()(), i1.ɵeld(13, 0, null, null, 7, "input", [["class", "form-control"], ["id", "name"], ["name", "name"], ["required", ""], ["type", "text"]], [[1, "required", 0], [2, "ng-untouched", null], [2, "ng-touched", null], [2, "ng-pristine", null], [2, "ng-dirty", null], [2, "ng-valid", null], [2, "ng-invalid", null], [2, "ng-pending", null]], [[null, "ngModel"], [null, "input"], [null, "blur"], [null, "compositionstart"], [null, "compositionend"]], function (_v, en, $event) { var ad = true; if (("input" === en)) {
         var pd_0 = (i1.ɵnov(_v, 14)._handleInput($event.target.value) !== false);
         ad = (pd_0 && ad);
     } if (("blur" === en)) {
@@ -706,15 +761,12 @@ function View_SignupComponent_0(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0
     } if (("ngModel" === en)) {
         var pd_4 = (i1.ɵnov(_v, 81) !== false);
         ad = (pd_4 && ad);
-    } return ad; }, null, null)), i1.ɵdid(74, 16384, null, 0, i5.DefaultValueAccessor, [i1.Renderer2, i1.ElementRef, [2, i5.COMPOSITION_BUFFER_MODE]], null, null), i1.ɵdid(75, 16384, null, 0, i5.RequiredValidator, [], { required: [0, "required"] }, null), i1.ɵdid(76, 540672, null, 0, i5.MinLengthValidator, [], { minlength: [0, "minlength"] }, null), i1.ɵdid(77, 540672, null, 0, i5.MaxLengthValidator, [], { maxlength: [0, "maxlength"] }, null), i1.ɵdid(78, 540672, null, 0, i5.PatternValidator, [], { pattern: [0, "pattern"] }, null), i1.ɵprd(1024, null, i5.NG_VALIDATORS, function (p0_0, p1_0, p2_0, p3_0) { return [p0_0, p1_0, p2_0, p3_0]; }, [i5.RequiredValidator, i5.MinLengthValidator, i5.MaxLengthValidator, i5.PatternValidator]), i1.ɵprd(1024, null, i5.NG_VALUE_ACCESSOR, function (p0_0) { return [p0_0]; }, [i5.DefaultValueAccessor]), i1.ɵdid(81, 671744, [["mobile", 4]], 0, i5.NgModel, [[2, i5.ControlContainer], [6, i5.NG_VALIDATORS], [8, null], [6, i5.NG_VALUE_ACCESSOR]], { name: [0, "name"] }, null), i1.ɵprd(2048, null, i5.NgControl, null, [i5.NgModel]), i1.ɵdid(83, 16384, null, 0, i5.NgControlStatus, [[4, i5.NgControl]], null, null), (_l()(), i1.ɵeld(84, 0, null, null, 6, "div", [["class", "alert alert-danger"]], [[8, "hidden", 0]], null, null, null, null)), (_l()(), i1.ɵeld(85, 0, null, null, 1, "div", [], [[8, "hidden", 0]], null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["Mobile should be 10 digit"])), (_l()(), i1.ɵeld(87, 0, null, null, 1, "div", [], [[8, "hidden", 0]], null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["Mobile is required"])), (_l()(), i1.ɵeld(89, 0, null, null, 1, "div", [], [[8, "hidden", 0]], null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["Mobile number should be only numbers"])), (_l()(), i1.ɵeld(91, 0, null, null, 6, "div", [["class", "form-group"]], null, null, null, null, null)), (_l()(), i1.ɵeld(92, 0, null, null, 1, "button", [["class", "btn btn-success"], ["type", "button"]], [[8, "disabled", 0]], [[null, "click"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("click" === en)) {
-        var pd_0 = (_co.onSignup(i1.ɵnov(_v, 7)) !== false);
-        ad = (pd_0 && ad);
-    } return ad; }, null, null)), (_l()(), i1.ɵted(-1, null, ["SIGNUP"])), (_l()(), i1.ɵeld(94, 0, null, null, 3, "a", [["class", "btn btn-link"]], [[1, "target", 0], [8, "href", 4]], [[null, "click"]], function (_v, en, $event) { var ad = true; if (("click" === en)) {
+    } return ad; }, null, null)), i1.ɵdid(74, 16384, null, 0, i5.DefaultValueAccessor, [i1.Renderer2, i1.ElementRef, [2, i5.COMPOSITION_BUFFER_MODE]], null, null), i1.ɵdid(75, 16384, null, 0, i5.RequiredValidator, [], { required: [0, "required"] }, null), i1.ɵdid(76, 540672, null, 0, i5.MinLengthValidator, [], { minlength: [0, "minlength"] }, null), i1.ɵdid(77, 540672, null, 0, i5.MaxLengthValidator, [], { maxlength: [0, "maxlength"] }, null), i1.ɵdid(78, 540672, null, 0, i5.PatternValidator, [], { pattern: [0, "pattern"] }, null), i1.ɵprd(1024, null, i5.NG_VALIDATORS, function (p0_0, p1_0, p2_0, p3_0) { return [p0_0, p1_0, p2_0, p3_0]; }, [i5.RequiredValidator, i5.MinLengthValidator, i5.MaxLengthValidator, i5.PatternValidator]), i1.ɵprd(1024, null, i5.NG_VALUE_ACCESSOR, function (p0_0) { return [p0_0]; }, [i5.DefaultValueAccessor]), i1.ɵdid(81, 671744, [["mobile", 4]], 0, i5.NgModel, [[2, i5.ControlContainer], [6, i5.NG_VALIDATORS], [8, null], [6, i5.NG_VALUE_ACCESSOR]], { name: [0, "name"] }, null), i1.ɵprd(2048, null, i5.NgControl, null, [i5.NgModel]), i1.ɵdid(83, 16384, null, 0, i5.NgControlStatus, [[4, i5.NgControl]], null, null), (_l()(), i1.ɵeld(84, 0, null, null, 6, "div", [["class", "alert alert-danger"]], [[8, "hidden", 0]], null, null, null, null)), (_l()(), i1.ɵeld(85, 0, null, null, 1, "div", [], [[8, "hidden", 0]], null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["Mobile should be 10 digit"])), (_l()(), i1.ɵeld(87, 0, null, null, 1, "div", [], [[8, "hidden", 0]], null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["Mobile is required"])), (_l()(), i1.ɵeld(89, 0, null, null, 1, "div", [], [[8, "hidden", 0]], null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["Mobile number should be only numbers"])), (_l()(), i1.ɵeld(91, 0, null, null, 6, "div", [["class", "form-group"]], null, null, null, null, null)), (_l()(), i1.ɵeld(92, 0, null, null, 1, "button", [["class", "btn btn-success"], ["type", "submit"]], [[8, "disabled", 0]], null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["SIGNUP"])), (_l()(), i1.ɵeld(94, 0, null, null, 3, "a", [["class", "btn btn-link"]], [[1, "target", 0], [8, "href", 4]], [[null, "click"]], function (_v, en, $event) { var ad = true; if (("click" === en)) {
         var pd_0 = (i1.ɵnov(_v, 95).onClick($event.button, $event.ctrlKey, $event.metaKey, $event.shiftKey) !== false);
         ad = (pd_0 && ad);
     } return ad; }, null, null)), i1.ɵdid(95, 671744, null, 0, i7.RouterLinkWithHref, [i7.Router, i7.ActivatedRoute, i4.LocationStrategy], { routerLink: [0, "routerLink"] }, null), i1.ɵpad(96, 1), (_l()(), i1.ɵted(-1, null, ["CANCEL"]))], function (_ck, _v) { var _co = _v.component; var currVal_0 = _co.showError; _ck(_v, 4, 0, currVal_0); var currVal_16 = ""; _ck(_v, 15, 0, currVal_16); var currVal_17 = "name"; _ck(_v, 18, 0, currVal_17); var currVal_28 = ""; _ck(_v, 28, 0, currVal_28); var currVal_29 = "^\\w+([\\.-]?\\w+)*@\\w+([\\.-]?\\w+)*(\\.\\w{2,3})+$"; _ck(_v, 29, 0, currVal_29); var currVal_30 = "email"; _ck(_v, 32, 0, currVal_30); var currVal_42 = ""; _ck(_v, 48, 0, currVal_42); var currVal_43 = "password"; _ck(_v, 51, 0, currVal_43); var currVal_53 = ""; _ck(_v, 61, 0, currVal_53); var currVal_54 = "confirmPassword"; _ck(_v, 65, 0, currVal_54); var currVal_67 = ""; _ck(_v, 75, 0, currVal_67); var currVal_68 = "10"; _ck(_v, 76, 0, currVal_68); var currVal_69 = "10"; _ck(_v, 77, 0, currVal_69); var currVal_70 = "[0-9]*"; _ck(_v, 78, 0, currVal_70); var currVal_71 = "mobile"; _ck(_v, 81, 0, currVal_71); var currVal_79 = _ck(_v, 96, 0, "/app-friends-login"); _ck(_v, 95, 0, currVal_79); }, function (_ck, _v) { var currVal_1 = i1.ɵnov(_v, 9).ngClassUntouched; var currVal_2 = i1.ɵnov(_v, 9).ngClassTouched; var currVal_3 = i1.ɵnov(_v, 9).ngClassPristine; var currVal_4 = i1.ɵnov(_v, 9).ngClassDirty; var currVal_5 = i1.ɵnov(_v, 9).ngClassValid; var currVal_6 = i1.ɵnov(_v, 9).ngClassInvalid; var currVal_7 = i1.ɵnov(_v, 9).ngClassPending; _ck(_v, 5, 0, currVal_1, currVal_2, currVal_3, currVal_4, currVal_5, currVal_6, currVal_7); var currVal_8 = (i1.ɵnov(_v, 15).required ? "" : null); var currVal_9 = i1.ɵnov(_v, 20).ngClassUntouched; var currVal_10 = i1.ɵnov(_v, 20).ngClassTouched; var currVal_11 = i1.ɵnov(_v, 20).ngClassPristine; var currVal_12 = i1.ɵnov(_v, 20).ngClassDirty; var currVal_13 = i1.ɵnov(_v, 20).ngClassValid; var currVal_14 = i1.ɵnov(_v, 20).ngClassInvalid; var currVal_15 = i1.ɵnov(_v, 20).ngClassPending; _ck(_v, 13, 0, currVal_8, currVal_9, currVal_10, currVal_11, currVal_12, currVal_13, currVal_14, currVal_15); var currVal_18 = (i1.ɵnov(_v, 18).valid || i1.ɵnov(_v, 18).pristine); _ck(_v, 21, 0, currVal_18); var currVal_19 = (i1.ɵnov(_v, 28).required ? "" : null); var currVal_20 = (i1.ɵnov(_v, 29).pattern ? i1.ɵnov(_v, 29).pattern : null); var currVal_21 = i1.ɵnov(_v, 34).ngClassUntouched; var currVal_22 = i1.ɵnov(_v, 34).ngClassTouched; var currVal_23 = i1.ɵnov(_v, 34).ngClassPristine; var currVal_24 = i1.ɵnov(_v, 34).ngClassDirty; var currVal_25 = i1.ɵnov(_v, 34).ngClassValid; var currVal_26 = i1.ɵnov(_v, 34).ngClassInvalid; var currVal_27 = i1.ɵnov(_v, 34).ngClassPending; _ck(_v, 26, 0, currVal_19, currVal_20, currVal_21, currVal_22, currVal_23, currVal_24, currVal_25, currVal_26, currVal_27); var currVal_31 = (i1.ɵnov(_v, 32).valid || i1.ɵnov(_v, 32).pristine); _ck(_v, 35, 0, currVal_31); var currVal_32 = !i1.ɵnov(_v, 32).hasError("required"); _ck(_v, 36, 0, currVal_32); var currVal_33 = !i1.ɵnov(_v, 32).hasError("pattern"); _ck(_v, 38, 0, currVal_33); var currVal_34 = (i1.ɵnov(_v, 48).required ? "" : null); var currVal_35 = i1.ɵnov(_v, 53).ngClassUntouched; var currVal_36 = i1.ɵnov(_v, 53).ngClassTouched; var currVal_37 = i1.ɵnov(_v, 53).ngClassPristine; var currVal_38 = i1.ɵnov(_v, 53).ngClassDirty; var currVal_39 = i1.ɵnov(_v, 53).ngClassValid; var currVal_40 = i1.ɵnov(_v, 53).ngClassInvalid; var currVal_41 = i1.ɵnov(_v, 53).ngClassPending; _ck(_v, 46, 0, currVal_34, currVal_35, currVal_36, currVal_37, currVal_38, currVal_39, currVal_40, currVal_41); var currVal_44 = (i1.ɵnov(_v, 51).valid || i1.ɵnov(_v, 51).pristine); _ck(_v, 54, 0, currVal_44); var currVal_45 = (i1.ɵnov(_v, 61).required ? "" : null); var currVal_46 = i1.ɵnov(_v, 67).ngClassUntouched; var currVal_47 = i1.ɵnov(_v, 67).ngClassTouched; var currVal_48 = i1.ɵnov(_v, 67).ngClassPristine; var currVal_49 = i1.ɵnov(_v, 67).ngClassDirty; var currVal_50 = i1.ɵnov(_v, 67).ngClassValid; var currVal_51 = i1.ɵnov(_v, 67).ngClassInvalid; var currVal_52 = i1.ɵnov(_v, 67).ngClassPending; _ck(_v, 59, 0, currVal_45, currVal_46, currVal_47, currVal_48, currVal_49, currVal_50, currVal_51, currVal_52); var currVal_55 = (i1.ɵnov(_v, 65).valid || i1.ɵnov(_v, 65).pristine); _ck(_v, 68, 0, currVal_55); var currVal_56 = (i1.ɵnov(_v, 75).required ? "" : null); var currVal_57 = (i1.ɵnov(_v, 76).minlength ? i1.ɵnov(_v, 76).minlength : null); var currVal_58 = (i1.ɵnov(_v, 77).maxlength ? i1.ɵnov(_v, 77).maxlength : null); var currVal_59 = (i1.ɵnov(_v, 78).pattern ? i1.ɵnov(_v, 78).pattern : null); var currVal_60 = i1.ɵnov(_v, 83).ngClassUntouched; var currVal_61 = i1.ɵnov(_v, 83).ngClassTouched; var currVal_62 = i1.ɵnov(_v, 83).ngClassPristine; var currVal_63 = i1.ɵnov(_v, 83).ngClassDirty; var currVal_64 = i1.ɵnov(_v, 83).ngClassValid; var currVal_65 = i1.ɵnov(_v, 83).ngClassInvalid; var currVal_66 = i1.ɵnov(_v, 83).ngClassPending; _ck(_v, 73, 1, [currVal_56, currVal_57, currVal_58, currVal_59, currVal_60, currVal_61, currVal_62, currVal_63, currVal_64, currVal_65, currVal_66]); var currVal_72 = (i1.ɵnov(_v, 81).valid || i1.ɵnov(_v, 81).pristine); _ck(_v, 84, 0, currVal_72); var currVal_73 = !i1.ɵnov(_v, 81).hasError("minlength"); _ck(_v, 85, 0, currVal_73); var currVal_74 = !i1.ɵnov(_v, 81).hasError("required"); _ck(_v, 87, 0, currVal_74); var currVal_75 = !i1.ɵnov(_v, 81).hasError("pattern"); _ck(_v, 89, 0, currVal_75); var currVal_76 = !i1.ɵnov(_v, 7).form.valid; _ck(_v, 92, 0, currVal_76); var currVal_77 = i1.ɵnov(_v, 95).target; var currVal_78 = i1.ɵnov(_v, 95).href; _ck(_v, 94, 0, currVal_77, currVal_78); }); }
 exports.View_SignupComponent_0 = View_SignupComponent_0;
-function View_SignupComponent_Host_0(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 1, "app-friends-signup", [], null, null, null, View_SignupComponent_0, RenderType_SignupComponent)), i1.ɵdid(1, 49152, null, 0, i8.SignupComponent, [i9.AuthenticationService, i10.UserService], null, null)], null, null); }
+function View_SignupComponent_Host_0(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 1, "app-friends-signup", [], null, null, null, View_SignupComponent_0, RenderType_SignupComponent)), i1.ɵdid(1, 49152, null, 0, i8.SignupComponent, [i9.AuthenticationService, i7.Router, i10.UserService], null, null)], null, null); }
 exports.View_SignupComponent_Host_0 = View_SignupComponent_Host_0;
 var SignupComponentNgFactory = i1.ɵccf("app-friends-signup", i8.SignupComponent, View_SignupComponent_Host_0, {}, {}, []);
 exports.SignupComponentNgFactory = SignupComponentNgFactory;
@@ -735,16 +787,21 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var user_1 = __webpack_require__(/*! ../../services/user */ "./src/app/services/user.ts");
 var authentication_service_1 = __webpack_require__(/*! ../../services/authentication.service */ "./src/app/services/authentication.service.ts");
 var user_service_1 = __webpack_require__(/*! ../../services/user.service */ "./src/app/services/user.service.ts");
+var router_1 = __webpack_require__(/*! @angular/router */ "@angular/router");
 var SignupComponent = /** @class */ (function () {
-    function SignupComponent(authService, userService) {
+    function SignupComponent(authService, router, userService) {
         this.authService = authService;
+        this.router = router;
         this.userService = userService;
     }
     SignupComponent.prototype.onSignup = function (signupFormData) {
         var _this = this;
         this.authService.signup(signupFormData.value.email, signupFormData.value.password).then(function (userInfo) {
             // Register the new user
-            var user = new user_1.User(signupFormData.value.email, signupFormData.value.name, signupFormData.value.mobile, userInfo.uid, 0, '');
+            var user = new user_1.User(signupFormData.value.email, signupFormData.value.name, signupFormData.value.mobile, userInfo.user.uid, 0, '');
+            console.log("UserInfo: " + userInfo.user.uid);
+            _this.writeNewUser(user);
+            _this.router.navigate(['/welcome']);
         }).catch(function (error) {
             _this.showError = true;
             _this.errorMessage = error.message;
@@ -756,6 +813,200 @@ var SignupComponent = /** @class */ (function () {
     return SignupComponent;
 }());
 exports.SignupComponent = SignupComponent;
+
+
+/***/ }),
+
+/***/ "./src/app/edit-dialog/edit-details.ts":
+/*!*********************************************!*\
+  !*** ./src/app/edit-dialog/edit-details.ts ***!
+  \*********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var EditType;
+(function (EditType) {
+    EditType[EditType["NAME"] = 0] = "NAME";
+    EditType[EditType["EMAIL"] = 1] = "EMAIL";
+    EditType[EditType["MOBILE"] = 2] = "MOBILE";
+    EditType[EditType["PASSWORD"] = 3] = "PASSWORD";
+})(EditType = exports.EditType || (exports.EditType = {}));
+var EditDetails = /** @class */ (function () {
+    function EditDetails(authService, userService) {
+        this.authService = authService;
+        this.userService = userService;
+    }
+    EditDetails.prototype.edit = function (editType, value) {
+        switch (editType) {
+            case EditType.NAME:
+                this.editName(value);
+                break;
+            case EditType.EMAIL:
+                this.editEmail(value);
+                break;
+            case EditType.MOBILE:
+                this.editMobile(value);
+                break;
+            case EditType.PASSWORD:
+                this.editPassword(value);
+                break;
+        }
+    };
+    EditDetails.prototype.editName = function (name) {
+        var user = this.userService.getSavedUser().getValue();
+        user.name = name;
+        this.userService.updateName(user, name);
+        alert('Name changed successfully');
+    };
+    EditDetails.prototype.editEmail = function (newEmail) {
+        var _this = this;
+        this.authService.changeEmail(newEmail).then(function () {
+            var user = _this.userService.getSavedUser().getValue();
+            user.email = newEmail;
+            _this.userService.updateEmail(user, newEmail);
+            alert('Email changed successfully');
+        }).catch(function (error) {
+            var errorMessage = error.message;
+            alert(errorMessage);
+        });
+    };
+    EditDetails.prototype.editMobile = function (mobile) {
+        var user = this.userService.getSavedUser().getValue();
+        user.mobile = mobile;
+        this.userService.updateMobile(user, mobile);
+        alert('Mobile changed successfully');
+    };
+    EditDetails.prototype.editPassword = function (value) {
+        var newPassword = value;
+        this.authService.changePassword(newPassword).then(function () {
+            alert('Password changed successfully');
+        }).catch(function (error) {
+            var errorMessage = error.message;
+            alert(errorMessage);
+        });
+    };
+    return EditDetails;
+}());
+exports.EditDetails = EditDetails;
+
+
+/***/ }),
+
+/***/ "./src/app/edit-dialog/edit-dialog.component.ngfactory.js":
+/*!****************************************************************!*\
+  !*** ./src/app/edit-dialog/edit-dialog.component.ngfactory.js ***!
+  \****************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+/**
+ * @fileoverview This file was generated by the Angular template compiler. Do not edit.
+ *
+ * @suppress {suspiciousCode,uselessCode,missingProperties,missingOverride,checkTypes}
+ * tslint:disable
+ */ 
+Object.defineProperty(exports, "__esModule", { value: true });
+var i0 = __webpack_require__(/*! @angular/core */ "@angular/core");
+var i1 = __webpack_require__(/*! @angular/forms */ "@angular/forms");
+var i2 = __webpack_require__(/*! @angular/common */ "@angular/common");
+var i3 = __webpack_require__(/*! ./edit-dialog.component */ "./src/app/edit-dialog/edit-dialog.component.ts");
+var i4 = __webpack_require__(/*! ../services/authentication.service */ "./src/app/services/authentication.service.ts");
+var i5 = __webpack_require__(/*! ../services/user.service */ "./src/app/services/user.service.ts");
+var styles_EditDialogComponent = [];
+var RenderType_EditDialogComponent = i0.ɵcrt({ encapsulation: 2, styles: styles_EditDialogComponent, data: {} });
+exports.RenderType_EditDialogComponent = RenderType_EditDialogComponent;
+function View_EditDialogComponent_1(_l) { return i0.ɵvid(0, [(_l()(), i0.ɵeld(0, 0, null, null, 30, "div", [["class", "modal fade in"], ["id", "editModal"], ["role", "dialog"]], null, null, null, null, null)), (_l()(), i0.ɵeld(1, 0, null, null, 29, "div", [["class", "modal-dialog"]], null, null, null, null, null)), (_l()(), i0.ɵeld(2, 0, null, null, 28, "form", [["name", "form"], ["novalidate", ""]], [[2, "ng-untouched", null], [2, "ng-touched", null], [2, "ng-pristine", null], [2, "ng-dirty", null], [2, "ng-valid", null], [2, "ng-invalid", null], [2, "ng-pending", null]], [[null, "ngSubmit"], [null, "submit"], [null, "reset"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("submit" === en)) {
+        var pd_0 = (i0.ɵnov(_v, 4).onSubmit($event) !== false);
+        ad = (pd_0 && ad);
+    } if (("reset" === en)) {
+        var pd_1 = (i0.ɵnov(_v, 4).onReset() !== false);
+        ad = (pd_1 && ad);
+    } if (("ngSubmit" === en)) {
+        var pd_2 = (_co.onSubmit(i0.ɵnov(_v, 4)) !== false);
+        ad = (pd_2 && ad);
+    } return ad; }, null, null)), i0.ɵdid(3, 16384, null, 0, i1.ɵangular_packages_forms_forms_bh, [], null, null), i0.ɵdid(4, 4210688, [["editFormData", 4]], 0, i1.NgForm, [[8, null], [8, null]], null, { ngSubmit: "ngSubmit" }), i0.ɵprd(2048, null, i1.ControlContainer, null, [i1.NgForm]), i0.ɵdid(6, 16384, null, 0, i1.NgControlStatusGroup, [[4, i1.ControlContainer]], null, null), (_l()(), i0.ɵted(-1, null, [" Hello "])), (_l()(), i0.ɵeld(8, 0, null, null, 22, "div", [["class", "modal-content"]], null, null, null, null, null)), (_l()(), i0.ɵeld(9, 0, null, null, 4, "div", [["class", "modal-header"]], null, null, null, null, null)), (_l()(), i0.ɵeld(10, 0, null, null, 1, "button", [["class", "close"], ["data-", ""], ["dismiss", "modal"], ["type", "button"]], null, null, null, null, null)), (_l()(), i0.ɵted(-1, null, ["\u00D7"])), (_l()(), i0.ɵeld(12, 0, null, null, 1, "h4", [["class", "modal-title"]], null, null, null, null, null)), (_l()(), i0.ɵted(13, null, ["", ""])), (_l()(), i0.ɵeld(14, 0, null, null, 11, "div", [["class", "modal-body"]], null, null, null, null, null)), (_l()(), i0.ɵeld(15, 0, null, null, 1, "p", [], null, null, null, null, null)), (_l()(), i0.ɵted(16, null, ["This will change your ", ""])), (_l()(), i0.ɵeld(17, 0, null, null, 8, "div", [["class", "form-group"]], null, null, null, null, null)), (_l()(), i0.ɵeld(18, 0, null, null, 1, "label", [["for", "editDetail"]], null, null, null, null, null)), (_l()(), i0.ɵted(19, null, ["", " "])), (_l()(), i0.ɵeld(20, 0, null, null, 5, "input", [["class", "form-control"], ["id", "editDetail"], ["name", "editValue"], ["type", "text"]], [[2, "ng-untouched", null], [2, "ng-touched", null], [2, "ng-pristine", null], [2, "ng-dirty", null], [2, "ng-valid", null], [2, "ng-invalid", null], [2, "ng-pending", null]], [[null, "ngModel"], [null, "input"], [null, "blur"], [null, "compositionstart"], [null, "compositionend"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("input" === en)) {
+        var pd_0 = (i0.ɵnov(_v, 21)._handleInput($event.target.value) !== false);
+        ad = (pd_0 && ad);
+    } if (("blur" === en)) {
+        var pd_1 = (i0.ɵnov(_v, 21).onTouched() !== false);
+        ad = (pd_1 && ad);
+    } if (("compositionstart" === en)) {
+        var pd_2 = (i0.ɵnov(_v, 21)._compositionStart() !== false);
+        ad = (pd_2 && ad);
+    } if (("compositionend" === en)) {
+        var pd_3 = (i0.ɵnov(_v, 21)._compositionEnd($event.target.value) !== false);
+        ad = (pd_3 && ad);
+    } if (("ngModel" === en)) {
+        var pd_4 = (_co.editValue !== false);
+        ad = (pd_4 && ad);
+    } return ad; }, null, null)), i0.ɵdid(21, 16384, null, 0, i1.DefaultValueAccessor, [i0.Renderer2, i0.ElementRef, [2, i1.COMPOSITION_BUFFER_MODE]], null, null), i0.ɵprd(1024, null, i1.NG_VALUE_ACCESSOR, function (p0_0) { return [p0_0]; }, [i1.DefaultValueAccessor]), i0.ɵdid(23, 671744, null, 0, i1.NgModel, [[2, i1.ControlContainer], [8, null], [8, null], [6, i1.NG_VALUE_ACCESSOR]], { name: [0, "name"] }, null), i0.ɵprd(2048, null, i1.NgControl, null, [i1.NgModel]), i0.ɵdid(25, 16384, null, 0, i1.NgControlStatus, [[4, i1.NgControl]], null, null), (_l()(), i0.ɵeld(26, 0, null, null, 4, "div", [["class", "modal-footer form-group"]], null, null, null, null, null)), (_l()(), i0.ɵeld(27, 0, null, null, 1, "button", [["class", "btn btn-default"], ["type", "submit"]], [[8, "disabled", 0]], null, null, null, null)), (_l()(), i0.ɵted(-1, null, [" Edit "])), (_l()(), i0.ɵeld(29, 0, null, null, 1, "button", [["class", "btn btn-default"], ["data-dismiss", "modal"], ["type", "button"]], null, [[null, "click"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("click" === en)) {
+        var pd_0 = (_co.hide() !== false);
+        ad = (pd_0 && ad);
+    } return ad; }, null, null)), (_l()(), i0.ɵted(-1, null, ["Close"]))], function (_ck, _v) { var currVal_17 = "editValue"; _ck(_v, 23, 0, currVal_17); }, function (_ck, _v) { var _co = _v.component; var currVal_0 = i0.ɵnov(_v, 6).ngClassUntouched; var currVal_1 = i0.ɵnov(_v, 6).ngClassTouched; var currVal_2 = i0.ɵnov(_v, 6).ngClassPristine; var currVal_3 = i0.ɵnov(_v, 6).ngClassDirty; var currVal_4 = i0.ɵnov(_v, 6).ngClassValid; var currVal_5 = i0.ɵnov(_v, 6).ngClassInvalid; var currVal_6 = i0.ɵnov(_v, 6).ngClassPending; _ck(_v, 2, 0, currVal_0, currVal_1, currVal_2, currVal_3, currVal_4, currVal_5, currVal_6); var currVal_7 = _co.titleMessage; _ck(_v, 13, 0, currVal_7); var currVal_8 = _co.bodyTitle; _ck(_v, 16, 0, currVal_8); var currVal_9 = _co.bodyLabel; _ck(_v, 19, 0, currVal_9); var currVal_10 = i0.ɵnov(_v, 25).ngClassUntouched; var currVal_11 = i0.ɵnov(_v, 25).ngClassTouched; var currVal_12 = i0.ɵnov(_v, 25).ngClassPristine; var currVal_13 = i0.ɵnov(_v, 25).ngClassDirty; var currVal_14 = i0.ɵnov(_v, 25).ngClassValid; var currVal_15 = i0.ɵnov(_v, 25).ngClassInvalid; var currVal_16 = i0.ɵnov(_v, 25).ngClassPending; _ck(_v, 20, 0, currVal_10, currVal_11, currVal_12, currVal_13, currVal_14, currVal_15, currVal_16); var currVal_18 = !i0.ɵnov(_v, 4).form.valid; _ck(_v, 27, 0, currVal_18); }); }
+function View_EditDialogComponent_0(_l) { return i0.ɵvid(0, [(_l()(), i0.ɵand(16777216, null, null, 1, null, View_EditDialogComponent_1)), i0.ɵdid(1, 16384, null, 0, i2.NgIf, [i0.ViewContainerRef, i0.TemplateRef], { ngIf: [0, "ngIf"] }, null)], function (_ck, _v) { var _co = _v.component; var currVal_0 = _co.isVisible; _ck(_v, 1, 0, currVal_0); }, null); }
+exports.View_EditDialogComponent_0 = View_EditDialogComponent_0;
+function View_EditDialogComponent_Host_0(_l) { return i0.ɵvid(0, [(_l()(), i0.ɵeld(0, 0, null, null, 1, "app-edit-dialog", [], null, null, null, View_EditDialogComponent_0, RenderType_EditDialogComponent)), i0.ɵdid(1, 49152, null, 0, i3.EditDialogComponent, [i4.AuthenticationService, i5.UserService], null, null)], null, null); }
+exports.View_EditDialogComponent_Host_0 = View_EditDialogComponent_Host_0;
+var EditDialogComponentNgFactory = i0.ɵccf("app-edit-dialog", i3.EditDialogComponent, View_EditDialogComponent_Host_0, {}, {}, []);
+exports.EditDialogComponentNgFactory = EditDialogComponentNgFactory;
+
+
+/***/ }),
+
+/***/ "./src/app/edit-dialog/edit-dialog.component.ts":
+/*!******************************************************!*\
+  !*** ./src/app/edit-dialog/edit-dialog.component.ts ***!
+  \******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var authentication_service_1 = __webpack_require__(/*! ../services/authentication.service */ "./src/app/services/authentication.service.ts");
+var user_service_1 = __webpack_require__(/*! ../services/user.service */ "./src/app/services/user.service.ts");
+var edit_details_1 = __webpack_require__(/*! ./edit-details */ "./src/app/edit-dialog/edit-details.ts");
+var EditDialogComponent = /** @class */ (function () {
+    function EditDialogComponent(authService, userService) {
+        this.authService = authService;
+        this.userService = userService;
+        this.editDetails = new edit_details_1.EditDetails(authService, userService);
+    }
+    EditDialogComponent.prototype.setTitle = function (title) {
+        this.titleMessage = title;
+        console.log("In set Title" + this.titleMessage);
+        return this;
+    };
+    EditDialogComponent.prototype.setBodyTitle = function (bodyTitle) {
+        this.bodyTitle = bodyTitle;
+        return this;
+    };
+    EditDialogComponent.prototype.setBodyLabel = function (bodyLabel) {
+        this.bodyLabel = bodyLabel;
+        return this;
+    };
+    EditDialogComponent.prototype.setEditType = function (editType) {
+        this.editType = editType;
+        return this;
+    };
+    EditDialogComponent.prototype.show = function () {
+        this.isVisible = true;
+        console.log(this.isVisible);
+    };
+    EditDialogComponent.prototype.hide = function () {
+        this.isVisible = false;
+    };
+    EditDialogComponent.prototype.onSubmit = function (editFormData) {
+        this.editDetails.edit(this.editType, editFormData.value.editValue);
+    };
+    return EditDialogComponent;
+}());
+exports.EditDialogComponent = EditDialogComponent;
 
 
 /***/ }),
@@ -776,7 +1027,7 @@ exports.SignupComponent = SignupComponent;
  * tslint:disable
  */ 
 Object.defineProperty(exports, "__esModule", { value: true });
-var styles = [".temp[_ngcontent-%COMP%]{\r\n  width:100%;\r\n  background-image: url(\"/assets/images/sunset-3689760_1920.jpeg\");\r\n  \r\n  height: 100%;\r\n   opacity: 1;\r\n   filter:blur(2px);\r\n   -webkit-filter: blur(2px);\r\n\r\n\r\n\r\n  \r\n  background-position: center;\r\n  background-repeat: no-repeat;\r\n  background-size: cover;\r\n  }\r\n\r\n  .PageTitle[_ngcontent-%COMP%]{\r\n    \r\n    color: #17a2b8;\r\n    font-weight: bold;\r\n    border: 3px solid #17a2b8;\r\n    position: absolute;\r\n    top: 40%;\r\n    left: 50%;\r\n    -webkit-transform: translate(-50%, -50%);\r\n            transform: translate(-50%, -50%);\r\n    z-index: 2;\r\n    width: 60%;\r\n    padding: 60px;\r\n    text-align: center;\r\nborder-radius:10px;\r\n    font: 400 90px/1.3 'Oleo Script', Helvetica, sans-serif;\r\n    -webkit-text-decoration: double underline;\r\n            text-decoration: double underline;\r\n   \r\n    \r\n    \r\n  }\r\n\r\n  .gallery[_ngcontent-%COMP%], .gallery1[_ngcontent-%COMP%], .gallery2[_ngcontent-%COMP%]{\r\n    color: #117a8b;\r\n\r\n    border: 1px solid #17a2b8;\r\n    position: absolute;\r\n    top: 70%;\r\n\r\n    -webkit-transform: translate(-50%, -50%);\r\n\r\n            transform: translate(-50%, -50%);\r\n    z-index: 2;\r\n    width: 15%;\r\n    padding: 30px;\r\n    text-align: center;\r\n    border-radius:5px;\r\n   \r\n       \r\n   \r\n  \r\n  \r\n  \r\n\r\n  }\r\n\r\n  .gallery1[_ngcontent-%COMP%]{\r\n    \r\n    left: 25%;\r\n  }\r\n\r\n  .gallery[_ngcontent-%COMP%]{\r\n    \r\n    left: 50%\r\n  }\r\n\r\n  .gallery2[_ngcontent-%COMP%]{\r\n    \r\n    left: 75%\r\n  }"];
+var styles = [".temp[_ngcontent-%COMP%]{\r\n  width:100%;\r\n  background-image: url(\"/assets/images/sunset-3689760_1920.jpeg\");\r\n  \r\n  height: 100%;\r\n   opacity: 1;\r\n   filter:blur(2px);\r\n   -webkit-filter: blur(2px);\r\n\r\n\r\n\r\n  \r\n  background-position: center;\r\n  background-repeat: no-repeat;\r\n  background-size: cover;\r\n  }\r\n\r\n  .PageTitle[_ngcontent-%COMP%]{\r\n    \r\n    color: #17a2b8;\r\n    font-weight: bold;\r\n    border: 3px solid #17a2b8;\r\n    position: absolute;\r\n    top: 40%;\r\n    left: 50%;\r\n    -webkit-transform: translate(-50%, -50%);\r\n            transform: translate(-50%, -50%);\r\n    z-index: 2;\r\n    width: 60%;\r\n    padding: 60px;\r\n    text-align: center;\r\nborder-radius:10px;\r\n    font: 400 90px/1.3 'Oleo Script', Helvetica, sans-serif;\r\n    -webkit-text-decoration: double underline;\r\n            text-decoration: double underline;\r\n   \r\n    \r\n    \r\n  }\r\n\r\n  .gallery[_ngcontent-%COMP%], .gallery1[_ngcontent-%COMP%], .gallery2[_ngcontent-%COMP%]{\r\n    color: #117a8b;\r\n\r\n    border: 1px solid #17a2b8;\r\n    position: absolute;\r\n    top: 70%;\r\n\r\n    -webkit-transform: translate(-50%, -50%);\r\n\r\n            transform: translate(-50%, -50%);\r\n    z-index: 2;\r\n    width: 15%;\r\n    padding: 30px;\r\n    text-align: center;\r\n    border-radius:5px;\r\n   \r\n       \r\n   \r\n  \r\n  \r\n  \r\n\r\n  }\r\n\r\n  .gallery1[_ngcontent-%COMP%]{\r\n    \r\n    left: 25%;\r\n  }\r\n\r\n  .gallery[_ngcontent-%COMP%]{\r\n    \r\n    left: 50%\r\n  }\r\n\r\n  .gallery2[_ngcontent-%COMP%]{\r\n    \r\n    left: 75%\r\n  }\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvaG9tZS93ZWxjb21lLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxXQUFXO0VBQ1gsaUVBQWlFO0VBQ2pFLGlCQUFpQjtFQUNqQixhQUFhO0dBQ1osV0FBVztHQUNYLGlCQUFpQjtHQUNqQiwwQkFBMEI7Ozs7RUFJM0IsdUNBQXVDO0VBQ3ZDLDRCQUE0QjtFQUM1Qiw2QkFBNkI7RUFDN0IsdUJBQXVCO0dBQ3RCOztFQUVEOztJQUVFLGVBQWU7SUFDZixrQkFBa0I7SUFDbEIsMEJBQTBCO0lBQzFCLG1CQUFtQjtJQUNuQixTQUFTO0lBQ1QsVUFBVTtJQUNWLHlDQUFpQztZQUFqQyxpQ0FBaUM7SUFDakMsV0FBVztJQUNYLFdBQVc7SUFDWCxjQUFjO0lBQ2QsbUJBQW1CO0FBQ3ZCLG1CQUFtQjtJQUNmLHdEQUF3RDtJQUN4RCwwQ0FBa0M7WUFBbEMsa0NBQWtDO0dBQ25DLHFEQUFxRDtJQUNwRCw2RUFBNkU7SUFDN0U7OzswREFHc0Q7R0FDdkQ7O0VBQ0Q7SUFDRSxlQUFlOztJQUVmLDBCQUEwQjtJQUMxQixtQkFBbUI7SUFDbkIsU0FBUzs7SUFFVCx5Q0FBaUM7O1lBQWpDLGlDQUFpQztJQUNqQyxXQUFXO0lBQ1gsV0FBVztJQUNYLGNBQWM7SUFDZCxtQkFBbUI7SUFDbkIsa0JBQWtCO0dBQ25CLDZEQUE2RDtPQUN6RCxvREFBb0Q7R0FDeEQsOEVBQThFO0VBQy9FLHVEQUF1RDtFQUN2RCwrREFBK0Q7RUFDL0Q7b0ZBQ2tGOztHQUVqRjs7RUFHRDtJQUNFLHlGQUF5RjtJQUN6RixVQUFVO0dBQ1g7O0VBQ0Q7SUFDRSx5RkFBeUY7SUFDekYsU0FBUztHQUNWOztFQUNEO0lBQ0UseUZBQXlGO0lBQ3pGLFNBQVM7R0FDViIsImZpbGUiOiJzcmMvYXBwL2hvbWUvd2VsY29tZS5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLnRlbXB7XHJcbiAgd2lkdGg6MTAwJTtcclxuICBiYWNrZ3JvdW5kLWltYWdlOiB1cmwoXCIvYXNzZXRzL2ltYWdlcy9zdW5zZXQtMzY4OTc2MF8xOTIwLmpwZWdcIik7XHJcbiAgLyogRnVsbCBoZWlnaHQgKi9cclxuICBoZWlnaHQ6IDEwMCU7XHJcbiAgIG9wYWNpdHk6IDE7XHJcbiAgIGZpbHRlcjpibHVyKDJweCk7XHJcbiAgIC13ZWJraXQtZmlsdGVyOiBibHVyKDJweCk7XHJcblxyXG5cclxuXHJcbiAgLyogQ2VudGVyIGFuZCBzY2FsZSB0aGUgaW1hZ2UgbmljZWx5ICovXHJcbiAgYmFja2dyb3VuZC1wb3NpdGlvbjogY2VudGVyO1xyXG4gIGJhY2tncm91bmQtcmVwZWF0OiBuby1yZXBlYXQ7XHJcbiAgYmFja2dyb3VuZC1zaXplOiBjb3ZlcjtcclxuICB9XHJcblxyXG4gIC5QYWdlVGl0bGV7XHJcbiAgICBcclxuICAgIGNvbG9yOiAjMTdhMmI4O1xyXG4gICAgZm9udC13ZWlnaHQ6IGJvbGQ7XHJcbiAgICBib3JkZXI6IDNweCBzb2xpZCAjMTdhMmI4O1xyXG4gICAgcG9zaXRpb246IGFic29sdXRlO1xyXG4gICAgdG9wOiA0MCU7XHJcbiAgICBsZWZ0OiA1MCU7XHJcbiAgICB0cmFuc2Zvcm06IHRyYW5zbGF0ZSgtNTAlLCAtNTAlKTtcclxuICAgIHotaW5kZXg6IDI7XHJcbiAgICB3aWR0aDogNjAlO1xyXG4gICAgcGFkZGluZzogNjBweDtcclxuICAgIHRleHQtYWxpZ246IGNlbnRlcjtcclxuYm9yZGVyLXJhZGl1czoxMHB4O1xyXG4gICAgZm9udDogNDAwIDkwcHgvMS4zICdPbGVvIFNjcmlwdCcsIEhlbHZldGljYSwgc2Fucy1zZXJpZjtcclxuICAgIHRleHQtZGVjb3JhdGlvbjogZG91YmxlIHVuZGVybGluZTtcclxuICAgLyogYmFja2dyb3VuZC1jb2xvcjogcmdiKDAsMCwwKTsgLyogRmFsbGJhY2sgY29sb3IgKi9cclxuICAgIC8qYmFja2dyb3VuZC1jb2xvcjogcmdiYSgyNTUsMjU1LDI1NSwgMC41KTsgLyogQmxhY2sgdy9vcGFjaXR5L3NlZS10aHJvdWdoICovXHJcbiAgICAvKi13ZWJraXQtdGV4dC1kZWNvcmF0aW9uOiBob3RwaW5rIGRvdWJsZSB1bmRlcmxpbmU7XHJcbiAgXHJcbiAgLXdlYmtpdC1maWx0ZXI6IGRyb3Atc2hhZG93KDBweCAzcHggMTBweCByZ2JhKDI1NSwyNTUsMjU1LC44KSk7XHJcbiAgICAgICBmaWx0ZXI6IGRyb3Atc2hhZG93KDBweCAwcHggMTBweCByZ2JhKDAsMCwwLC44KSk7Ki9cclxuICB9XHJcbiAgLmdhbGxlcnksIC5nYWxsZXJ5MSwgLmdhbGxlcnkye1xyXG4gICAgY29sb3I6ICMxMTdhOGI7XHJcblxyXG4gICAgYm9yZGVyOiAxcHggc29saWQgIzE3YTJiODtcclxuICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcclxuICAgIHRvcDogNzAlO1xyXG5cclxuICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlKC01MCUsIC01MCUpO1xyXG4gICAgei1pbmRleDogMjtcclxuICAgIHdpZHRoOiAxNSU7XHJcbiAgICBwYWRkaW5nOiAzMHB4O1xyXG4gICAgdGV4dC1hbGlnbjogY2VudGVyO1xyXG4gICAgYm9yZGVyLXJhZGl1czo1cHg7XHJcbiAgIC8qIGZvbnQ6IDEwMCA1MHB4LzEuMyAnT2xlbyBTY3JpcHQnLCBIZWx2ZXRpY2EsIHNhbnMtc2VyaWY7Ki9cclxuICAgICAgIC8qYmFja2dyb3VuZC1jb2xvcjogcmdiKDAsMCwwKTsgLyogRmFsbGJhY2sgY29sb3IgKi9cclxuICAgLyogYmFja2dyb3VuZC1jb2xvcjogcmdiYSgyNTUsIDI1NSwgMjU1LCAwLjQpOyAgQmxhY2sgdy9vcGFjaXR5L3NlZS10aHJvdWdoICovXHJcbiAgLyogIGJhY2tncm91bmQtcG9zaXRpb246IGNlbnRlcjsgLyogQ2VudGVyIHRoZSBpbWFnZSAqL1xyXG4gIC8qICBiYWNrZ3JvdW5kLXJlcGVhdDogbm8tcmVwZWF0OyAvKiBEbyBub3QgcmVwZWF0IHRoZSBpbWFnZSAqL1xyXG4gIC8qICBiYWNrZ3JvdW5kLXNpemU6IGNvdmVyOyAvKiBSZXNpemUgdGhlIGJhY2tncm91bmQgaW1hZ2UgdG8gY292ZXIgdGhlIGVudGlyZSBjb250YWluZXJcclxuICAgIGJveC1zaGFkb3c6IDAgNHB4IDhweCAwIHJnYmEoMCwgMCwgMCwgMC41KSwgMCA2cHggMjBweCAwIHJnYmEoMCwgMCwgMCwgMC41OSk7ICovXHJcblxyXG4gIH1cclxuXHJcblxyXG4gIC5nYWxsZXJ5MXtcclxuICAgIC8qYmFja2dyb3VuZC1pbWFnZTogdXJsKFwiL2Fzc2V0cy9pbWFnZXMvV2hhdHNBcHAgSW1hZ2UgMjAxOC0xMC0wNyBhdCA5LjQ2LjUxIFBNLmpwZWdcIik7Ki9cclxuICAgIGxlZnQ6IDI1JTtcclxuICB9XHJcbiAgLmdhbGxlcnl7XHJcbiAgICAvKmJhY2tncm91bmQtaW1hZ2U6IHVybChcIi9hc3NldHMvaW1hZ2VzL1doYXRzQXBwIEltYWdlIDIwMTgtMDktMTEgYXQgNS4yOS4zMSBQTS5qcGVnXCIpOyovXHJcbiAgICBsZWZ0OiA1MCVcclxuICB9XHJcbiAgLmdhbGxlcnkye1xyXG4gICAgLypiYWNrZ3JvdW5kLWltYWdlOiB1cmwoXCIvYXNzZXRzL2ltYWdlcy9XaGF0c0FwcCBJbWFnZSAyMDE4LTA5LTExIGF0IDUuMjkuMzEgUE0uanBlZ1wiKTsqL1xyXG4gICAgbGVmdDogNzUlXHJcbiAgfVxyXG4iXX0= */"];
 exports.styles = styles;
 
 
@@ -849,6 +1100,326 @@ exports.WelcomeComponent = WelcomeComponent;
 
 /***/ }),
 
+/***/ "./src/app/products/product-detail.component.css.shim.ngstyle.js":
+/*!***********************************************************************!*\
+  !*** ./src/app/products/product-detail.component.css.shim.ngstyle.js ***!
+  \***********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+/**
+ * @fileoverview This file was generated by the Angular template compiler. Do not edit.
+ *
+ * @suppress {suspiciousCode,uselessCode,missingProperties,missingOverride,checkTypes}
+ * tslint:disable
+ */ 
+Object.defineProperty(exports, "__esModule", { value: true });
+var styles = ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3Byb2R1Y3RzL3Byb2R1Y3QtZGV0YWlsLmNvbXBvbmVudC5jc3MifQ== */"];
+exports.styles = styles;
+
+
+/***/ }),
+
+/***/ "./src/app/products/product-detail.component.ngfactory.js":
+/*!****************************************************************!*\
+  !*** ./src/app/products/product-detail.component.ngfactory.js ***!
+  \****************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+/**
+ * @fileoverview This file was generated by the Angular template compiler. Do not edit.
+ *
+ * @suppress {suspiciousCode,uselessCode,missingProperties,missingOverride,checkTypes}
+ * tslint:disable
+ */ 
+Object.defineProperty(exports, "__esModule", { value: true });
+var i0 = __webpack_require__(/*! ./product-detail.component.css.shim.ngstyle */ "./src/app/products/product-detail.component.css.shim.ngstyle.js");
+var i1 = __webpack_require__(/*! @angular/core */ "@angular/core");
+var i2 = __webpack_require__(/*! ../shared/star.component.ngfactory */ "./src/app/shared/star.component.ngfactory.js");
+var i3 = __webpack_require__(/*! ../shared/star.component */ "./src/app/shared/star.component.ts");
+var i4 = __webpack_require__(/*! @angular/common */ "@angular/common");
+var i5 = __webpack_require__(/*! ./product-detail.component */ "./src/app/products/product-detail.component.ts");
+var i6 = __webpack_require__(/*! @angular/router */ "@angular/router");
+var i7 = __webpack_require__(/*! ./product.service */ "./src/app/products/product.service.ts");
+var styles_ProductDetailComponent = [i0.styles];
+var RenderType_ProductDetailComponent = i1.ɵcrt({ encapsulation: 0, styles: styles_ProductDetailComponent, data: {} });
+exports.RenderType_ProductDetailComponent = RenderType_ProductDetailComponent;
+function View_ProductDetailComponent_1(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 38, "div", [["class", "card"]], null, null, null, null, null)), (_l()(), i1.ɵeld(1, 0, null, null, 1, "div", [["class", "card-header"]], null, null, null, null, null)), (_l()(), i1.ɵted(2, null, [" ", " "])), (_l()(), i1.ɵeld(3, 0, null, null, 31, "div", [["class", "card-body"]], null, null, null, null, null)), (_l()(), i1.ɵeld(4, 0, null, null, 30, "div", [["class", "row"]], null, null, null, null, null)), (_l()(), i1.ɵeld(5, 0, null, null, 27, "div", [["class", "col-md-8"]], null, null, null, null, null)), (_l()(), i1.ɵeld(6, 0, null, null, 4, "div", [["class", "row"]], null, null, null, null, null)), (_l()(), i1.ɵeld(7, 0, null, null, 1, "div", [["class", "col-md-4"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["Name:"])), (_l()(), i1.ɵeld(9, 0, null, null, 1, "div", [["class", "col-md-8"]], null, null, null, null, null)), (_l()(), i1.ɵted(10, null, ["", ""])), (_l()(), i1.ɵeld(11, 0, null, null, 4, "div", [["class", "row"]], null, null, null, null, null)), (_l()(), i1.ɵeld(12, 0, null, null, 1, "div", [["class", "col-md-4"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["Description:"])), (_l()(), i1.ɵeld(14, 0, null, null, 1, "div", [["class", "col-md-8"]], null, null, null, null, null)), (_l()(), i1.ɵted(15, null, ["", ""])), (_l()(), i1.ɵeld(16, 0, null, null, 4, "div", [["class", "row"]], null, null, null, null, null)), (_l()(), i1.ɵeld(17, 0, null, null, 1, "div", [["class", "col-md-4"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["Availability:"])), (_l()(), i1.ɵeld(19, 0, null, null, 1, "div", [["class", "col-md-8"]], null, null, null, null, null)), (_l()(), i1.ɵted(20, null, ["", ""])), (_l()(), i1.ɵeld(21, 0, null, null, 5, "div", [["class", "row"]], null, null, null, null, null)), (_l()(), i1.ɵeld(22, 0, null, null, 1, "div", [["class", "col-md-4"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["Price:"])), (_l()(), i1.ɵeld(24, 0, null, null, 2, "div", [["class", "col-md-8"]], null, null, null, null, null)), (_l()(), i1.ɵted(25, null, ["", ""])), i1.ɵppd(26, 3), (_l()(), i1.ɵeld(27, 0, null, null, 5, "div", [["class", "row"]], null, null, null, null, null)), (_l()(), i1.ɵeld(28, 0, null, null, 1, "div", [["class", "col-md-4"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["5 Star Rating:"])), (_l()(), i1.ɵeld(30, 0, null, null, 2, "div", [["class", "col-md-8"]], null, null, null, null, null)), (_l()(), i1.ɵeld(31, 0, null, null, 1, "pm-star", [], null, null, null, i2.View_StarComponent_0, i2.RenderType_StarComponent)), i1.ɵdid(32, 573440, null, 0, i3.StarComponent, [], { rating: [0, "rating"] }, null), (_l()(), i1.ɵeld(33, 0, null, null, 1, "div", [["class", "col-md-4"]], null, null, null, null, null)), (_l()(), i1.ɵeld(34, 0, null, null, 0, "img", [["class", "center-block img-responsive"]], [[8, "src", 4], [4, "width", "px"], [4, "margin", "px"], [8, "title", 0]], null, null, null, null)), (_l()(), i1.ɵeld(35, 0, null, null, 3, "div", [["class", "card-footer"]], null, null, null, null, null)), (_l()(), i1.ɵeld(36, 0, null, null, 2, "button", [["class", "btn btn-outline-secondary"], ["style", "width:80px"]], null, [[null, "click"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("click" === en)) {
+        var pd_0 = (_co.onBack() !== false);
+        ad = (pd_0 && ad);
+    } return ad; }, null, null)), (_l()(), i1.ɵeld(37, 0, null, null, 0, "i", [["class", "fa fa-chevron-left"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, [" Back "]))], function (_ck, _v) { var _co = _v.component; var currVal_5 = _co.product.starRating; _ck(_v, 32, 0, currVal_5); }, function (_ck, _v) { var _co = _v.component; var currVal_0 = ((_co.pageTitle + ": ") + _co.product.productName); _ck(_v, 2, 0, currVal_0); var currVal_1 = _co.product.productName; _ck(_v, 10, 0, currVal_1); var currVal_2 = _co.product.description; _ck(_v, 15, 0, currVal_2); var currVal_3 = _co.product.releaseDate; _ck(_v, 20, 0, currVal_3); var currVal_4 = i1.ɵunv(_v, 25, 0, _ck(_v, 26, 0, i1.ɵnov(_v.parent, 0), _co.product.price, "USD", "symbol")); _ck(_v, 25, 0, currVal_4); var currVal_6 = _co.product.imageUrl; var currVal_7 = 250; var currVal_8 = 2; var currVal_9 = _co.product.productName; _ck(_v, 34, 0, currVal_6, currVal_7, currVal_8, currVal_9); }); }
+function View_ProductDetailComponent_0(_l) { return i1.ɵvid(0, [i1.ɵpid(0, i4.CurrencyPipe, [i1.LOCALE_ID]), (_l()(), i1.ɵand(16777216, null, null, 1, null, View_ProductDetailComponent_1)), i1.ɵdid(2, 16384, null, 0, i4.NgIf, [i1.ViewContainerRef, i1.TemplateRef], { ngIf: [0, "ngIf"] }, null)], function (_ck, _v) { var _co = _v.component; var currVal_0 = _co.product; _ck(_v, 2, 0, currVal_0); }, null); }
+exports.View_ProductDetailComponent_0 = View_ProductDetailComponent_0;
+function View_ProductDetailComponent_Host_0(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 1, "ng-component", [], null, null, null, View_ProductDetailComponent_0, RenderType_ProductDetailComponent)), i1.ɵdid(1, 114688, null, 0, i5.ProductDetailComponent, [i6.ActivatedRoute, i6.Router, i7.ProductService], null, null)], function (_ck, _v) { _ck(_v, 1, 0); }, null); }
+exports.View_ProductDetailComponent_Host_0 = View_ProductDetailComponent_Host_0;
+var ProductDetailComponentNgFactory = i1.ɵccf("ng-component", i5.ProductDetailComponent, View_ProductDetailComponent_Host_0, {}, {}, []);
+exports.ProductDetailComponentNgFactory = ProductDetailComponentNgFactory;
+
+
+/***/ }),
+
+/***/ "./src/app/products/product-detail.component.ts":
+/*!******************************************************!*\
+  !*** ./src/app/products/product-detail.component.ts ***!
+  \******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = __webpack_require__(/*! @angular/core */ "@angular/core");
+var router_1 = __webpack_require__(/*! @angular/router */ "@angular/router");
+var product_service_1 = __webpack_require__(/*! ./product.service */ "./src/app/products/product.service.ts");
+var ProductDetailComponent = /** @class */ (function () {
+    function ProductDetailComponent(route, router, productService) {
+        this.route = route;
+        this.router = router;
+        this.productService = productService;
+        this.pageTitle = 'Product Detail';
+        this.errorMessage = '';
+    }
+    ProductDetailComponent.prototype.ngOnInit = function () {
+        var param = this.route.snapshot.paramMap.get('id');
+        if (param) {
+            var id = +param;
+            this.getProduct(id);
+        }
+    };
+    ProductDetailComponent.prototype.getProduct = function (id) {
+        var _this = this;
+        this.productService.getProduct(id).subscribe(function (product) { return _this.product = product; }, function (error) { return _this.errorMessage = error; });
+    };
+    ProductDetailComponent.prototype.onBack = function () {
+        this.router.navigate(['/products']);
+    };
+    return ProductDetailComponent;
+}());
+exports.ProductDetailComponent = ProductDetailComponent;
+
+
+/***/ }),
+
+/***/ "./src/app/products/product-list.component.css.shim.ngstyle.js":
+/*!*********************************************************************!*\
+  !*** ./src/app/products/product-list.component.css.shim.ngstyle.js ***!
+  \*********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+/**
+ * @fileoverview This file was generated by the Angular template compiler. Do not edit.
+ *
+ * @suppress {suspiciousCode,uselessCode,missingProperties,missingOverride,checkTypes}
+ * tslint:disable
+ */ 
+Object.defineProperty(exports, "__esModule", { value: true });
+var styles = [".jumbotron[_ngcontent-%COMP%]{\r\n  width:100%;\r\n  background-image: url(\"/assets/images/WhatsApp Image 2018-10-18 at 8.06.03 PM (3).jpeg\");\r\n  \r\n  height: 100%;\r\n  min-height: 200px;\r\n   opacity: 1;\r\n   filter:blur(2px);\r\n   -webkit-filter: blur(2px);\r\n  \r\n  background-position: center;\r\n  background-repeat: no-repeat;\r\n  background-size: cover;\r\n}\r\n.productPageTitle[_ngcontent-%COMP%] {\r\n  color: white;\r\n  font-weight: bold;\r\n\r\n  position: absolute;\r\n  top: 18%;\r\n  left: 50%;\r\n  -webkit-transform: translate(-50%, -50%);\r\n          transform: translate(-50%, -50%);\r\n  z-index: 2;\r\n  width: 60%;\r\n  padding: 40px;\r\n  text-align: center;\r\n  font: 400 90px/1.3 'Oleo Script', Helvetica, sans-serif;\r\n  -webkit-text-decoration: hotpink double underline;\r\ntext-decoration: double underline;\r\n\r\n}\r\n.card[_ngcontent-%COMP%]{\r\n  height: auto;\r\n  margin: 7% 2% !important;\r\n}\r\n.imgClass[_ngcontent-%COMP%]{\r\n  height: 550px;;\r\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcHJvZHVjdHMvcHJvZHVjdC1saXN0LmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxXQUFXO0VBQ1gseUZBQXlGO0VBQ3pGLGlCQUFpQjtFQUNqQixhQUFhO0VBQ2Isa0JBQWtCO0dBQ2pCLFdBQVc7R0FDWCxpQkFBaUI7R0FDakIsMEJBQTBCO0VBQzNCLHVDQUF1QztFQUN2Qyw0QkFBNEI7RUFDNUIsNkJBQTZCO0VBQzdCLHVCQUF1QjtDQUN4QjtBQUNEO0VBQ0UsYUFBYTtFQUNiLGtCQUFrQjs7RUFFbEIsbUJBQW1CO0VBQ25CLFNBQVM7RUFDVCxVQUFVO0VBQ1YseUNBQWlDO1VBQWpDLGlDQUFpQztFQUNqQyxXQUFXO0VBQ1gsV0FBVztFQUNYLGNBQWM7RUFDZCxtQkFBbUI7RUFDbkIsd0RBQXdEO0VBQ3hELGtEQUFrRDtBQUNwRCxrQ0FBa0M7O0NBRWpDO0FBRUQ7RUFDRSxhQUFhO0VBQ2IseUJBQXlCO0NBQzFCO0FBRUQ7RUFDRSxjQUFjO0NBQ2YiLCJmaWxlIjoic3JjL2FwcC9wcm9kdWN0cy9wcm9kdWN0LWxpc3QuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5qdW1ib3Ryb257XHJcbiAgd2lkdGg6MTAwJTtcclxuICBiYWNrZ3JvdW5kLWltYWdlOiB1cmwoXCIvYXNzZXRzL2ltYWdlcy9XaGF0c0FwcCBJbWFnZSAyMDE4LTEwLTE4IGF0IDguMDYuMDMgUE0gKDMpLmpwZWdcIik7XHJcbiAgLyogRnVsbCBoZWlnaHQgKi9cclxuICBoZWlnaHQ6IDEwMCU7XHJcbiAgbWluLWhlaWdodDogMjAwcHg7XHJcbiAgIG9wYWNpdHk6IDE7XHJcbiAgIGZpbHRlcjpibHVyKDJweCk7XHJcbiAgIC13ZWJraXQtZmlsdGVyOiBibHVyKDJweCk7XHJcbiAgLyogQ2VudGVyIGFuZCBzY2FsZSB0aGUgaW1hZ2UgbmljZWx5ICovXHJcbiAgYmFja2dyb3VuZC1wb3NpdGlvbjogY2VudGVyO1xyXG4gIGJhY2tncm91bmQtcmVwZWF0OiBuby1yZXBlYXQ7XHJcbiAgYmFja2dyb3VuZC1zaXplOiBjb3ZlcjtcclxufVxyXG4ucHJvZHVjdFBhZ2VUaXRsZSB7XHJcbiAgY29sb3I6IHdoaXRlO1xyXG4gIGZvbnQtd2VpZ2h0OiBib2xkO1xyXG5cclxuICBwb3NpdGlvbjogYWJzb2x1dGU7XHJcbiAgdG9wOiAxOCU7XHJcbiAgbGVmdDogNTAlO1xyXG4gIHRyYW5zZm9ybTogdHJhbnNsYXRlKC01MCUsIC01MCUpO1xyXG4gIHotaW5kZXg6IDI7XHJcbiAgd2lkdGg6IDYwJTtcclxuICBwYWRkaW5nOiA0MHB4O1xyXG4gIHRleHQtYWxpZ246IGNlbnRlcjtcclxuICBmb250OiA0MDAgOTBweC8xLjMgJ09sZW8gU2NyaXB0JywgSGVsdmV0aWNhLCBzYW5zLXNlcmlmO1xyXG4gIC13ZWJraXQtdGV4dC1kZWNvcmF0aW9uOiBob3RwaW5rIGRvdWJsZSB1bmRlcmxpbmU7XHJcbnRleHQtZGVjb3JhdGlvbjogZG91YmxlIHVuZGVybGluZTtcclxuXHJcbn1cclxuXHJcbi5jYXJke1xyXG4gIGhlaWdodDogYXV0bztcclxuICBtYXJnaW46IDclIDIlICFpbXBvcnRhbnQ7XHJcbn1cclxuXHJcbi5pbWdDbGFzc3tcclxuICBoZWlnaHQ6IDU1MHB4OztcclxufSJdfQ== */"];
+exports.styles = styles;
+
+
+/***/ }),
+
+/***/ "./src/app/products/product-list.component.ngfactory.js":
+/*!**************************************************************!*\
+  !*** ./src/app/products/product-list.component.ngfactory.js ***!
+  \**************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+/**
+ * @fileoverview This file was generated by the Angular template compiler. Do not edit.
+ *
+ * @suppress {suspiciousCode,uselessCode,missingProperties,missingOverride,checkTypes}
+ * tslint:disable
+ */ 
+Object.defineProperty(exports, "__esModule", { value: true });
+var i0 = __webpack_require__(/*! ./product-list.component.css.shim.ngstyle */ "./src/app/products/product-list.component.css.shim.ngstyle.js");
+var i1 = __webpack_require__(/*! @angular/core */ "@angular/core");
+var i2 = __webpack_require__(/*! @angular/router */ "@angular/router");
+var i3 = __webpack_require__(/*! ../shared/star.component.ngfactory */ "./src/app/shared/star.component.ngfactory.js");
+var i4 = __webpack_require__(/*! ../shared/star.component */ "./src/app/shared/star.component.ts");
+var i5 = __webpack_require__(/*! @angular/common */ "@angular/common");
+var i6 = __webpack_require__(/*! @angular/forms */ "@angular/forms");
+var i7 = __webpack_require__(/*! ./product-list.component */ "./src/app/products/product-list.component.ts");
+var i8 = __webpack_require__(/*! ./product.service */ "./src/app/products/product.service.ts");
+var styles_ProductListComponent = [i0.styles];
+var RenderType_ProductListComponent = i1.ɵcrt({ encapsulation: 0, styles: styles_ProductListComponent, data: {} });
+exports.RenderType_ProductListComponent = RenderType_ProductListComponent;
+function View_ProductListComponent_2(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 18, "div", [["class", "card col-sm-3"], ["style", "width:400px"]], null, [[null, "click"]], function (_v, en, $event) { var ad = true; if (("click" === en)) {
+        var pd_0 = (i1.ɵnov(_v, 1).onClick() !== false);
+        ad = (pd_0 && ad);
+    } return ad; }, null, null)), i1.ɵdid(1, 16384, null, 0, i2.RouterLink, [i2.Router, i2.ActivatedRoute, [8, null], i1.Renderer2, i1.ElementRef], { routerLink: [0, "routerLink"] }, null), i1.ɵpad(2, 2), (_l()(), i1.ɵeld(3, 0, null, null, 1, "div", [["class", "imgClass"]], null, null, null, null, null)), (_l()(), i1.ɵeld(4, 0, null, null, 0, "img", [["class", "card-img-top"], ["style", "width:100%; height: 500px;"]], [[8, "src", 4]], null, null, null, null)), (_l()(), i1.ɵeld(5, 0, null, null, 13, "div", [["class", "card-body"]], null, null, null, null, null)), (_l()(), i1.ɵeld(6, 0, null, null, 1, "h4", [["class", "card-title"]], null, null, null, null, null)), (_l()(), i1.ɵted(7, null, ["", ""])), (_l()(), i1.ɵeld(8, 0, null, null, 1, "p", [["class", "card-text"]], null, null, null, null, null)), (_l()(), i1.ɵted(9, null, ["", ""])), (_l()(), i1.ɵeld(10, 0, null, null, 2, "p", [], null, null, null, null, null)), (_l()(), i1.ɵeld(11, 0, null, null, 1, "pm-star", [], null, null, null, i3.View_StarComponent_0, i3.RenderType_StarComponent)), i1.ɵdid(12, 573440, null, 0, i4.StarComponent, [], { rating: [0, "rating"] }, null), (_l()(), i1.ɵeld(13, 0, null, null, 0, "br", [], null, null, null, null, null)), (_l()(), i1.ɵeld(14, 0, null, null, 2, "span", [], null, null, null, null, null)), (_l()(), i1.ɵted(15, null, ["", ""])), i1.ɵppd(16, 4), (_l()(), i1.ɵeld(17, 0, null, null, 1, "a", [["class", "btn btn-primary"], ["href", "#"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["See Profile"]))], function (_ck, _v) { var currVal_0 = _ck(_v, 2, 0, "/products", _v.context.$implicit.productId); _ck(_v, 1, 0, currVal_0); var currVal_4 = _v.context.$implicit.starRating; _ck(_v, 12, 0, currVal_4); }, function (_ck, _v) { var currVal_1 = _v.context.$implicit.imageUrl; _ck(_v, 4, 0, currVal_1); var currVal_2 = _v.context.$implicit.productName; _ck(_v, 7, 0, currVal_2); var currVal_3 = _v.context.$implicit.description; _ck(_v, 9, 0, currVal_3); var currVal_5 = i1.ɵunv(_v, 15, 0, _ck(_v, 16, 0, i1.ɵnov(_v.parent.parent, 0), _v.context.$implicit.price, "USD", "symbol", "1.2-2")); _ck(_v, 15, 0, currVal_5); }); }
+function View_ProductListComponent_1(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 2, "div", [["class", "row"]], null, null, null, null, null)), (_l()(), i1.ɵand(16777216, null, null, 1, null, View_ProductListComponent_2)), i1.ɵdid(2, 278528, null, 0, i5.NgForOf, [i1.ViewContainerRef, i1.TemplateRef, i1.IterableDiffers], { ngForOf: [0, "ngForOf"] }, null)], function (_ck, _v) { var _co = _v.component; var currVal_0 = _co.filterproducts; _ck(_v, 2, 0, currVal_0); }, null); }
+function View_ProductListComponent_0(_l) { return i1.ɵvid(0, [i1.ɵpid(0, i5.CurrencyPipe, [i1.LOCALE_ID]), (_l()(), i1.ɵeld(1, 0, null, null, 15, "div", [], null, null, null, null, null)), (_l()(), i1.ɵeld(2, 0, null, null, 0, "div", [["class", "jumbotron"]], null, null, null, null, null)), (_l()(), i1.ɵeld(3, 0, null, null, 2, "div", [["class", "productPageTitle"]], null, null, null, null, null)), (_l()(), i1.ɵeld(4, 0, null, null, 1, "h1", [], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["~ Meraki Art ~"])), (_l()(), i1.ɵeld(6, 0, null, null, 8, "div", [["class", "form-group"]], null, null, null, null, null)), (_l()(), i1.ɵeld(7, 0, null, null, 1, "label", [["for", "usr"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["Search:"])), (_l()(), i1.ɵeld(9, 0, null, null, 5, "input", [["class", "form-control"], ["id", "usr"], ["type", "text"]], [[2, "ng-untouched", null], [2, "ng-touched", null], [2, "ng-pristine", null], [2, "ng-dirty", null], [2, "ng-valid", null], [2, "ng-invalid", null], [2, "ng-pending", null]], [[null, "ngModelChange"], [null, "input"], [null, "blur"], [null, "compositionstart"], [null, "compositionend"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("input" === en)) {
+        var pd_0 = (i1.ɵnov(_v, 10)._handleInput($event.target.value) !== false);
+        ad = (pd_0 && ad);
+    } if (("blur" === en)) {
+        var pd_1 = (i1.ɵnov(_v, 10).onTouched() !== false);
+        ad = (pd_1 && ad);
+    } if (("compositionstart" === en)) {
+        var pd_2 = (i1.ɵnov(_v, 10)._compositionStart() !== false);
+        ad = (pd_2 && ad);
+    } if (("compositionend" === en)) {
+        var pd_3 = (i1.ɵnov(_v, 10)._compositionEnd($event.target.value) !== false);
+        ad = (pd_3 && ad);
+    } if (("ngModelChange" === en)) {
+        var pd_4 = ((_co.listFilter = $event) !== false);
+        ad = (pd_4 && ad);
+    } return ad; }, null, null)), i1.ɵdid(10, 16384, null, 0, i6.DefaultValueAccessor, [i1.Renderer2, i1.ElementRef, [2, i6.COMPOSITION_BUFFER_MODE]], null, null), i1.ɵprd(1024, null, i6.NG_VALUE_ACCESSOR, function (p0_0) { return [p0_0]; }, [i6.DefaultValueAccessor]), i1.ɵdid(12, 671744, null, 0, i6.NgModel, [[8, null], [8, null], [8, null], [6, i6.NG_VALUE_ACCESSOR]], { model: [0, "model"] }, { update: "ngModelChange" }), i1.ɵprd(2048, null, i6.NgControl, null, [i6.NgModel]), i1.ɵdid(14, 16384, null, 0, i6.NgControlStatus, [[4, i6.NgControl]], null, null), (_l()(), i1.ɵand(16777216, null, null, 1, null, View_ProductListComponent_1)), i1.ɵdid(16, 16384, null, 0, i5.NgIf, [i1.ViewContainerRef, i1.TemplateRef], { ngIf: [0, "ngIf"] }, null)], function (_ck, _v) { var _co = _v.component; var currVal_7 = _co.listFilter; _ck(_v, 12, 0, currVal_7); var currVal_8 = (_co.products && _co.products.length); _ck(_v, 16, 0, currVal_8); }, function (_ck, _v) { var currVal_0 = i1.ɵnov(_v, 14).ngClassUntouched; var currVal_1 = i1.ɵnov(_v, 14).ngClassTouched; var currVal_2 = i1.ɵnov(_v, 14).ngClassPristine; var currVal_3 = i1.ɵnov(_v, 14).ngClassDirty; var currVal_4 = i1.ɵnov(_v, 14).ngClassValid; var currVal_5 = i1.ɵnov(_v, 14).ngClassInvalid; var currVal_6 = i1.ɵnov(_v, 14).ngClassPending; _ck(_v, 9, 0, currVal_0, currVal_1, currVal_2, currVal_3, currVal_4, currVal_5, currVal_6); }); }
+exports.View_ProductListComponent_0 = View_ProductListComponent_0;
+function View_ProductListComponent_Host_0(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 1, "ng-component", [], null, null, null, View_ProductListComponent_0, RenderType_ProductListComponent)), i1.ɵdid(1, 114688, null, 0, i7.ProductListComponent, [i8.ProductService], null, null)], function (_ck, _v) { _ck(_v, 1, 0); }, null); }
+exports.View_ProductListComponent_Host_0 = View_ProductListComponent_Host_0;
+var ProductListComponentNgFactory = i1.ɵccf("ng-component", i7.ProductListComponent, View_ProductListComponent_Host_0, {}, {}, []);
+exports.ProductListComponentNgFactory = ProductListComponentNgFactory;
+
+
+/***/ }),
+
+/***/ "./src/app/products/product-list.component.ts":
+/*!****************************************************!*\
+  !*** ./src/app/products/product-list.component.ts ***!
+  \****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var product_service_1 = __webpack_require__(/*! ./product.service */ "./src/app/products/product.service.ts");
+var ProductListComponent = /** @class */ (function () {
+    function ProductListComponent(productService) {
+        this.productService = productService;
+        this.title = 'Art List';
+        this.imagewidth = 100;
+        this.imagemargin = 2;
+        this.showPrice = false;
+        this.products = [];
+    }
+    Object.defineProperty(ProductListComponent.prototype, "listFilter", {
+        get: function () {
+            return this._listFilter;
+        },
+        set: function (value) {
+            this._listFilter = value;
+            this.filterproducts = this.listFilter ? this.performeFilter(this.listFilter) : this.products;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    ProductListComponent.prototype.togglePrice = function () {
+        this.showPrice = !this.showPrice;
+    };
+    ProductListComponent.prototype.performeFilter = function (filterBy) {
+        filterBy = filterBy.toLocaleLowerCase();
+        return this.products.filter(function (product) {
+            return product.productName.toLocaleLowerCase().indexOf(filterBy) !== -1;
+        });
+    };
+    ProductListComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.productService.getProducts().subscribe(function (products) {
+            _this.products = products;
+            _this.filterproducts = _this.products;
+        }, function (error) { return _this.errorMessage = error; });
+    };
+    return ProductListComponent;
+}());
+exports.ProductListComponent = ProductListComponent;
+
+
+/***/ }),
+
+/***/ "./src/app/products/product.service.ts":
+/*!*********************************************!*\
+  !*** ./src/app/products/product.service.ts ***!
+  \*********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var http_1 = __webpack_require__(/*! @angular/common/http */ "@angular/common/http");
+var rxjs_1 = __webpack_require__(/*! rxjs */ "rxjs");
+var operators_1 = __webpack_require__(/*! rxjs/operators */ "rxjs/operators");
+var i0 = __webpack_require__(/*! @angular/core */ "@angular/core");
+var i1 = __webpack_require__(/*! @angular/common/http */ "@angular/common/http");
+var ProductService = /** @class */ (function () {
+    function ProductService(http) {
+        this.http = http;
+        this.productUrl = 'api/products/products.json';
+    }
+    ProductService.prototype.getProducts = function () {
+        return this.http.get(this.productUrl).pipe(operators_1.tap(function (data) { return console.log('All: ' + JSON.stringify(data)); }), operators_1.catchError(this.handleError));
+    };
+    ProductService.prototype.getProduct = function (id) {
+        return this.getProducts().pipe(operators_1.map(function (products) { return products.find(function (p) { return p.productId === id; }); }));
+    };
+    ProductService.prototype.handleError = function (err) {
+        // in a real world app, we may send the server to some remote logging infrastructure
+        // instead of just logging it to the console
+        var errorMessage = '';
+        if (err.error instanceof ErrorEvent) {
+            // A client-side or network error occurred. Handle it accordingly.
+            errorMessage = "An error occurred: " + err.error.message;
+        }
+        else {
+            // The backend returned an unsuccessful response code.
+            // The response body may contain clues as to what went wrong,
+            errorMessage = "Server returned code: " + err.status + ", error message is: " + err.message;
+        }
+        console.error(errorMessage);
+        return rxjs_1.throwError(errorMessage);
+    };
+    ProductService.ngInjectableDef = i0.defineInjectable({ factory: function ProductService_Factory() { return new ProductService(i0.inject(i1.HttpClient)); }, token: ProductService, providedIn: "root" });
+    return ProductService;
+}());
+exports.ProductService = ProductService;
+
+
+/***/ }),
+
+/***/ "./src/app/services/authentication.guard.ts":
+/*!**************************************************!*\
+  !*** ./src/app/services/authentication.guard.ts ***!
+  \**************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var router_1 = __webpack_require__(/*! @angular/router */ "@angular/router");
+var authentication_service_1 = __webpack_require__(/*! ./authentication.service */ "./src/app/services/authentication.service.ts");
+var AuthenticationGuard = /** @class */ (function () {
+    function AuthenticationGuard(authService, router) {
+        this.authService = authService;
+        this.router = router;
+    }
+    AuthenticationGuard.prototype.canActivate = function (route, state) {
+        var isLoggedIn = this.authService.isAuthenticated();
+        if (!isLoggedIn) {
+            this.router.navigateByUrl('/app-friends-login');
+        }
+        return isLoggedIn;
+    };
+    return AuthenticationGuard;
+}());
+exports.AuthenticationGuard = AuthenticationGuard;
+
+
+/***/ }),
+
 /***/ "./src/app/services/authentication.service.ts":
 /*!****************************************************!*\
   !*** ./src/app/services/authentication.service.ts ***!
@@ -889,6 +1460,12 @@ var AuthenticationService = /** @class */ (function () {
     AuthenticationService.prototype.signout = function () {
         return this.angularFireAuth.auth.signOut();
     };
+    AuthenticationService.prototype.changeEmail = function (email) {
+        return this.angularFireAuth.auth.currentUser.updateEmail(email);
+    };
+    AuthenticationService.prototype.changePassword = function (password) {
+        return this.angularFireAuth.auth.currentUser.updatePassword(password);
+    };
     return AuthenticationService;
 }());
 exports.AuthenticationService = AuthenticationService;
@@ -922,8 +1499,10 @@ exports.USERS_CHILD = '/users';
 
 Object.defineProperty(exports, "__esModule", { value: true });
 var database_1 = __webpack_require__(/*! angularfire2/database */ "angularfire2/database");
+var storage_1 = __webpack_require__(/*! @angular/fire/storage */ "@angular/fire/storage");
 __webpack_require__(/*! firebase/storage */ "firebase/storage");
 var database_constants_1 = __webpack_require__(/*! ./database-constants */ "./src/app/services/database-constants.ts");
+var BehaviorSubject_1 = __webpack_require__(/*! rxjs/BehaviorSubject */ "rxjs/BehaviorSubject");
 /**
  * User service
  *
@@ -934,14 +1513,53 @@ var UserService = /** @class */ (function () {
      *
      * @param {AngularFireDatabase} fireDb provides the functionality for Firebase Database
      */
-    function UserService(fireDb) {
+    function UserService(fireDb, afStorage) {
         this.fireDb = fireDb;
+        this.afStorage = afStorage;
+        this.subject = new BehaviorSubject_1.BehaviorSubject(null);
+        this.basePath = '/profile';
+        this.fbStorage = afStorage;
     }
     UserService.prototype.addUser = function (user) {
         this.fireDb.object(database_constants_1.USERS_CHILD + "/" + user.uid).set(user);
+        this.saveUser(user);
     };
     UserService.prototype.getUser = function (uid) {
         return this.fireDb.object(database_constants_1.USERS_CHILD + "/" + uid).valueChanges();
+    };
+    UserService.prototype.saveUser = function (user) {
+        this.subject.next(user);
+    };
+    UserService.prototype.getSavedUser = function () {
+        return this.subject;
+    };
+    UserService.prototype.updateEmail = function (user, newEmail) {
+        this.fireDb.object(database_constants_1.USERS_CHILD + "/" + user.uid).update({ email: newEmail });
+        this.saveUser(user);
+    };
+    UserService.prototype.updateMobile = function (user, mobile) {
+        this.fireDb.object(database_constants_1.USERS_CHILD + "/" + user.uid).update({ mobile: mobile });
+        this.saveUser(user);
+    };
+    UserService.prototype.updateName = function (user, name) {
+        this.fireDb.object(database_constants_1.USERS_CHILD + "/" + user.uid).update({ name: name });
+        this.saveUser(user);
+    };
+    UserService.prototype.addProfileImage = function (user, file) {
+        var _this = this;
+        this.fbStorage.ref(this.basePath + "/" + file.name).put(file).then(function (snapshot) {
+            snapshot.ref.getDownloadURL().then((function (downloadURL) {
+                console.log("User Servicce Dowload Url: ");
+                console.log(downloadURL);
+                _this.fireDb.object(database_constants_1.USERS_CHILD + "/" + user.uid).update({ image: downloadURL });
+                user.image = downloadURL;
+                _this.saveUser(user);
+            }));
+            //ref.getDownloadURL().then((downloadURL) => console.log(downloadURL));
+        }).catch(function (error) {
+            var errorMessage = error.message;
+            alert(errorMessage);
+        });
     };
     return UserService;
 }());
@@ -992,7 +1610,7 @@ exports.User = User;
  * tslint:disable
  */ 
 Object.defineProperty(exports, "__esModule", { value: true });
-var styles = [".error-alert-container[_ngcontent-%COMP%] {\r\n    margin-top: 24px;\r\n    margin-bottom: 8px;\r\n}"];
+var styles = [".error-alert-container[_ngcontent-%COMP%] {\r\n    margin-top: 24px;\r\n    margin-bottom: 8px;\r\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvc2hhcmVkL2Vycm9yLWFsZXJ0L2Vycm9yLWFsZXJ0LmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSxpQkFBaUI7SUFDakIsbUJBQW1CO0NBQ3RCIiwiZmlsZSI6InNyYy9hcHAvc2hhcmVkL2Vycm9yLWFsZXJ0L2Vycm9yLWFsZXJ0LmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuZXJyb3ItYWxlcnQtY29udGFpbmVyIHtcclxuICAgIG1hcmdpbi10b3A6IDI0cHg7XHJcbiAgICBtYXJnaW4tYm90dG9tOiA4cHg7XHJcbn0iXX0= */"];
 exports.styles = styles;
 
 
@@ -1046,6 +1664,291 @@ var ErrorAlertComponent = /** @class */ (function () {
     return ErrorAlertComponent;
 }());
 exports.ErrorAlertComponent = ErrorAlertComponent;
+
+
+/***/ }),
+
+/***/ "./src/app/shared/star.component.css.shim.ngstyle.js":
+/*!***********************************************************!*\
+  !*** ./src/app/shared/star.component.css.shim.ngstyle.js ***!
+  \***********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+/**
+ * @fileoverview This file was generated by the Angular template compiler. Do not edit.
+ *
+ * @suppress {suspiciousCode,uselessCode,missingProperties,missingOverride,checkTypes}
+ * tslint:disable
+ */ 
+Object.defineProperty(exports, "__esModule", { value: true });
+var styles = [".crop[_ngcontent-%COMP%] {\n  overflow: hidden;\n}\ndiv[_ngcontent-%COMP%] {\n  cursor: pointer;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvc2hhcmVkL3N0YXIuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLGlCQUFpQjtDQUNsQjtBQUNEO0VBQ0UsZ0JBQWdCO0NBQ2pCIiwiZmlsZSI6InNyYy9hcHAvc2hhcmVkL3N0YXIuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5jcm9wIHtcbiAgb3ZlcmZsb3c6IGhpZGRlbjtcbn1cbmRpdiB7XG4gIGN1cnNvcjogcG9pbnRlcjtcbn0iXX0= */"];
+exports.styles = styles;
+
+
+/***/ }),
+
+/***/ "./src/app/shared/star.component.ngfactory.js":
+/*!****************************************************!*\
+  !*** ./src/app/shared/star.component.ngfactory.js ***!
+  \****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+/**
+ * @fileoverview This file was generated by the Angular template compiler. Do not edit.
+ *
+ * @suppress {suspiciousCode,uselessCode,missingProperties,missingOverride,checkTypes}
+ * tslint:disable
+ */ 
+Object.defineProperty(exports, "__esModule", { value: true });
+var i0 = __webpack_require__(/*! ./star.component.css.shim.ngstyle */ "./src/app/shared/star.component.css.shim.ngstyle.js");
+var i1 = __webpack_require__(/*! @angular/core */ "@angular/core");
+var i2 = __webpack_require__(/*! ./star.component */ "./src/app/shared/star.component.ts");
+var styles_StarComponent = [i0.styles];
+var RenderType_StarComponent = i1.ɵcrt({ encapsulation: 0, styles: styles_StarComponent, data: {} });
+exports.RenderType_StarComponent = RenderType_StarComponent;
+function View_StarComponent_0(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 6, "div", [["class", "crop"]], [[4, "width", "px"], [8, "title", 0]], null, null, null, null)), (_l()(), i1.ɵeld(1, 0, null, null, 5, "div", [["style", "width: 75px"]], null, null, null, null, null)), (_l()(), i1.ɵeld(2, 0, null, null, 0, "span", [["class", "fa fa-star"]], null, null, null, null, null)), (_l()(), i1.ɵeld(3, 0, null, null, 0, "span", [["class", "fa fa-star"]], null, null, null, null, null)), (_l()(), i1.ɵeld(4, 0, null, null, 0, "span", [["class", "fa fa-star"]], null, null, null, null, null)), (_l()(), i1.ɵeld(5, 0, null, null, 0, "span", [["class", "fa fa-star"]], null, null, null, null, null)), (_l()(), i1.ɵeld(6, 0, null, null, 0, "span", [["class", "fa fa-star"]], null, null, null, null, null))], null, function (_ck, _v) { var _co = _v.component; var currVal_0 = _co.starWidth; var currVal_1 = _co.rating; _ck(_v, 0, 0, currVal_0, currVal_1); }); }
+exports.View_StarComponent_0 = View_StarComponent_0;
+function View_StarComponent_Host_0(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 1, "pm-star", [], null, null, null, View_StarComponent_0, RenderType_StarComponent)), i1.ɵdid(1, 573440, null, 0, i2.StarComponent, [], null, null)], null, null); }
+exports.View_StarComponent_Host_0 = View_StarComponent_Host_0;
+var StarComponentNgFactory = i1.ɵccf("pm-star", i2.StarComponent, View_StarComponent_Host_0, { rating: "rating" }, {}, []);
+exports.StarComponentNgFactory = StarComponentNgFactory;
+
+
+/***/ }),
+
+/***/ "./src/app/shared/star.component.ts":
+/*!******************************************!*\
+  !*** ./src/app/shared/star.component.ts ***!
+  \******************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = __webpack_require__(/*! @angular/core */ "@angular/core");
+var StarComponent = /** @class */ (function () {
+    function StarComponent() {
+    }
+    StarComponent.prototype.ngOnChanges = function () {
+        this.starWidth = this.rating * 75 / 5;
+    };
+    return StarComponent;
+}());
+exports.StarComponent = StarComponent;
+
+
+/***/ }),
+
+/***/ "./src/app/user/user-profile/user-profile.component.ngfactory.js":
+/*!***********************************************************************!*\
+  !*** ./src/app/user/user-profile/user-profile.component.ngfactory.js ***!
+  \***********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+/**
+ * @fileoverview This file was generated by the Angular template compiler. Do not edit.
+ *
+ * @suppress {suspiciousCode,uselessCode,missingProperties,missingOverride,checkTypes}
+ * tslint:disable
+ */ 
+Object.defineProperty(exports, "__esModule", { value: true });
+var i0 = __webpack_require__(/*! ./user-profile.component.scss.shim.ngstyle */ "./src/app/user/user-profile/user-profile.component.scss.shim.ngstyle.js");
+var i1 = __webpack_require__(/*! @angular/core */ "@angular/core");
+var i2 = __webpack_require__(/*! @angular/common */ "@angular/common");
+var i3 = __webpack_require__(/*! ../../edit-dialog/edit-dialog.component.ngfactory */ "./src/app/edit-dialog/edit-dialog.component.ngfactory.js");
+var i4 = __webpack_require__(/*! ../../edit-dialog/edit-dialog.component */ "./src/app/edit-dialog/edit-dialog.component.ts");
+var i5 = __webpack_require__(/*! ../../services/authentication.service */ "./src/app/services/authentication.service.ts");
+var i6 = __webpack_require__(/*! ../../services/user.service */ "./src/app/services/user.service.ts");
+var i7 = __webpack_require__(/*! ./user-profile.component */ "./src/app/user/user-profile/user-profile.component.ts");
+var i8 = __webpack_require__(/*! @angular/router */ "@angular/router");
+var styles_UserProfileComponent = [i0.styles];
+var RenderType_UserProfileComponent = i1.ɵcrt({ encapsulation: 0, styles: styles_UserProfileComponent, data: {} });
+exports.RenderType_UserProfileComponent = RenderType_UserProfileComponent;
+function View_UserProfileComponent_1(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 34, "div", [["class", "user-profile"]], null, null, null, null, null)), (_l()(), i1.ɵeld(1, 0, null, null, 2, "div", [["class", "person-icon"]], null, null, null, null, null)), (_l()(), i1.ɵeld(2, 0, null, null, 0, "img", [["style", "max-width: 100%; max-height: 100%;"]], [[8, "src", 4]], null, null, null, null)), (_l()(), i1.ɵeld(3, 0, null, null, 0, "input", [["accept", ".jpg"], ["required", ""], ["style", "opacity: 0.0; position: absolute; top:120px;    left: 30px; bottom: 0; right:0; width: 200px; height:200px;"], ["type", "file"]], null, [[null, "change"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("change" === en)) {
+        var pd_0 = (_co.onPersonEdit($event) !== false);
+        ad = (pd_0 && ad);
+    } return ad; }, null, null)), (_l()(), i1.ɵeld(4, 0, null, null, 6, "div", [["class", "user-profile-name"]], null, null, null, null, null)), (_l()(), i1.ɵeld(5, 0, null, null, 1, "label", [], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["Name: "])), (_l()(), i1.ɵeld(7, 0, null, null, 1, "div", [["class", "user-profile-name-value"]], null, null, null, null, null)), (_l()(), i1.ɵted(8, null, ["", ""])), (_l()(), i1.ɵeld(9, 0, null, null, 1, "button", [["class", "btn btn-default btn-sm user-profile-name-btn"], ["data-target", "#editModal"], ["data-toggle", "modal"]], null, [[null, "click"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("click" === en)) {
+        var pd_0 = (_co.onNameChange() !== false);
+        ad = (pd_0 && ad);
+    } return ad; }, null, null)), (_l()(), i1.ɵted(-1, null, [" Edit "])), (_l()(), i1.ɵeld(11, 0, null, null, 6, "div", [["class", "user-profile-email"]], null, null, null, null, null)), (_l()(), i1.ɵeld(12, 0, null, null, 1, "label", [], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["Email: "])), (_l()(), i1.ɵeld(14, 0, null, null, 1, "div", [["class", "user-profile-email-value"]], null, null, null, null, null)), (_l()(), i1.ɵted(15, null, ["", ""])), (_l()(), i1.ɵeld(16, 0, null, null, 1, "button", [["class", "btn btn-default btn-sm"], ["data-target", "#editModal"], ["data-toggle", "modal"], ["type", "button"]], null, [[null, "click"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("click" === en)) {
+        var pd_0 = (_co.onEmailChange() !== false);
+        ad = (pd_0 && ad);
+    } return ad; }, null, null)), (_l()(), i1.ɵted(-1, null, [" Edit "])), (_l()(), i1.ɵeld(18, 0, null, null, 6, "div", [["class", "user-profile-mobile"]], null, null, null, null, null)), (_l()(), i1.ɵeld(19, 0, null, null, 1, "label", [], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["Mobile: "])), (_l()(), i1.ɵeld(21, 0, null, null, 1, "div", [["class", "user-profile-mobile-value"]], null, null, null, null, null)), (_l()(), i1.ɵted(22, null, ["", ""])), (_l()(), i1.ɵeld(23, 0, null, null, 1, "button", [["class", "btn btn-default btn-sm user-profile-mobile-btn"], ["data-target", "#editModal"], ["data-toggle", "modal"], ["type", "button"]], null, [[null, "click"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("click" === en)) {
+        var pd_0 = (_co.onMobileChange() !== false);
+        ad = (pd_0 && ad);
+    } return ad; }, null, null)), (_l()(), i1.ɵted(-1, null, [" Edit "])), (_l()(), i1.ɵeld(25, 0, null, null, 6, "div", [["class", "user-profile-password"]], null, null, null, null, null)), (_l()(), i1.ɵeld(26, 0, null, null, 1, "label", [], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["Password: "])), (_l()(), i1.ɵeld(28, 0, null, null, 1, "div", [["class", "user-profile-password-value"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["****"])), (_l()(), i1.ɵeld(30, 0, null, null, 1, "button", [["class", "btn btn-default btn-sm user-profile-password-btn"], ["data-target", "#editModal"], ["data-toggle", "modal"], ["type", "button"]], null, [[null, "click"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("click" === en)) {
+        var pd_0 = (_co.onPasswordChange() !== false);
+        ad = (pd_0 && ad);
+    } return ad; }, null, null)), (_l()(), i1.ɵted(-1, null, [" Edit "])), (_l()(), i1.ɵeld(32, 0, null, null, 2, "div", [["class", "user-profile-btn"]], null, null, null, null, null)), (_l()(), i1.ɵeld(33, 0, null, null, 1, "button", [["class", "btn btn-info"], ["type", "button"]], null, [[null, "click"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("click" === en)) {
+        var pd_0 = (_co.onLogout() !== false);
+        ad = (pd_0 && ad);
+    } return ad; }, null, null)), (_l()(), i1.ɵted(-1, null, ["LOGOUT"]))], null, function (_ck, _v) { var _co = _v.component; var currVal_0 = _co.profileImage; _ck(_v, 2, 0, currVal_0); var currVal_1 = ((_co.user == null) ? null : _co.user.name); _ck(_v, 8, 0, currVal_1); var currVal_2 = ((_co.user == null) ? null : _co.user.email); _ck(_v, 15, 0, currVal_2); var currVal_3 = ((_co.user == null) ? null : _co.user.mobile); _ck(_v, 22, 0, currVal_3); }); }
+function View_UserProfileComponent_0(_l) { return i1.ɵvid(0, [i1.ɵqud(402653184, 1, { editDialog: 0 }), (_l()(), i1.ɵand(16777216, null, null, 1, null, View_UserProfileComponent_1)), i1.ɵdid(2, 16384, null, 0, i2.NgIf, [i1.ViewContainerRef, i1.TemplateRef], { ngIf: [0, "ngIf"] }, null), (_l()(), i1.ɵeld(3, 0, null, null, 1, "app-edit-dialog", [], null, null, null, i3.View_EditDialogComponent_0, i3.RenderType_EditDialogComponent)), i1.ɵdid(4, 49152, [[1, 4]], 0, i4.EditDialogComponent, [i5.AuthenticationService, i6.UserService], null, null)], function (_ck, _v) { var _co = _v.component; var currVal_0 = _co.user; _ck(_v, 2, 0, currVal_0); }, null); }
+exports.View_UserProfileComponent_0 = View_UserProfileComponent_0;
+function View_UserProfileComponent_Host_0(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 1, "app-friends-userprofile", [], null, null, null, View_UserProfileComponent_0, RenderType_UserProfileComponent)), i1.ɵdid(1, 4308992, null, 0, i7.UserProfileComponent, [i5.AuthenticationService, i6.UserService, i8.Router], null, null)], function (_ck, _v) { _ck(_v, 1, 0); }, null); }
+exports.View_UserProfileComponent_Host_0 = View_UserProfileComponent_Host_0;
+var UserProfileComponentNgFactory = i1.ɵccf("app-friends-userprofile", i7.UserProfileComponent, View_UserProfileComponent_Host_0, {}, {}, []);
+exports.UserProfileComponentNgFactory = UserProfileComponentNgFactory;
+
+
+/***/ }),
+
+/***/ "./src/app/user/user-profile/user-profile.component.scss.shim.ngstyle.js":
+/*!*******************************************************************************!*\
+  !*** ./src/app/user/user-profile/user-profile.component.scss.shim.ngstyle.js ***!
+  \*******************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+/**
+ * @fileoverview This file was generated by the Angular template compiler. Do not edit.
+ *
+ * @suppress {suspiciousCode,uselessCode,missingProperties,missingOverride,checkTypes}
+ * tslint:disable
+ */ 
+Object.defineProperty(exports, "__esModule", { value: true });
+var styles = [".user-profile[_ngcontent-%COMP%] {\n  width: 50%;\n  margin-left: 24px;\n  margin-top: 10px; }\n  .user-profile[_ngcontent-%COMP%]   .person-icon[_ngcontent-%COMP%] {\n    width: 200px;\n    height: 200px; }\n  .user-profile[_ngcontent-%COMP%]   .user-profile-name[_ngcontent-%COMP%] {\n    text-align: left;\n    margin-top: 10px; }\n  .user-profile[_ngcontent-%COMP%]   .user-profile-name[_ngcontent-%COMP%]   .user-profile-name-value[_ngcontent-%COMP%] {\n      display: inline-block;\n      margin-left: 10px; }\n  .user-profile[_ngcontent-%COMP%]   .user-profile-name[_ngcontent-%COMP%]   .user-profile-name-btn[_ngcontent-%COMP%] {\n      margin-left: 100px; }\n  .user-profile[_ngcontent-%COMP%]   .user-profile-email[_ngcontent-%COMP%] {\n    text-align: left;\n    margin-top: 20px; }\n  .user-profile[_ngcontent-%COMP%]   .user-profile-email[_ngcontent-%COMP%]   .user-profile-email-value[_ngcontent-%COMP%] {\n      display: inline-block;\n      margin-left: 10px; }\n  .user-profile[_ngcontent-%COMP%]   .user-profile-mobile[_ngcontent-%COMP%] {\n    text-align: left;\n    margin-top: 20px; }\n  .user-profile[_ngcontent-%COMP%]   .user-profile-mobile[_ngcontent-%COMP%]   .user-profile-mobile-value[_ngcontent-%COMP%] {\n      display: inline-block;\n      margin-left: 10px; }\n  .user-profile[_ngcontent-%COMP%]   .user-profile-mobile[_ngcontent-%COMP%]   .user-profile-mobile-btn[_ngcontent-%COMP%] {\n      margin-left: 110px; }\n  .user-profile[_ngcontent-%COMP%]   .user-profile-password[_ngcontent-%COMP%] {\n    text-align: left;\n    margin-top: 20px; }\n  .user-profile[_ngcontent-%COMP%]   .user-profile-password[_ngcontent-%COMP%]   .user-profile-password-value[_ngcontent-%COMP%] {\n      display: inline-block;\n      margin-left: 10px; }\n  .user-profile[_ngcontent-%COMP%]   .user-profile-password[_ngcontent-%COMP%]   .user-profile-password-btn[_ngcontent-%COMP%] {\n      margin-left: 154px; }\n  .user-profile[_ngcontent-%COMP%]   .user-profile-btn[_ngcontent-%COMP%] {\n    margin-top: 20px; }\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvdXNlci91c2VyLXByb2ZpbGUvYzpcXFVzZXJzXFxraHlhdFxcRGVza3RvcFxcR2l0SHViXFxBbmd1bGFyLUdldHRpbmdTdGFydGVkXFxQaG90b1NhbGUvc3JjXFxhcHBcXHVzZXJcXHVzZXItcHJvZmlsZVxcdXNlci1wcm9maWxlLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsV0FBVTtFQUNWLGtCQUFpQjtFQUNqQixpQkFBZ0IsRUFpRGpCO0VBcEREO0lBS00sYUFBWTtJQUNaLGNBQWEsRUFDaEI7RUFQSDtJQVNNLGlCQUFnQjtJQUNoQixpQkFBZ0IsRUFRbkI7RUFsQkg7TUFZVSxzQkFBcUI7TUFDckIsa0JBQWlCLEVBQ3BCO0VBZFA7TUFnQlUsbUJBQWtCLEVBQ3JCO0VBakJQO0lBb0JNLGlCQUFnQjtJQUNoQixpQkFBZ0IsRUFLbkI7RUExQkg7TUF1QlUsc0JBQXFCO01BQ3JCLGtCQUFpQixFQUNwQjtFQXpCUDtJQTRCTSxpQkFBZ0I7SUFDaEIsaUJBQWdCLEVBUW5CO0VBckNIO01BK0JVLHNCQUFxQjtNQUNyQixrQkFBaUIsRUFDcEI7RUFqQ1A7TUFtQ1UsbUJBQWtCLEVBQ3JCO0VBcENQO0lBdUNNLGlCQUFnQjtJQUNoQixpQkFBZ0IsRUFRbkI7RUFoREg7TUEwQ1Usc0JBQXFCO01BQ3JCLGtCQUFpQixFQUNwQjtFQTVDUDtNQThDVSxtQkFBa0IsRUFDckI7RUEvQ1A7SUFrRE0saUJBQWdCLEVBQ25CIiwiZmlsZSI6InNyYy9hcHAvdXNlci91c2VyLXByb2ZpbGUvdXNlci1wcm9maWxlLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLnVzZXItcHJvZmlsZXtcclxuICB3aWR0aDogNTAlO1xyXG4gIG1hcmdpbi1sZWZ0OiAyNHB4O1xyXG4gIG1hcmdpbi10b3A6IDEwcHg7XHJcbiAgLnBlcnNvbi1pY29ue1xyXG4gICAgICB3aWR0aDogMjAwcHg7XHJcbiAgICAgIGhlaWdodDogMjAwcHg7XHJcbiAgfVxyXG4gIC51c2VyLXByb2ZpbGUtbmFtZXtcclxuICAgICAgdGV4dC1hbGlnbjogbGVmdDtcclxuICAgICAgbWFyZ2luLXRvcDogMTBweDtcclxuICAgICAgLnVzZXItcHJvZmlsZS1uYW1lLXZhbHVle1xyXG4gICAgICAgICAgZGlzcGxheTogaW5saW5lLWJsb2NrO1xyXG4gICAgICAgICAgbWFyZ2luLWxlZnQ6IDEwcHg7XHJcbiAgICAgIH1cclxuICAgICAgLnVzZXItcHJvZmlsZS1uYW1lLWJ0bntcclxuICAgICAgICAgIG1hcmdpbi1sZWZ0OiAxMDBweDtcclxuICAgICAgfVxyXG4gIH1cclxuICAudXNlci1wcm9maWxlLWVtYWlse1xyXG4gICAgICB0ZXh0LWFsaWduOiBsZWZ0O1xyXG4gICAgICBtYXJnaW4tdG9wOiAyMHB4O1xyXG4gICAgICAudXNlci1wcm9maWxlLWVtYWlsLXZhbHVle1xyXG4gICAgICAgICAgZGlzcGxheTogaW5saW5lLWJsb2NrO1xyXG4gICAgICAgICAgbWFyZ2luLWxlZnQ6IDEwcHg7XHJcbiAgICAgIH1cclxuICB9XHJcbiAgLnVzZXItcHJvZmlsZS1tb2JpbGV7XHJcbiAgICAgIHRleHQtYWxpZ246IGxlZnQ7XHJcbiAgICAgIG1hcmdpbi10b3A6IDIwcHg7XHJcbiAgICAgIC51c2VyLXByb2ZpbGUtbW9iaWxlLXZhbHVle1xyXG4gICAgICAgICAgZGlzcGxheTogaW5saW5lLWJsb2NrO1xyXG4gICAgICAgICAgbWFyZ2luLWxlZnQ6IDEwcHg7XHJcbiAgICAgIH1cclxuICAgICAgLnVzZXItcHJvZmlsZS1tb2JpbGUtYnRue1xyXG4gICAgICAgICAgbWFyZ2luLWxlZnQ6IDExMHB4O1xyXG4gICAgICB9XHJcbiAgfVxyXG4gIC51c2VyLXByb2ZpbGUtcGFzc3dvcmR7XHJcbiAgICAgIHRleHQtYWxpZ246IGxlZnQ7XHJcbiAgICAgIG1hcmdpbi10b3A6IDIwcHg7XHJcbiAgICAgIC51c2VyLXByb2ZpbGUtcGFzc3dvcmQtdmFsdWV7XHJcbiAgICAgICAgICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XHJcbiAgICAgICAgICBtYXJnaW4tbGVmdDogMTBweDtcclxuICAgICAgfVxyXG4gICAgICAudXNlci1wcm9maWxlLXBhc3N3b3JkLWJ0bntcclxuICAgICAgICAgIG1hcmdpbi1sZWZ0OiAxNTRweDtcclxuICAgICAgfVxyXG4gIH1cclxuICAudXNlci1wcm9maWxlLWJ0bntcclxuICAgICAgbWFyZ2luLXRvcDogMjBweDtcclxuICB9XHJcbn0iXX0= */"];
+exports.styles = styles;
+
+
+/***/ }),
+
+/***/ "./src/app/user/user-profile/user-profile.component.ts":
+/*!*************************************************************!*\
+  !*** ./src/app/user/user-profile/user-profile.component.ts ***!
+  \*************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = __webpack_require__(/*! @angular/core */ "@angular/core");
+var authentication_service_1 = __webpack_require__(/*! ../../services/authentication.service */ "./src/app/services/authentication.service.ts");
+var router_1 = __webpack_require__(/*! @angular/router */ "@angular/router");
+var user_service_1 = __webpack_require__(/*! ../../services/user.service */ "./src/app/services/user.service.ts");
+var edit_dialog_component_1 = __webpack_require__(/*! ../../edit-dialog/edit-dialog.component */ "./src/app/edit-dialog/edit-dialog.component.ts");
+var edit_details_1 = __webpack_require__(/*! ../../edit-dialog/edit-details */ "./src/app/edit-dialog/edit-details.ts");
+var UserProfileComponent = /** @class */ (function () {
+    function UserProfileComponent(authService, userService, router) {
+        this.authService = authService;
+        this.userService = userService;
+        this.router = router;
+        this.profileImage = '../../../assets/images/person_edit.png';
+    }
+    UserProfileComponent.prototype.ngAfterViewInit = function () {
+        console.log("After View Init:" + this.editDialog);
+        // this.editDialog=this.editDialog;
+    };
+    UserProfileComponent.prototype.ngOnInit = function () {
+        this.user = this.userService.getSavedUser().getValue();
+        console.log("USerProfile:" + this.user);
+    };
+    UserProfileComponent.prototype.onLogout = function () {
+        var _this = this;
+        this.authService.signout().then(function () {
+            _this.navigateToLogin();
+        });
+    };
+    UserProfileComponent.prototype.navigateToLogin = function () {
+        this.router.navigateByUrl('/app-friends-login');
+    };
+    UserProfileComponent.prototype.onPersonEdit = function (event) {
+        var selectedFiles = event.target.files;
+        var file = selectedFiles.item(0);
+        this.userService.addProfileImage(this.user, file);
+    };
+    UserProfileComponent.prototype.onNameChange = function () {
+        console.log("In name change: " + this.editDialog);
+        this.editDialog.setTitle('Do you want to edit name?')
+            .setBodyTitle('name')
+            .setBodyLabel('Enter new name')
+            .setEditType(edit_details_1.EditType.NAME)
+            .show();
+    };
+    UserProfileComponent.prototype.onEmailChange = function () {
+        this.editDialog.setTitle('Do you want to edit email?')
+            .setBodyTitle('email')
+            .setBodyLabel('Enter new email')
+            .setEditType(edit_details_1.EditType.EMAIL)
+            .show();
+    };
+    UserProfileComponent.prototype.onMobileChange = function () {
+        this.editDialog.setTitle('Do you want to edit mobile?')
+            .setBodyTitle('mobile')
+            .setBodyLabel('Enter new mobile')
+            .setEditType(edit_details_1.EditType.MOBILE)
+            .show();
+    };
+    UserProfileComponent.prototype.onPasswordChange = function () {
+        this.editDialog.setTitle('Do you want to edit password?')
+            .setBodyTitle('password')
+            .setBodyLabel('Enter new password')
+            .setEditType(edit_details_1.EditType.PASSWORD)
+            .show();
+    };
+    return UserProfileComponent;
+}());
+exports.UserProfileComponent = UserProfileComponent;
+
+
+/***/ }),
+
+/***/ "./src/app/user/user-routing.module.ts":
+/*!*********************************************!*\
+  !*** ./src/app/user/user-routing.module.ts ***!
+  \*********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var router_1 = __webpack_require__(/*! @angular/router */ "@angular/router");
+var user_profile_component_1 = __webpack_require__(/*! ./user-profile/user-profile.component */ "./src/app/user/user-profile/user-profile.component.ts");
+var authentication_guard_1 = __webpack_require__(/*! ../services/authentication.guard */ "./src/app/services/authentication.guard.ts");
+var ROUTES = [
+    //{path: '', redirectTo: '/app-friends-userprofile', pathMatch: 'full' , canActivate: [AuthenticationGuard]},
+    { path: 'app-friends-userprofile', component: user_profile_component_1.UserProfileComponent, canActivate: [authentication_guard_1.AuthenticationGuard] }
+];
+var UserRoutingModule = /** @class */ (function () {
+    function UserRoutingModule() {
+    }
+    return UserRoutingModule;
+}());
+exports.UserRoutingModule = UserRoutingModule;
+
+
+/***/ }),
+
+/***/ "./src/app/user/user.module.ts":
+/*!*************************************!*\
+  !*** ./src/app/user/user.module.ts ***!
+  \*************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var UserModule = /** @class */ (function () {
+    function UserModule() {
+    }
+    return UserModule;
+}());
+exports.UserModule = UserModule;
 
 
 /***/ }),
@@ -1105,7 +2008,7 @@ exports.LAZY_MODULE_MAP = {};
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /mnt/c/Users/khyat/Desktop/GitHub/Angular-GettingStarted/PhotoSale/src/main-ssr.ts */"./src/main-ssr.ts");
+module.exports = __webpack_require__(/*! c:\Users\khyat\Desktop\GitHub\Angular-GettingStarted\PhotoSale\src\main-ssr.ts */"./src/main-ssr.ts");
 
 
 /***/ }),
@@ -1165,36 +2068,14 @@ module.exports = require("@angular/core");
 
 /***/ }),
 
-/***/ "@angular/fire":
-/*!********************************!*\
-  !*** external "@angular/fire" ***!
-  \********************************/
+/***/ "@angular/fire/storage":
+/*!****************************************!*\
+  !*** external "@angular/fire/storage" ***!
+  \****************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = require("@angular/fire");
-
-/***/ }),
-
-/***/ "@angular/fire/auth":
-/*!*************************************!*\
-  !*** external "@angular/fire/auth" ***!
-  \*************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = require("@angular/fire/auth");
-
-/***/ }),
-
-/***/ "@angular/fire/database":
-/*!*****************************************!*\
-  !*** external "@angular/fire/database" ***!
-  \*****************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = require("@angular/fire/database");
+module.exports = require("@angular/fire/storage");
 
 /***/ }),
 
@@ -1264,6 +2145,17 @@ module.exports = require("@angular/router");
 
 /***/ }),
 
+/***/ "angularfire2":
+/*!*******************************!*\
+  !*** external "angularfire2" ***!
+  \*******************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("angularfire2");
+
+/***/ }),
+
 /***/ "angularfire2/auth":
 /*!************************************!*\
   !*** external "angularfire2/auth" ***!
@@ -1294,6 +2186,39 @@ module.exports = require("angularfire2/database");
 /***/ (function(module, exports) {
 
 module.exports = require("firebase/storage");
+
+/***/ }),
+
+/***/ "rxjs":
+/*!***********************!*\
+  !*** external "rxjs" ***!
+  \***********************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("rxjs");
+
+/***/ }),
+
+/***/ "rxjs/BehaviorSubject":
+/*!***************************************!*\
+  !*** external "rxjs/BehaviorSubject" ***!
+  \***************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("rxjs/BehaviorSubject");
+
+/***/ }),
+
+/***/ "rxjs/operators":
+/*!*********************************!*\
+  !*** external "rxjs/operators" ***!
+  \*********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("rxjs/operators");
 
 /***/ })
 

@@ -22,12 +22,11 @@ export class LoginComponent {
               private router: Router,
               private authService: AuthenticationService,
               private angularFireAuth: AngularFireAuth) {
-    angularFireAuth.auth.onAuthStateChanged(user => {
+    this.angularFireAuth.auth.onAuthStateChanged(user => {
       console.log("in authchange");
       if (user) {
         console.log("on authentication:"+user.uid);
         this.getUserInfo(user.uid);
-        
       }
     });
   }
@@ -39,7 +38,6 @@ export class LoginComponent {
       console.log("on login:"+ user.user);
       this.getUserInfo(uid);
       //this.router.navigate(['/welcome']);
-      
     }).catch((error) => {
       this.errorMessage = error.message;
       this.showError = true;
@@ -54,8 +52,6 @@ export class LoginComponent {
       this.showError = true;
     });
   }
-
-  
   private navigateToUserProfile() {
     this.router.navigateByUrl('/app-friends-userprofile');
 }
