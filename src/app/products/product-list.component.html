@@ -1,17 +1,19 @@
 <div>
-  <div class="jumbotron">
-  <h1>Welcome to ArtSale</h1>
-  <p>Share and sale your art...</p>
+  <div class="jumbotron"></div>
+  <div class="productPageTitle">
+    <h1>~ Meraki Art ~</h1>
+
 </div>
 <div class="form-group">
   <label for="usr">Search:</label>
   <input type="text" class="form-control" id="usr"
         [(ngModel)]='listFilter'>
 </div>
-<table class="table table-dark table-hover"
+<div class="row" *ngIf='products && products.length'>
+<!-- <table class="table table-dark table-hover"
         *ngIf='products && products.length'>
     <thead>
-      <tr>
+       <tr>
         <th>Art</th>
         <th>Product Name</th>
         <th>Description</th>
@@ -21,10 +23,27 @@
             {{showPrice ? 'Hide' : 'Show'}} Price
           </button>
         </th>
-      </tr>
+      </tr> 
     </thead>
-    <tbody>
-      <tr *ngFor='let product of filterproducts'[routerLink]="['/products',product.productId]">
+    <tbody> -->
+        <div class="card col-sm-3" style="width:400px"
+        *ngFor='let product of filterproducts'
+        [routerLink]="['/products',product.productId]">
+        <div class="imgClass">
+            <img class="card-img-top"  
+            [src]='product.imageUrl'
+            style="width:100%; height: 500px;">
+        </div>  
+            <div class="card-body">
+              <h4 class="card-title">{{product.productName}}</h4>
+              <p class="card-text">{{product.description}}</p>
+              <p><pm-star [rating]='product.starRating'></pm-star></p>
+              <br>
+              <span >{{product.price | currency :'USD':'symbol':'1.2-2'}}</span>
+              <a href="#" class="btn btn-primary">See Profile</a>
+            </div>
+          </div>
+            <!--  <tr *ngFor='let product of filterproducts'[routerLink]="['/products',product.productId]">
         <td><img
           [src]='product.imageUrl'
           [style.width.px]='imagewidth'
@@ -33,10 +52,11 @@
         <td>{{product.description}}</td>
         <td><pm-star [rating]='product.starRating'></pm-star></td>
         <td>
-          <span *ngIf= 'showPrice'>{{product.price | currency :'USD':'symbol':'1.2-2'}}</span>
+          <span >{{product.price | currency :'USD':'symbol':'1.2-2'}}</span>
         </td>
 
       </tr>
     </tbody>
-  </table>
+  </table> -->
+  </div>
 </div>

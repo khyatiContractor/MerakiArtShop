@@ -1,5 +1,7 @@
 {
   "projects": {
-    "default": "photosale-f15df"
+    "default": "merakiart-35689",
+    "merakiart": "merakiart-35689",
+    "photosale": "photosale-f15df"
   }
 }

@@ -1,7 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
 
-@import "~bootstrap/dist/css/bootstrap.min.css";
-@import "~font-awesome/css/font-awesome.min.css";
+
+body, html {
+  height: 100%;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 30px;
+  padding-right: 10px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
 
 div.card-header {
  font-size: large;
@@ -13,4 +25,104 @@ div.card {
 
 .table {
   margin-top: 10px
+}
+
+div.gallery {
+  border: 1px solid #ccc;
+  border-radius: 20px;
+
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+  border-radius: 20px;
+
+}
+
+.contentImage {
+  border: 1px none;
+  border-radius: 10px;
+  width: 100%;
+  height: auto;
+  padding: 20px;
+ /** border: 2px none ;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);**/
+}
+
+.img-circle{
+width:1%;
+height: 1%;
+padding:  9px;
+
+}
+.username{
+  padding-top:  20px;
+}
+
+.contentCaption{
+  padding-left:  20px;
+}
+
+.button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  cursor: pointer;
+
+}
+
+.highlight {
+  background: red;
+}
+
+.button:hover {
+  background-color: #3e8e41;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.well {
+
+background-color: white;
+padding: 20px;
+margin-top: 20px;
+}
+.card {
+
+    margin: 7% auto;
+    width: 50%;
+   background-color: white;
+   padding: 20px;
+   height: 50%;
+
+}
+
+@media only screen and (max-width: 700px){
+  .well {
+      width: 49.99999%;
+      margin: 6px 0;
+  }
+}
+
+@media only screen and (max-width: 500px){
+  .well {
+      width: 100%;
+  }
+}
+
+.clearfix {
+  overflow: auto;
+}
+
+.navbar{
+  padding: 20px 0px;
+  background-color: #17a2b8!important;
 }

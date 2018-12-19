@@ -8,6 +8,7 @@ import { Products } from './product-list';
 @Injectable({
   providedIn: 'root'
 })
+
 export class ProductService {
   private productUrl = 'api/products/products.json';
 

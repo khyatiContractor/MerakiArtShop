@@ -1,0 +1,40 @@
+.jumbotron{
+  width:100%;
+  background-image: url("/assets/images/WhatsApp Image 2018-10-18 at 8.06.03 PM (3).jpeg");
+  /* Full height */
+  height: 100%;
+  min-height: 200px;
+   opacity: 1;
+   filter:blur(2px);
+   -webkit-filter: blur(2px);
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.productPageTitle {
+  color: white;
+  font-weight: bold;
+
+  position: absolute;
+  top: 18%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 60%;
+  padding: 40px;
+  text-align: center;
+  font: 400 90px/1.3 'Oleo Script', Helvetica, sans-serif;
+  -webkit-text-decoration: hotpink double underline;
+text-decoration: double underline;
+
+}
+
+.card{
+  height: auto;
+  margin: 7% 2% !important;
+}
+
+.imgClass{
+  height: 550px;;
+}
