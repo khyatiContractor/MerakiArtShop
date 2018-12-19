@@ -72,7 +72,9 @@ export class UserService {
               user.image = downloadURL;
               this.saveUser(user);
 
-            }));
+            })).catch(
+              (error)=>alert(error)
+            );
               //ref.getDownloadURL().then((downloadURL) => console.log(downloadURL));
 
 
