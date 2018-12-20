@@ -46,11 +46,11 @@ export class UserProfileComponent implements OnInit, AfterViewInit {
         this.router.navigateByUrl('/app-friends-login');
     }
 
-    onPersonEdit(event) {
+    /* onPersonEdit(event) {
         const selectedFiles: FileList = event.target.files;
         const file = selectedFiles.item(0);
         this.userService.addProfileImage(this.user, file);
-    }
+    } */
 
     onNameChange() {
         console.log("In name change: "+this.editDialog);

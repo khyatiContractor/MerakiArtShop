@@ -1,14 +1,11 @@
 <div class="user-profile" *ngIf="user">
-    <div class="person-icon">
-        <img [src]="profileImage" style="max-width: 100%; max-height: 100%;">
-        <input (change)="onPersonEdit($event)" 
-        required accept=".jpg"    type="file" 
-        style="opacity: 0.0; position: absolute; top:120px;    left: 30px; bottom: 0; right:0; width: 200px; height:200px;" />
-    </div>
+  <div class="person-icon">
+    <img [src]="profileImage" style="max-width: 100%; max-height: 100%;">
+  </div>
     <div class="user-profile-name">
         <label>Name: </label>
         <div class="user-profile-name-value">{{user?.name}}</div>
-        <button (click)="onNameChange()" data-toggle="modal" data-target="#editModal" 
+        <button (click)="onNameChange()" data-toggle="modal" data-target="#editModal"
                 class="btn btn-default btn-sm user-profile-name-btn">
             Edit
         </button>

@@ -1,11 +1,10 @@
 import {Injectable} from '@angular/core';
 import {AngularFireDatabase} from 'angularfire2/database';
-import { AngularFireStorage } from '@angular/fire/storage';
+//import { AngularFireStorage } from 'angularfire2/storage';
 import {User} from './user';
 import 'firebase/storage';
 import {USERS_CHILD} from './database-constants';
-import {Observable} from 'rxjs/Observable';
-import {BehaviorSubject} from 'rxjs/BehaviorSubject';
+import {Observable, BehaviorSubject} from 'rxjs';
 
 /**
  * User service
@@ -15,7 +14,7 @@ import {BehaviorSubject} from 'rxjs/BehaviorSubject';
 export class UserService {
 
     private subject: BehaviorSubject<User> = new BehaviorSubject(null);
-    private fbStorage: AngularFireStorage;
+    //private fbStorage: AngularFireStorage;
     private basePath = '/profile';
     /**
      * Constructor
@@ -23,8 +22,9 @@ export class UserService {
      * @param {AngularFireDatabase} fireDb provides the functionality for Firebase Database
      */
     constructor(private fireDb: AngularFireDatabase,
-      private afStorage: AngularFireStorage) {
-        this.fbStorage = afStorage;
+      //private afStorage: AngularFireStorage
+      ) {
+        //this.fbStorage = afStorage;
 }
 
     public addUser(user: User): void {
@@ -62,7 +62,7 @@ export class UserService {
         this.saveUser(user);
     }
 
-    public addProfileImage(user: User, file: File) {
+    /* public addProfileImage(user: User, file: File) {
       this.fbStorage.ref(`${this.basePath}/${file.name}`).put(file).then(
           snapshot => {
             snapshot.ref.getDownloadURL().then(((downloadURL) =>   {
@@ -82,5 +82,5 @@ export class UserService {
           const errorMessage = error.message;
           alert(errorMessage);
       });
-  }
+  } */
 }

@@ -3,6 +3,7 @@ import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
 import { catchError, tap, map } from 'rxjs/operators';
 import { Products } from './product-list';
+import { HttpModule } from '@angular/http';
 
 @Injectable()
 export class ProductService {

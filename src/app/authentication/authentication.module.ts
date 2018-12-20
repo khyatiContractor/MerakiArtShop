@@ -8,8 +8,9 @@ import {CommonModule} from '@angular/common';
 import {ErrorAlertComponent} from '../shared/error-alert/error-alert.component';
 import {PasswordEqualValidator} from '../utils/password-equal-validator.directive';
 import {LoginComponent} from './login/login.component';
-import { AuthenticationGuard } from '../services/authentication.guard';
-
+import {AngularFireAuth} from 'angularfire2/auth';
+import {AngularFireDatabase} from 'angularfire2/database';
+import {AuthenticationGuard} from '../services/authentication.guard';
 
 /**
  * Authentication Module
@@ -27,9 +28,11 @@ import { AuthenticationGuard } from '../services/authentication.guard';
         PasswordEqualValidator
     ],
     providers: [
+      AngularFireAuth,
+        AngularFireDatabase,
         AuthenticationService,
+        AuthenticationGuard,
         UserService,
-        AuthenticationGuard
     ]
 })
 export class AuthenticationModule {

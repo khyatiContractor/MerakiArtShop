@@ -23,7 +23,6 @@ export class LoginComponent {
               private authService: AuthenticationService,
               private angularFireAuth: AngularFireAuth) {
     this.angularFireAuth.auth.onAuthStateChanged(user => {
-      console.log("in authchange");
       if (user) {
         console.log("on authentication:"+user.uid);
         this.getUserInfo(user.uid);
