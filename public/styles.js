@@ -557,7 +557,7 @@ if(false) {}
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /mnt/c/Users/khyat/Desktop/GitHub/Angular-GettingStarted/PhotoSale/src/styles.css */"./src/styles.css");
+module.exports = __webpack_require__(/*! /mnt/c/Users/khyat/Desktop/GitHub/MerakiArtShop/src/styles.css */"./src/styles.css");
 
 
 /***/ })

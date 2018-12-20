@@ -36,15 +36,7 @@ export class UserProfileComponent implements OnInit, AfterViewInit {
         console.log("USerProfile:"+this.user);
     }
 
-    onLogout(): void {
-        this.authService.signout().then(() => {
-            this.navigateToLogin();
-        });
-    }
 
-    navigateToLogin() {
-        this.router.navigateByUrl('/app-friends-login');
-    }
 
     /* onPersonEdit(event) {
         const selectedFiles: FileList = event.target.files;

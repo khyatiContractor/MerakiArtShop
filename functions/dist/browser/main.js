@@ -41,7 +41,7 @@ module.exports = ".nav-link {\n  font-size: large;\n  text-align: center;\n}\n\n
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n<!--\n<nav class=\"navbar navbar-expand-sm bg-light navbar-light fixed-top\" style=\"padding-left:50px;\">\n\n  <a class=\"navbar-brand\" href=\"#\">\n    <img src=\"./assets/images/art_palette.png\" alt=\"logo\" style=\"width:40px;\">\n  </a>\n\n\n  <ul class=\"navbar-nav \">\n    <li class=\"nav-item \" >\n      <a class=\"nav-link\" [routerLink]=\"['/welcome']\">Home</a>\n    </li>\n    <li class=\"nav-item  \">\n      <a class=\"nav-link\"  [routerLink]=\"['/products']\">Product List</a>\n    </li>\n  </ul>\n</nav>\n-->\n<h1 class=\"title\">Friends - A Social App</h1>\n<div class=\"nav-container\">\n<nav class=\"navbar navbar-expand-lg navbar-light bg-color\">\n  <div class=\"collapse navbar-collapse\" id=\"navbarNav\">\n    <ul class=\"navbar-nav\">\n      <li class=\"nav-item\" *ngIf=\"authenticationService?.isAuthenticated()\"><a class=\"nav-link\" routerLink=\"/app-friends-userprofile\" routerLinkActive=\"active\">My Profile</a></li>\n      <li class=\"nav-item\" *ngIf=\"authenticationService?.isAuthenticated()\"><a class=\"nav-link\" routerLink=\"/app-friends-userfriends\" routerLinkActive=\"active\">Friends</a></li>\n      <li class=\"nav-item\" ><a class=\"nav-link\" routerLink=\"/app-friends-about\" routerLinkActive=\"active\">About</a></li>\n      <li class=\"nav-item\" active *ngIf=\"!authenticationService?.isAuthenticated()\"><a class=\"nav-link\" routerLink=\"/app-friends-login\" routerLinkActive=\"active\">Login</a></li>\n    </ul>\n    <div class=\"form-container\">\n    <form class=\"form-inline my-2 my-lg-0\">\n      <input class=\"form-control mr-sm-2\" type=\"text\" placeholder=\"Search friends...\" aria-label=\"Search\">\n      <button class=\"btn btn-success my-2 my-sm-0\" type=\"submit\">Search</button>\n    </form>\n    </div>\n  </div>\n</nav>\n</div>\n<router-outlet></router-outlet>\n\n"
+module.exports = "\n<!--\n<nav class=\"navbar navbar-expand-sm bg-light navbar-light fixed-top\" style=\"padding-left:50px;\">\n\n  <a class=\"navbar-brand\" href=\"#\">\n    <img src=\"./assets/images/art_palette.png\" alt=\"logo\" style=\"width:40px;\">\n  </a>\n\n\n  <ul class=\"navbar-nav \">\n    <li class=\"nav-item \" >\n      <a class=\"nav-link\" [routerLink]=\"['/welcome']\">Home</a>\n    </li>\n    <li class=\"nav-item  \">\n      <a class=\"nav-link\"  [routerLink]=\"['/products']\">Product List</a>\n    </li>\n  </ul>\n</nav>\n-->\n<h1 class=\"title\">Meraki Art - Buy Amazing Artwork</h1>\n<div class=\"nav-container\">\n<nav class=\"navbar navbar-expand-lg navbar-light bg-color\">\n  <div class=\"collapse navbar-collapse\" id=\"navbarNav\">\n    <ul class=\"navbar-nav\">\n      <li class=\"nav-item\" *ngIf=\"authenticationService?.isAuthenticated()\"><a class=\"nav-link\" routerLink=\"/app-friends-userprofile\" routerLinkActive=\"active\">My Profile</a></li>\n      <li class=\"nav-item\" *ngIf=\"authenticationService?.isAuthenticated()\"><a class=\"nav-link\" routerLink=\"/products\" routerLinkActive=\"active\">Art</a></li>\n      <li class=\"nav-item\" active *ngIf=\"!authenticationService?.isAuthenticated()\"><a class=\"nav-link\" routerLink=\"/app-friends-login\" routerLinkActive=\"active\">Login</a></li>\n      <li class=\"nav-item\" *ngIf=\"authenticationService?.isAuthenticated()\"><button type=\"button\" (click)='onLogout()' class=\"btn btn-info\">Logout</button></li>\n    </ul>\n  </div>\n</nav>\n</div>\n<router-outlet></router-outlet>\n\n"
 
 /***/ }),
 
@@ -58,21 +58,34 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _services_authentication_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./services/authentication.service */ "./src/app/services/authentication.service.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+
 
 
 
 var AppComponent = /** @class */ (function () {
-    function AppComponent(authService) {
+    function AppComponent(authService, router) {
         this.authService = authService;
+        this.router = router;
         this.authenticationService = authService;
     }
+    AppComponent.prototype.onLogout = function () {
+        var _this = this;
+        this.authService.signout().then(function () {
+            _this.navigateToLogin();
+        });
+    };
+    AppComponent.prototype.navigateToLogin = function () {
+        this.router.navigateByUrl('/app-friends-login');
+    };
     AppComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
             selector: 'pm-root',
             template: __webpack_require__(/*! ./app.component.html */ "./src/app/app.component.html"),
             styles: [__webpack_require__(/*! ./app.component.css */ "./src/app/app.component.css")]
         }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_services_authentication_service__WEBPACK_IMPORTED_MODULE_2__["AuthenticationService"]])
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_services_authentication_service__WEBPACK_IMPORTED_MODULE_2__["AuthenticationService"],
+            _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"]])
     ], AppComponent);
     return AppComponent;
 }());
@@ -206,6 +219,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _home_welcome_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./home/welcome.component */ "./src/app/home/welcome.component.ts");
 /* harmony import */ var _products_product_list_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./products/product-list.component */ "./src/app/products/product-list.component.ts");
 /* harmony import */ var _products_product_detail_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./products/product-detail.component */ "./src/app/products/product-detail.component.ts");
+/* harmony import */ var _services_authentication_guard__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./services/authentication.guard */ "./src/app/services/authentication.guard.ts");
+
 
 
 
@@ -214,8 +229,8 @@ __webpack_require__.r(__webpack_exports__);
 
 var ROUTES = [
     { path: 'welcome', component: _home_welcome_component__WEBPACK_IMPORTED_MODULE_3__["WelcomeComponent"] },
-    { path: 'products', component: _products_product_list_component__WEBPACK_IMPORTED_MODULE_4__["ProductListComponent"] },
-    { path: 'products/:id', component: _products_product_detail_component__WEBPACK_IMPORTED_MODULE_5__["ProductDetailComponent"] }
+    { path: 'products', component: _products_product_list_component__WEBPACK_IMPORTED_MODULE_4__["ProductListComponent"], canActivate: [_services_authentication_guard__WEBPACK_IMPORTED_MODULE_6__["AuthenticationGuard"]] },
+    { path: 'products/:id', component: _products_product_detail_component__WEBPACK_IMPORTED_MODULE_5__["ProductDetailComponent"], canActivate: [_services_authentication_guard__WEBPACK_IMPORTED_MODULE_6__["AuthenticationGuard"]] }
 ];
 var AppRouting = /** @class */ (function () {
     function AppRouting() {
@@ -227,6 +242,9 @@ var AppRouting = /** @class */ (function () {
             ],
             exports: [
                 _angular_router__WEBPACK_IMPORTED_MODULE_1__["RouterModule"]
+            ],
+            providers: [
+                _services_authentication_guard__WEBPACK_IMPORTED_MODULE_6__["AuthenticationGuard"]
             ]
         })
     ], AppRouting);
@@ -1349,7 +1367,7 @@ module.exports = "<div class=\"user-profile\" *ngIf=\"user\">\r\n  <div class=\"
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".user-profile {\n  width: 50%;\n  margin-left: 24px;\n  margin-top: 10px; }\n  .user-profile .person-icon {\n    width: 200px;\n    height: 200px; }\n  .user-profile .user-profile-name {\n    text-align: left;\n    margin-top: 10px; }\n  .user-profile .user-profile-name .user-profile-name-value {\n      display: inline-block;\n      margin-left: 10px; }\n  .user-profile .user-profile-name .user-profile-name-btn {\n      margin-left: 100px; }\n  .user-profile .user-profile-email {\n    text-align: left;\n    margin-top: 20px; }\n  .user-profile .user-profile-email .user-profile-email-value {\n      display: inline-block;\n      margin-left: 10px; }\n  .user-profile .user-profile-mobile {\n    text-align: left;\n    margin-top: 20px; }\n  .user-profile .user-profile-mobile .user-profile-mobile-value {\n      display: inline-block;\n      margin-left: 10px; }\n  .user-profile .user-profile-mobile .user-profile-mobile-btn {\n      margin-left: 110px; }\n  .user-profile .user-profile-password {\n    text-align: left;\n    margin-top: 20px; }\n  .user-profile .user-profile-password .user-profile-password-value {\n      display: inline-block;\n      margin-left: 10px; }\n  .user-profile .user-profile-password .user-profile-password-btn {\n      margin-left: 154px; }\n  .user-profile .user-profile-btn {\n    margin-top: 20px; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9tbnQvYy9Vc2Vycy9raHlhdC9EZXNrdG9wL0dpdEh1Yi9Bbmd1bGFyLUdldHRpbmdTdGFydGVkL1Bob3RvU2FsZS9zcmMvYXBwL3VzZXIvdXNlci1wcm9maWxlL3VzZXItcHJvZmlsZS5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLFdBQVU7RUFDVixrQkFBaUI7RUFDakIsaUJBQWdCLEVBaURqQjtFQXBERDtJQUtNLGFBQVk7SUFDWixjQUFhLEVBQ2hCO0VBUEg7SUFTTSxpQkFBZ0I7SUFDaEIsaUJBQWdCLEVBUW5CO0VBbEJIO01BWVUsc0JBQXFCO01BQ3JCLGtCQUFpQixFQUNwQjtFQWRQO01BZ0JVLG1CQUFrQixFQUNyQjtFQWpCUDtJQW9CTSxpQkFBZ0I7SUFDaEIsaUJBQWdCLEVBS25CO0VBMUJIO01BdUJVLHNCQUFxQjtNQUNyQixrQkFBaUIsRUFDcEI7RUF6QlA7SUE0Qk0saUJBQWdCO0lBQ2hCLGlCQUFnQixFQVFuQjtFQXJDSDtNQStCVSxzQkFBcUI7TUFDckIsa0JBQWlCLEVBQ3BCO0VBakNQO01BbUNVLG1CQUFrQixFQUNyQjtFQXBDUDtJQXVDTSxpQkFBZ0I7SUFDaEIsaUJBQWdCLEVBUW5CO0VBaERIO01BMENVLHNCQUFxQjtNQUNyQixrQkFBaUIsRUFDcEI7RUE1Q1A7TUE4Q1UsbUJBQWtCLEVBQ3JCO0VBL0NQO0lBa0RNLGlCQUFnQixFQUNuQiIsImZpbGUiOiJzcmMvYXBwL3VzZXIvdXNlci1wcm9maWxlL3VzZXItcHJvZmlsZS5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi51c2VyLXByb2ZpbGV7XHJcbiAgd2lkdGg6IDUwJTtcclxuICBtYXJnaW4tbGVmdDogMjRweDtcclxuICBtYXJnaW4tdG9wOiAxMHB4O1xyXG4gIC5wZXJzb24taWNvbntcclxuICAgICAgd2lkdGg6IDIwMHB4O1xyXG4gICAgICBoZWlnaHQ6IDIwMHB4O1xyXG4gIH1cclxuICAudXNlci1wcm9maWxlLW5hbWV7XHJcbiAgICAgIHRleHQtYWxpZ246IGxlZnQ7XHJcbiAgICAgIG1hcmdpbi10b3A6IDEwcHg7XHJcbiAgICAgIC51c2VyLXByb2ZpbGUtbmFtZS12YWx1ZXtcclxuICAgICAgICAgIGRpc3BsYXk6IGlubGluZS1ibG9jaztcclxuICAgICAgICAgIG1hcmdpbi1sZWZ0OiAxMHB4O1xyXG4gICAgICB9XHJcbiAgICAgIC51c2VyLXByb2ZpbGUtbmFtZS1idG57XHJcbiAgICAgICAgICBtYXJnaW4tbGVmdDogMTAwcHg7XHJcbiAgICAgIH1cclxuICB9XHJcbiAgLnVzZXItcHJvZmlsZS1lbWFpbHtcclxuICAgICAgdGV4dC1hbGlnbjogbGVmdDtcclxuICAgICAgbWFyZ2luLXRvcDogMjBweDtcclxuICAgICAgLnVzZXItcHJvZmlsZS1lbWFpbC12YWx1ZXtcclxuICAgICAgICAgIGRpc3BsYXk6IGlubGluZS1ibG9jaztcclxuICAgICAgICAgIG1hcmdpbi1sZWZ0OiAxMHB4O1xyXG4gICAgICB9XHJcbiAgfVxyXG4gIC51c2VyLXByb2ZpbGUtbW9iaWxle1xyXG4gICAgICB0ZXh0LWFsaWduOiBsZWZ0O1xyXG4gICAgICBtYXJnaW4tdG9wOiAyMHB4O1xyXG4gICAgICAudXNlci1wcm9maWxlLW1vYmlsZS12YWx1ZXtcclxuICAgICAgICAgIGRpc3BsYXk6IGlubGluZS1ibG9jaztcclxuICAgICAgICAgIG1hcmdpbi1sZWZ0OiAxMHB4O1xyXG4gICAgICB9XHJcbiAgICAgIC51c2VyLXByb2ZpbGUtbW9iaWxlLWJ0bntcclxuICAgICAgICAgIG1hcmdpbi1sZWZ0OiAxMTBweDtcclxuICAgICAgfVxyXG4gIH1cclxuICAudXNlci1wcm9maWxlLXBhc3N3b3Jke1xyXG4gICAgICB0ZXh0LWFsaWduOiBsZWZ0O1xyXG4gICAgICBtYXJnaW4tdG9wOiAyMHB4O1xyXG4gICAgICAudXNlci1wcm9maWxlLXBhc3N3b3JkLXZhbHVle1xyXG4gICAgICAgICAgZGlzcGxheTogaW5saW5lLWJsb2NrO1xyXG4gICAgICAgICAgbWFyZ2luLWxlZnQ6IDEwcHg7XHJcbiAgICAgIH1cclxuICAgICAgLnVzZXItcHJvZmlsZS1wYXNzd29yZC1idG57XHJcbiAgICAgICAgICBtYXJnaW4tbGVmdDogMTU0cHg7XHJcbiAgICAgIH1cclxuICB9XHJcbiAgLnVzZXItcHJvZmlsZS1idG57XHJcbiAgICAgIG1hcmdpbi10b3A6IDIwcHg7XHJcbiAgfVxyXG59Il19 */"
+module.exports = ".user-profile {\n  width: 50%;\n  margin-left: 24px;\n  margin-top: 10px; }\n  .user-profile .person-icon {\n    width: 200px;\n    height: 200px; }\n  .user-profile .user-profile-name {\n    text-align: left;\n    margin-top: 10px; }\n  .user-profile .user-profile-name .user-profile-name-value {\n      display: inline-block;\n      margin-left: 10px; }\n  .user-profile .user-profile-name .user-profile-name-btn {\n      margin-left: 100px; }\n  .user-profile .user-profile-email {\n    text-align: left;\n    margin-top: 20px; }\n  .user-profile .user-profile-email .user-profile-email-value {\n      display: inline-block;\n      margin-left: 10px; }\n  .user-profile .user-profile-mobile {\n    text-align: left;\n    margin-top: 20px; }\n  .user-profile .user-profile-mobile .user-profile-mobile-value {\n      display: inline-block;\n      margin-left: 10px; }\n  .user-profile .user-profile-mobile .user-profile-mobile-btn {\n      margin-left: 110px; }\n  .user-profile .user-profile-password {\n    text-align: left;\n    margin-top: 20px; }\n  .user-profile .user-profile-password .user-profile-password-value {\n      display: inline-block;\n      margin-left: 10px; }\n  .user-profile .user-profile-password .user-profile-password-btn {\n      margin-left: 154px; }\n  .user-profile .user-profile-btn {\n    margin-top: 20px; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9tbnQvYy9Vc2Vycy9raHlhdC9EZXNrdG9wL0dpdEh1Yi9NZXJha2lBcnRTaG9wL3NyYy9hcHAvdXNlci91c2VyLXByb2ZpbGUvdXNlci1wcm9maWxlLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsV0FBVTtFQUNWLGtCQUFpQjtFQUNqQixpQkFBZ0IsRUFpRGpCO0VBcEREO0lBS00sYUFBWTtJQUNaLGNBQWEsRUFDaEI7RUFQSDtJQVNNLGlCQUFnQjtJQUNoQixpQkFBZ0IsRUFRbkI7RUFsQkg7TUFZVSxzQkFBcUI7TUFDckIsa0JBQWlCLEVBQ3BCO0VBZFA7TUFnQlUsbUJBQWtCLEVBQ3JCO0VBakJQO0lBb0JNLGlCQUFnQjtJQUNoQixpQkFBZ0IsRUFLbkI7RUExQkg7TUF1QlUsc0JBQXFCO01BQ3JCLGtCQUFpQixFQUNwQjtFQXpCUDtJQTRCTSxpQkFBZ0I7SUFDaEIsaUJBQWdCLEVBUW5CO0VBckNIO01BK0JVLHNCQUFxQjtNQUNyQixrQkFBaUIsRUFDcEI7RUFqQ1A7TUFtQ1UsbUJBQWtCLEVBQ3JCO0VBcENQO0lBdUNNLGlCQUFnQjtJQUNoQixpQkFBZ0IsRUFRbkI7RUFoREg7TUEwQ1Usc0JBQXFCO01BQ3JCLGtCQUFpQixFQUNwQjtFQTVDUDtNQThDVSxtQkFBa0IsRUFDckI7RUEvQ1A7SUFrRE0saUJBQWdCLEVBQ25CIiwiZmlsZSI6InNyYy9hcHAvdXNlci91c2VyLXByb2ZpbGUvdXNlci1wcm9maWxlLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLnVzZXItcHJvZmlsZXtcclxuICB3aWR0aDogNTAlO1xyXG4gIG1hcmdpbi1sZWZ0OiAyNHB4O1xyXG4gIG1hcmdpbi10b3A6IDEwcHg7XHJcbiAgLnBlcnNvbi1pY29ue1xyXG4gICAgICB3aWR0aDogMjAwcHg7XHJcbiAgICAgIGhlaWdodDogMjAwcHg7XHJcbiAgfVxyXG4gIC51c2VyLXByb2ZpbGUtbmFtZXtcclxuICAgICAgdGV4dC1hbGlnbjogbGVmdDtcclxuICAgICAgbWFyZ2luLXRvcDogMTBweDtcclxuICAgICAgLnVzZXItcHJvZmlsZS1uYW1lLXZhbHVle1xyXG4gICAgICAgICAgZGlzcGxheTogaW5saW5lLWJsb2NrO1xyXG4gICAgICAgICAgbWFyZ2luLWxlZnQ6IDEwcHg7XHJcbiAgICAgIH1cclxuICAgICAgLnVzZXItcHJvZmlsZS1uYW1lLWJ0bntcclxuICAgICAgICAgIG1hcmdpbi1sZWZ0OiAxMDBweDtcclxuICAgICAgfVxyXG4gIH1cclxuICAudXNlci1wcm9maWxlLWVtYWlse1xyXG4gICAgICB0ZXh0LWFsaWduOiBsZWZ0O1xyXG4gICAgICBtYXJnaW4tdG9wOiAyMHB4O1xyXG4gICAgICAudXNlci1wcm9maWxlLWVtYWlsLXZhbHVle1xyXG4gICAgICAgICAgZGlzcGxheTogaW5saW5lLWJsb2NrO1xyXG4gICAgICAgICAgbWFyZ2luLWxlZnQ6IDEwcHg7XHJcbiAgICAgIH1cclxuICB9XHJcbiAgLnVzZXItcHJvZmlsZS1tb2JpbGV7XHJcbiAgICAgIHRleHQtYWxpZ246IGxlZnQ7XHJcbiAgICAgIG1hcmdpbi10b3A6IDIwcHg7XHJcbiAgICAgIC51c2VyLXByb2ZpbGUtbW9iaWxlLXZhbHVle1xyXG4gICAgICAgICAgZGlzcGxheTogaW5saW5lLWJsb2NrO1xyXG4gICAgICAgICAgbWFyZ2luLWxlZnQ6IDEwcHg7XHJcbiAgICAgIH1cclxuICAgICAgLnVzZXItcHJvZmlsZS1tb2JpbGUtYnRue1xyXG4gICAgICAgICAgbWFyZ2luLWxlZnQ6IDExMHB4O1xyXG4gICAgICB9XHJcbiAgfVxyXG4gIC51c2VyLXByb2ZpbGUtcGFzc3dvcmR7XHJcbiAgICAgIHRleHQtYWxpZ246IGxlZnQ7XHJcbiAgICAgIG1hcmdpbi10b3A6IDIwcHg7XHJcbiAgICAgIC51c2VyLXByb2ZpbGUtcGFzc3dvcmQtdmFsdWV7XHJcbiAgICAgICAgICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XHJcbiAgICAgICAgICBtYXJnaW4tbGVmdDogMTBweDtcclxuICAgICAgfVxyXG4gICAgICAudXNlci1wcm9maWxlLXBhc3N3b3JkLWJ0bntcclxuICAgICAgICAgIG1hcmdpbi1sZWZ0OiAxNTRweDtcclxuICAgICAgfVxyXG4gIH1cclxuICAudXNlci1wcm9maWxlLWJ0bntcclxuICAgICAgbWFyZ2luLXRvcDogMjBweDtcclxuICB9XHJcbn0iXX0= */"
 
 /***/ }),
 
@@ -1664,7 +1682,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /mnt/c/Users/khyat/Desktop/GitHub/Angular-GettingStarted/PhotoSale/src/main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! /mnt/c/Users/khyat/Desktop/GitHub/MerakiArtShop/src/main.ts */"./src/main.ts");
 
 
 /***/ })
