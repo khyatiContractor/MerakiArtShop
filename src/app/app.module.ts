@@ -1,3 +1,4 @@
+import { ProductImgUploadComponent } from './products/product-imgUpload.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
@@ -35,7 +36,8 @@ const APP_ID = 'PhotoSale';
     StarComponent,
     ProductDetailComponent,
     WelcomeComponent,
-    ProductUploadComponent
+    ProductUploadComponent,
+    ProductImgUploadComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId : APP_ID }) ,

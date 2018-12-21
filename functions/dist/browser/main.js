@@ -105,36 +105,38 @@ var AppComponent = /** @class */ (function () {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AppModule", function() { return AppModule; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm5/platform-browser.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
-/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
-/* harmony import */ var ngx_cookie__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ngx-cookie */ "./node_modules/ngx-cookie/fesm5/ngx-cookie.js");
-/* harmony import */ var _services_authentication_guard__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./services/authentication.guard */ "./src/app/services/authentication.guard.ts");
-/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
-/* harmony import */ var angularfire2__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! angularfire2 */ "./node_modules/angularfire2/index.js");
-/* harmony import */ var angularfire2__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(angularfire2__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var _environments_environment__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../environments/environment */ "./src/environments/environment.ts");
-/* harmony import */ var _products_product_list_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./products/product-list.component */ "./src/app/products/product-list.component.ts");
-/* harmony import */ var _shared_star_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./shared/star.component */ "./src/app/shared/star.component.ts");
-/* harmony import */ var _home_welcome_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./home/welcome.component */ "./src/app/home/welcome.component.ts");
-/* harmony import */ var _products_product_detail_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./products/product-detail.component */ "./src/app/products/product-detail.component.ts");
-/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm5/common.js");
-/* harmony import */ var _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! @angular/platform-browser/animations */ "./node_modules/@angular/platform-browser/fesm5/animations.js");
-/* harmony import */ var angularfire2_auth__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! angularfire2/auth */ "./node_modules/angularfire2/auth/index.js");
-/* harmony import */ var angularfire2_auth__WEBPACK_IMPORTED_MODULE_16___default = /*#__PURE__*/__webpack_require__.n(angularfire2_auth__WEBPACK_IMPORTED_MODULE_16__);
-/* harmony import */ var angularfire2_database__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! angularfire2/database */ "./node_modules/angularfire2/database/index.js");
-/* harmony import */ var angularfire2_database__WEBPACK_IMPORTED_MODULE_17___default = /*#__PURE__*/__webpack_require__.n(angularfire2_database__WEBPACK_IMPORTED_MODULE_17__);
-/* harmony import */ var _app_routing__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./app.routing */ "./src/app/app.routing.ts");
-/* harmony import */ var _user_user_module__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./user/user.module */ "./src/app/user/user.module.ts");
-/* harmony import */ var _authentication_authentication_module__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./authentication/authentication.module */ "./src/app/authentication/authentication.module.ts");
-/* harmony import */ var _products_product_service__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./products/product.service */ "./src/app/products/product.service.ts");
-/* harmony import */ var _services_authentication_service__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./services/authentication.service */ "./src/app/services/authentication.service.ts");
-/* harmony import */ var _services_user_service__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./services/user.service */ "./src/app/services/user.service.ts");
-/* harmony import */ var _angular_http__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! @angular/http */ "./node_modules/@angular/http/fesm5/http.js");
-/* harmony import */ var angularfire2_storage__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! angularfire2/storage */ "./node_modules/angularfire2/storage/index.js");
-/* harmony import */ var angularfire2_storage__WEBPACK_IMPORTED_MODULE_25___default = /*#__PURE__*/__webpack_require__.n(angularfire2_storage__WEBPACK_IMPORTED_MODULE_25__);
-/* harmony import */ var _products_product_upload_component__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./products/product-upload.component */ "./src/app/products/product-upload.component.ts");
+/* harmony import */ var _products_product_imgUpload_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./products/product-imgUpload.component */ "./src/app/products/product-imgUpload.component.ts");
+/* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm5/platform-browser.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+/* harmony import */ var ngx_cookie__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ngx-cookie */ "./node_modules/ngx-cookie/fesm5/ngx-cookie.js");
+/* harmony import */ var _services_authentication_guard__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./services/authentication.guard */ "./src/app/services/authentication.guard.ts");
+/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
+/* harmony import */ var angularfire2__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! angularfire2 */ "./node_modules/angularfire2/index.js");
+/* harmony import */ var angularfire2__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(angularfire2__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var _environments_environment__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../environments/environment */ "./src/environments/environment.ts");
+/* harmony import */ var _products_product_list_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./products/product-list.component */ "./src/app/products/product-list.component.ts");
+/* harmony import */ var _shared_star_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./shared/star.component */ "./src/app/shared/star.component.ts");
+/* harmony import */ var _home_welcome_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./home/welcome.component */ "./src/app/home/welcome.component.ts");
+/* harmony import */ var _products_product_detail_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./products/product-detail.component */ "./src/app/products/product-detail.component.ts");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm5/common.js");
+/* harmony import */ var _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! @angular/platform-browser/animations */ "./node_modules/@angular/platform-browser/fesm5/animations.js");
+/* harmony import */ var angularfire2_auth__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! angularfire2/auth */ "./node_modules/angularfire2/auth/index.js");
+/* harmony import */ var angularfire2_auth__WEBPACK_IMPORTED_MODULE_17___default = /*#__PURE__*/__webpack_require__.n(angularfire2_auth__WEBPACK_IMPORTED_MODULE_17__);
+/* harmony import */ var angularfire2_database__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! angularfire2/database */ "./node_modules/angularfire2/database/index.js");
+/* harmony import */ var angularfire2_database__WEBPACK_IMPORTED_MODULE_18___default = /*#__PURE__*/__webpack_require__.n(angularfire2_database__WEBPACK_IMPORTED_MODULE_18__);
+/* harmony import */ var _app_routing__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./app.routing */ "./src/app/app.routing.ts");
+/* harmony import */ var _user_user_module__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./user/user.module */ "./src/app/user/user.module.ts");
+/* harmony import */ var _authentication_authentication_module__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./authentication/authentication.module */ "./src/app/authentication/authentication.module.ts");
+/* harmony import */ var _products_product_service__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./products/product.service */ "./src/app/products/product.service.ts");
+/* harmony import */ var _services_authentication_service__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./services/authentication.service */ "./src/app/services/authentication.service.ts");
+/* harmony import */ var _services_user_service__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./services/user.service */ "./src/app/services/user.service.ts");
+/* harmony import */ var _angular_http__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! @angular/http */ "./node_modules/@angular/http/fesm5/http.js");
+/* harmony import */ var angularfire2_storage__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! angularfire2/storage */ "./node_modules/angularfire2/storage/index.js");
+/* harmony import */ var angularfire2_storage__WEBPACK_IMPORTED_MODULE_26___default = /*#__PURE__*/__webpack_require__.n(angularfire2_storage__WEBPACK_IMPORTED_MODULE_26__);
+/* harmony import */ var _products_product_upload_component__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./products/product-upload.component */ "./src/app/products/product-upload.component.ts");
+
 
 
 
@@ -167,39 +169,40 @@ var AppModule = /** @class */ (function () {
     function AppModule() {
     }
     AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["NgModule"])({
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_3__["NgModule"])({
             declarations: [
-                _app_component__WEBPACK_IMPORTED_MODULE_7__["AppComponent"],
-                _products_product_list_component__WEBPACK_IMPORTED_MODULE_10__["ProductListComponent"],
-                _shared_star_component__WEBPACK_IMPORTED_MODULE_11__["StarComponent"],
-                _products_product_detail_component__WEBPACK_IMPORTED_MODULE_13__["ProductDetailComponent"],
-                _home_welcome_component__WEBPACK_IMPORTED_MODULE_12__["WelcomeComponent"],
-                _products_product_upload_component__WEBPACK_IMPORTED_MODULE_26__["ProductUploadComponent"]
+                _app_component__WEBPACK_IMPORTED_MODULE_8__["AppComponent"],
+                _products_product_list_component__WEBPACK_IMPORTED_MODULE_11__["ProductListComponent"],
+                _shared_star_component__WEBPACK_IMPORTED_MODULE_12__["StarComponent"],
+                _products_product_detail_component__WEBPACK_IMPORTED_MODULE_14__["ProductDetailComponent"],
+                _home_welcome_component__WEBPACK_IMPORTED_MODULE_13__["WelcomeComponent"],
+                _products_product_upload_component__WEBPACK_IMPORTED_MODULE_27__["ProductUploadComponent"],
+                _products_product_imgUpload_component__WEBPACK_IMPORTED_MODULE_1__["ProductImgUploadComponent"]
             ],
             imports: [
-                _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"].withServerTransition({ appId: APP_ID }),
-                ngx_cookie__WEBPACK_IMPORTED_MODULE_5__["CookieModule"].forRoot(),
-                _angular_common__WEBPACK_IMPORTED_MODULE_14__["CommonModule"],
-                _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormsModule"],
-                _angular_common_http__WEBPACK_IMPORTED_MODULE_4__["HttpClientModule"],
-                _angular_http__WEBPACK_IMPORTED_MODULE_24__["HttpModule"],
-                angularfire2__WEBPACK_IMPORTED_MODULE_8__["AngularFireModule"].initializeApp(_environments_environment__WEBPACK_IMPORTED_MODULE_9__["environment"].firebase),
-                _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_15__["BrowserAnimationsModule"],
-                _authentication_authentication_module__WEBPACK_IMPORTED_MODULE_20__["AuthenticationModule"],
-                _app_routing__WEBPACK_IMPORTED_MODULE_18__["AppRouting"],
-                _user_user_module__WEBPACK_IMPORTED_MODULE_19__["UserModule"],
+                _angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__["BrowserModule"].withServerTransition({ appId: APP_ID }),
+                ngx_cookie__WEBPACK_IMPORTED_MODULE_6__["CookieModule"].forRoot(),
+                _angular_common__WEBPACK_IMPORTED_MODULE_15__["CommonModule"],
+                _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormsModule"],
+                _angular_common_http__WEBPACK_IMPORTED_MODULE_5__["HttpClientModule"],
+                _angular_http__WEBPACK_IMPORTED_MODULE_25__["HttpModule"],
+                angularfire2__WEBPACK_IMPORTED_MODULE_9__["AngularFireModule"].initializeApp(_environments_environment__WEBPACK_IMPORTED_MODULE_10__["environment"].firebase),
+                _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_16__["BrowserAnimationsModule"],
+                _authentication_authentication_module__WEBPACK_IMPORTED_MODULE_21__["AuthenticationModule"],
+                _app_routing__WEBPACK_IMPORTED_MODULE_19__["AppRouting"],
+                _user_user_module__WEBPACK_IMPORTED_MODULE_20__["UserModule"],
             ],
             providers: [
-                angularfire2_auth__WEBPACK_IMPORTED_MODULE_16__["AngularFireAuth"],
-                angularfire2_database__WEBPACK_IMPORTED_MODULE_17__["AngularFireDatabase"],
-                _products_product_service__WEBPACK_IMPORTED_MODULE_21__["ProductService"],
-                _services_authentication_service__WEBPACK_IMPORTED_MODULE_22__["AuthenticationService"],
-                angularfire2_storage__WEBPACK_IMPORTED_MODULE_25__["AngularFireStorage"],
-                _services_user_service__WEBPACK_IMPORTED_MODULE_23__["UserService"],
-                _services_authentication_guard__WEBPACK_IMPORTED_MODULE_6__["AuthenticationGuard"],
-                { provide: ngx_cookie__WEBPACK_IMPORTED_MODULE_5__["CookieService"], useClass: ngx_cookie__WEBPACK_IMPORTED_MODULE_5__["CookieBackendService"] }
+                angularfire2_auth__WEBPACK_IMPORTED_MODULE_17__["AngularFireAuth"],
+                angularfire2_database__WEBPACK_IMPORTED_MODULE_18__["AngularFireDatabase"],
+                _products_product_service__WEBPACK_IMPORTED_MODULE_22__["ProductService"],
+                _services_authentication_service__WEBPACK_IMPORTED_MODULE_23__["AuthenticationService"],
+                angularfire2_storage__WEBPACK_IMPORTED_MODULE_26__["AngularFireStorage"],
+                _services_user_service__WEBPACK_IMPORTED_MODULE_24__["UserService"],
+                _services_authentication_guard__WEBPACK_IMPORTED_MODULE_7__["AuthenticationGuard"],
+                { provide: ngx_cookie__WEBPACK_IMPORTED_MODULE_6__["CookieService"], useClass: ngx_cookie__WEBPACK_IMPORTED_MODULE_6__["CookieBackendService"] }
             ],
-            bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_7__["AppComponent"]]
+            bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_8__["AppComponent"]]
         })
     ], AppModule);
     return AppModule;
@@ -228,6 +231,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _products_product_detail_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./products/product-detail.component */ "./src/app/products/product-detail.component.ts");
 /* harmony import */ var _services_authentication_guard__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./services/authentication.guard */ "./src/app/services/authentication.guard.ts");
 /* harmony import */ var _products_product_upload_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./products/product-upload.component */ "./src/app/products/product-upload.component.ts");
+/* harmony import */ var _products_product_imgUpload_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./products/product-imgUpload.component */ "./src/app/products/product-imgUpload.component.ts");
+
 
 
 
@@ -240,6 +245,7 @@ var ROUTES = [
     { path: 'welcome', component: _home_welcome_component__WEBPACK_IMPORTED_MODULE_3__["WelcomeComponent"] },
     { path: 'products', component: _products_product_list_component__WEBPACK_IMPORTED_MODULE_4__["ProductListComponent"], canActivate: [_services_authentication_guard__WEBPACK_IMPORTED_MODULE_6__["AuthenticationGuard"]] },
     { path: 'pm-upload-art', component: _products_product_upload_component__WEBPACK_IMPORTED_MODULE_7__["ProductUploadComponent"], canActivate: [_services_authentication_guard__WEBPACK_IMPORTED_MODULE_6__["AuthenticationGuard"]] },
+    { path: 'pm-upload-img', component: _products_product_imgUpload_component__WEBPACK_IMPORTED_MODULE_8__["ProductImgUploadComponent"], canActivate: [_services_authentication_guard__WEBPACK_IMPORTED_MODULE_6__["AuthenticationGuard"]] },
     { path: 'products/:id', component: _products_product_detail_component__WEBPACK_IMPORTED_MODULE_5__["ProductDetailComponent"], canActivate: [_services_authentication_guard__WEBPACK_IMPORTED_MODULE_6__["AuthenticationGuard"]] }
 ];
 var AppRouting = /** @class */ (function () {
@@ -557,7 +563,7 @@ var SignupComponent = /** @class */ (function () {
             var user = new _services_user__WEBPACK_IMPORTED_MODULE_2__["User"](signupFormData.value.email, signupFormData.value.name, signupFormData.value.mobile, userInfo.user.uid, 0, '');
             console.log("UserInfo: " + userInfo.user.uid);
             _this.writeNewUser(user);
-            _this.router.navigate(['/welcome']);
+            _this.router.navigate(['/products']);
         }).catch(function (error) {
             _this.showError = true;
             _this.errorMessage = error.message;
@@ -873,6 +879,84 @@ var ProductDetailComponent = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/products/product-imgUpload.component.html":
+/*!***********************************************************!*\
+  !*** ./src/app/products/product-imgUpload.component.html ***!
+  \***********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"form-group\">\r\n  <label for=\"Art\">Art Image</label>\r\n  <input (change)=\"onArtEdit($event)\" required accept=\".jpg\" name=\"fileName\"\r\n  type=\"file\" class=\"form-control-file\" id=\"Art\" >\r\n</div>\r\n<button type=\"button\" (click)='onUpload()' class=\"btn btn-info\">Upload</button>\r\n"
+
+/***/ }),
+
+/***/ "./src/app/products/product-imgUpload.component.ts":
+/*!*********************************************************!*\
+  !*** ./src/app/products/product-imgUpload.component.ts ***!
+  \*********************************************************/
+/*! exports provided: ProductImgUploadComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ProductImgUploadComponent", function() { return ProductImgUploadComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _product_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./product.service */ "./src/app/products/product.service.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _services_authentication_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./../services/authentication.service */ "./src/app/services/authentication.service.ts");
+/* harmony import */ var angularfire2_storage__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! angularfire2/storage */ "./node_modules/angularfire2/storage/index.js");
+/* harmony import */ var angularfire2_storage__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(angularfire2_storage__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+
+
+
+
+
+
+var ProductImgUploadComponent = /** @class */ (function () {
+    function ProductImgUploadComponent(authService, router, afStorage, productService) {
+        this.authService = authService;
+        this.router = router;
+        this.afStorage = afStorage;
+        this.productService = productService;
+        this.profileImage = '../../../assets/images/person_edit.png';
+        this.fbStorage = afStorage;
+    }
+    ProductImgUploadComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.product = this.productService.getSavedProduct().getValue();
+        this.productService.getSavedProduct().subscribe(function (product) {
+            if (_this.product.imageUrl) {
+                _this.profileImage = _this.product.imageUrl;
+            }
+        });
+    };
+    ProductImgUploadComponent.prototype.onArtEdit = function (event) {
+        var selectedFiles = event.target.files;
+        var file = selectedFiles.item(0);
+        this.productService.addArtImage(this.product, file);
+    };
+    ProductImgUploadComponent.prototype.onUpload = function () {
+        this.router.navigate(['/products']);
+    };
+    ProductImgUploadComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_5__["Component"])({
+            selector: 'pm-upload-img',
+            template: __webpack_require__(/*! ./product-imgUpload.component.html */ "./src/app/products/product-imgUpload.component.html")
+            //styleUrls: ['./product-upload.component.css']
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_services_authentication_service__WEBPACK_IMPORTED_MODULE_3__["AuthenticationService"],
+            _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"],
+            angularfire2_storage__WEBPACK_IMPORTED_MODULE_4__["AngularFireStorage"],
+            _product_service__WEBPACK_IMPORTED_MODULE_1__["ProductService"]])
+    ], ProductImgUploadComponent);
+    return ProductImgUploadComponent;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/products/product-list.component.css":
 /*!*****************************************************!*\
   !*** ./src/app/products/product-list.component.css ***!
@@ -961,6 +1045,33 @@ var ProductListComponent = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/products/product-list.ts":
+/*!******************************************!*\
+  !*** ./src/app/products/product-list.ts ***!
+  \******************************************/
+/*! exports provided: Products */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Products", function() { return Products; });
+var Products = /** @class */ (function () {
+    function Products(productName, releaseDate, description, productId, price, starRating, imageUrl) {
+        this.productName = productName;
+        this.releaseDate = releaseDate;
+        this.description = description;
+        this.productId = productId;
+        this.price = price;
+        this.starRating = starRating;
+        this.imageUrl = imageUrl;
+    }
+    return Products;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/products/product-upload.component.html":
 /*!********************************************************!*\
   !*** ./src/app/products/product-upload.component.html ***!
@@ -968,7 +1079,7 @@ var ProductListComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<form>\r\n  <div class=\"form-group\">\r\n    <label for=\"Art\">Art</label>\r\n    <input (change)=\"onArtEdit($event)\" required accept=\".jpg\"\r\n    type=\"file\" class=\"form-control-file\" id=\"Art\" >\r\n  </div>\r\n</form>\r\n"
+module.exports = "<div class=\"col-md-6 col-md-offset-3\">\r\n  <h2>Upload Art</h2>\r\n  <form name=\"form\" (ngSubmit)=\"onArtAdd(artData)\" #artData='ngForm'>\r\n      <div class=\"form-group\">\r\n          <label for=\"productName\">What is Your Art</label>\r\n          <input type=\"text\" class=\"form-control\" name=\"productName\" (ngModel)=\"productName\" #productName=\"ngModel\" required id=\"name\"/>\r\n\r\n      </div>\r\n      <div class=\"form-group\">\r\n          <label for=\"releaseDate\">Release Date</label>\r\n          <input type=\"text\" class=\"form-control\" name=\"releaseDate\" (ngModel)=\"releaseDate\" #releaseDate=\"ngModel\"\r\n                 id=\"releaseDate\"/>\r\n\r\n      </div>\r\n      <div class=\"form-group\">\r\n          <label for=\"description\">Description</label>\r\n          <input type=\"text\" class=\"form-control\" name=\"description\" (ngModel)=\"description\" #description=\"ngModel\" required id=\"password\"/>\r\n\r\n      </div>\r\n      <div class=\"form-group\">\r\n          <label for=\"price\">Price</label>\r\n          <input type=\"text\" class=\"form-control\" id=\"price\"\r\n                 (ngModel)=\"price\" name=\"price\"\r\n                 #price=\"ngModel\">\r\n      </div>\r\n      <div class=\"form-group\">\r\n          <label for=\"starRating\">Give Rating to Art</label>\r\n          <input type=\"text\" class=\"form-control\" name=\"starRating\" (ngModel)=\"starRating\" #starRating=\"ngModel\"\r\n                 id=\"starRating\"/>\r\n      </div>\r\n\r\n      <div class=\"form-group\">\r\n        <button type=\"submit\" class=\"btn btn-success\" [disabled]=\"!artData.form\">Next</button>\r\n    </div>\r\n  </form>\r\n</div>\r\n"
 
 /***/ }),
 
@@ -984,25 +1095,49 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ProductUploadComponent", function() { return ProductUploadComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _product_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./product.service */ "./src/app/products/product.service.ts");
+/* harmony import */ var _product_list__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./product-list */ "./src/app/products/product-list.ts");
+/* harmony import */ var _product_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./product.service */ "./src/app/products/product.service.ts");
+/* harmony import */ var _services_authentication_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../services/authentication.service */ "./src/app/services/authentication.service.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var angularfire2_storage__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! angularfire2/storage */ "./node_modules/angularfire2/storage/index.js");
+/* harmony import */ var angularfire2_storage__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(angularfire2_storage__WEBPACK_IMPORTED_MODULE_6__);
+
+
+
+
 
 
 
 var ProductUploadComponent = /** @class */ (function () {
-    function ProductUploadComponent(productService) {
+    function ProductUploadComponent(authService, router, afStorage, productService) {
+        this.authService = authService;
+        this.router = router;
+        this.afStorage = afStorage;
         this.productService = productService;
+        this.fbStorage = afStorage;
     }
-    ProductUploadComponent.prototype.onArtEdit = function (event) {
-        var selectedFiles = event.target.files;
-        var file = selectedFiles.item(0);
-        this.productService.addArtImage(file);
+    ProductUploadComponent.prototype.onArtAdd = function (artData) {
+        // tslint:disable-next-line:no-shadowed-variable
+        var products = new _product_list__WEBPACK_IMPORTED_MODULE_2__["Products"](artData.value.productName, artData.value.releaseDate, artData.value.description, '', artData.value.price, artData.value.starRating, '');
+        //products.imageUrl=this.imageUrl;
+        //console.log("products Details");
+        //console.log(products.imageUrl);
+        this.writeNewProducts(products);
+        this.router.navigate(['/pm-upload-img']);
+    };
+    ProductUploadComponent.prototype.writeNewProducts = function (products) {
+        this.productService.addArt(products);
     };
     ProductUploadComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
             selector: 'pm-upload-art',
-            template: __webpack_require__(/*! ./product-upload.component.html */ "./src/app/products/product-upload.component.html"),
+            template: __webpack_require__(/*! ./product-upload.component.html */ "./src/app/products/product-upload.component.html")
+            //styleUrls: ['./product-upload.component.css']
         }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_product_service__WEBPACK_IMPORTED_MODULE_2__["ProductService"]])
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_services_authentication_service__WEBPACK_IMPORTED_MODULE_4__["AuthenticationService"],
+            _angular_router__WEBPACK_IMPORTED_MODULE_5__["Router"],
+            angularfire2_storage__WEBPACK_IMPORTED_MODULE_6__["AngularFireStorage"],
+            _product_service__WEBPACK_IMPORTED_MODULE_3__["ProductService"]])
     ], ProductUploadComponent);
     return ProductUploadComponent;
 }());
@@ -1022,12 +1157,17 @@ var ProductUploadComponent = /** @class */ (function () {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ProductService", function() { return ProductService; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
-/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm5/index.js");
-/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm5/operators/index.js");
-/* harmony import */ var angularfire2_storage__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! angularfire2/storage */ "./node_modules/angularfire2/storage/index.js");
-/* harmony import */ var angularfire2_storage__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(angularfire2_storage__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var angularfire2_database__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! angularfire2/database */ "./node_modules/angularfire2/database/index.js");
+/* harmony import */ var angularfire2_database__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(angularfire2_database__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm5/index.js");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm5/operators/index.js");
+/* harmony import */ var angularfire2_storage__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! angularfire2/storage */ "./node_modules/angularfire2/storage/index.js");
+/* harmony import */ var angularfire2_storage__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(angularfire2_storage__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _services_database_constants__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! .././services/database-constants */ "./src/app/services/database-constants.ts");
+
+
 
 
 
@@ -1035,18 +1175,36 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var ProductService = /** @class */ (function () {
-    function ProductService(http, afStorage) {
+    function ProductService(http, afStorage, fireDb) {
         this.http = http;
         this.afStorage = afStorage;
+        this.fireDb = fireDb;
         this.productUrl = 'api/products/products.json';
         this.basePath = '/art';
+        this.subject = new rxjs__WEBPACK_IMPORTED_MODULE_4__["BehaviorSubject"](null);
         this.fbStorage = afStorage;
+        this.productArt = this.fireDb.list(this.basePath);
     }
     ProductService.prototype.getProducts = function () {
-        return this.http.get(this.productUrl).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["tap"])(function (data) { return console.log('All: ' + JSON.stringify(data)); }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["catchError"])(this.handleError));
+        return this.http.get(this.productUrl).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["tap"])(function (data) { return console.log('All: ' + JSON.stringify(data)); }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["catchError"])(this.handleError));
+    };
+    ProductService.prototype.addArt = function (product) {
+        //this.productId=this.fireDb.createPushId();
+        //this.fireDb.object(`${PRODUCT_CHILD }/${this.productId}`).set(product);
+        var ref = this.productArt.push(product);
+        this.productArt.update(ref.key, { productId: ref.key });
+        product.productId = ref.key;
+        this.saveproduct(product);
     };
     ProductService.prototype.getProduct = function (id) {
-        return this.getProducts().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["map"])(function (products) { return products.find(function (p) { return p.productId === id; }); }));
+        return this.getProducts().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["map"])(function (products) { return products.find(function (p) { return true; } //p.productId === id
+        ); }));
+    };
+    ProductService.prototype.getSavedProduct = function () {
+        return this.subject;
+    };
+    ProductService.prototype.saveproduct = function (product) {
+        this.subject.next(product);
     };
     ProductService.prototype.handleError = function (err) {
         // in a real world app, we may send the server to some remote logging infrastructure
@@ -1062,26 +1220,28 @@ var ProductService = /** @class */ (function () {
             errorMessage = "Server returned code: " + err.status + ", error message is: " + err.message;
         }
         console.error(errorMessage);
-        return Object(rxjs__WEBPACK_IMPORTED_MODULE_3__["throwError"])(errorMessage);
+        return Object(rxjs__WEBPACK_IMPORTED_MODULE_4__["throwError"])(errorMessage);
     };
-    ProductService.prototype.addArtImage = function (file) {
+    ProductService.prototype.addArtImage = function (product, file) {
+        var _this = this;
         this.fbStorage.ref(this.basePath + "/" + file.name).put(file).then(function (snapshot) {
-            snapshot.ref.getDownloadURL().then((function (downloadURL) {
-                console.log("User Servicce Dowload Url: ");
+            snapshot.ref.getDownloadURL().then(function (downloadURL) {
+                //console.log(product.productId);
                 console.log(downloadURL);
-                /* this.fireDb.object(`${USERS_CHILD}/${user.uid}`).update({image: downloadURL});
-                user.image = downloadURL;
-                this.saveUser(user); */
-            })).catch(function (error) { return alert(error); });
-            //ref.getDownloadURL().then((downloadURL) => console.log(downloadURL));
-        }).catch(function (error) {
-            var errorMessage = error.message;
-            alert(errorMessage);
+                console.log(product);
+                _this.fireDb.object(_services_database_constants__WEBPACK_IMPORTED_MODULE_7__["PRODUCT_CHILD"] + "/" + product.productId).update({ imageUrl: downloadURL });
+                //this.productArt.update(`${this.productId}`,{imageUrl: downloadURL});
+                //product.imageUrl = downloadURL;
+                //console.log(product.imageUrl);
+                _this.saveproduct(product);
+            });
         });
     };
     ProductService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])(),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"], angularfire2_storage__WEBPACK_IMPORTED_MODULE_5__["AngularFireStorage"]])
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Injectable"])(),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClient"],
+            angularfire2_storage__WEBPACK_IMPORTED_MODULE_6__["AngularFireStorage"],
+            angularfire2_database__WEBPACK_IMPORTED_MODULE_1__["AngularFireDatabase"]])
     ], ProductService);
     return ProductService;
 }());
@@ -1199,13 +1359,15 @@ var AuthenticationService = /** @class */ (function () {
 /*!************************************************!*\
   !*** ./src/app/services/database-constants.ts ***!
   \************************************************/
-/*! exports provided: USERS_CHILD */
+/*! exports provided: USERS_CHILD, PRODUCT_CHILD */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "USERS_CHILD", function() { return USERS_CHILD; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PRODUCT_CHILD", function() { return PRODUCT_CHILD; });
 var USERS_CHILD = '/users';
+var PRODUCT_CHILD = '/art';
 
 
 /***/ }),
@@ -1457,7 +1619,7 @@ var StarComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"user-profile\" *ngIf=\"user\">\r\n  <div class=\"person-icon\">\r\n    <img [src]=\"profileImage\" style=\"max-width: 100%; max-height:\r\n     100%;\">\r\n    <input (change)=\"onPersonEdit($event)\" required accept=\".jpg\"\r\n     type=\"file\" style=\"opacity: 0.0; position: absolute; top:120px;\r\n     left: 30px; bottom: 0; right:0; width: 200px; height:200px;\" />\r\n  </div>\r\n    <div class=\"user-profile-name\">\r\n        <label>Name: </label>\r\n        <div class=\"user-profile-name-value\">{{user?.name}}</div>\r\n        <button (click)=\"onNameChange()\" data-toggle=\"modal\" data-target=\"#editModal\"\r\n                class=\"btn btn-default btn-sm user-profile-name-btn\">\r\n            Edit\r\n        </button>\r\n    </div>\r\n    <div class=\"user-profile-email\">\r\n        <label>Email: </label>\r\n        <div class=\"user-profile-email-value\">{{user?.email}}</div>\r\n        <button (click)=\"onEmailChange()\" data-toggle=\"modal\" data-target=\"#editModal\" type=\"button\"\r\n                class=\"btn btn-default btn-sm\">\r\n            Edit\r\n        </button>\r\n    </div>\r\n    <div class=\"user-profile-mobile\">\r\n        <label>Mobile: </label>\r\n        <div class=\"user-profile-mobile-value\">{{user?.mobile}}</div>\r\n        <button (click)=\"onMobileChange()\" data-toggle=\"modal\" data-target=\"#editModal\" type=\"button\"\r\n                class=\"btn btn-default btn-sm user-profile-mobile-btn\">\r\n            Edit\r\n        </button>\r\n    </div>\r\n\r\n    <div class=\"user-profile-password\">\r\n        <label>Password: </label>\r\n        <div class=\"user-profile-password-value\">****</div>\r\n        <button (click)=\"onPasswordChange()\" data-toggle=\"modal\" data-target=\"#editModal\" type=\"button\"\r\n                class=\"btn btn-default btn-sm user-profile-password-btn\">\r\n            Edit\r\n        </button>\r\n    </div>\r\n\r\n</div>\r\n<app-edit-dialog></app-edit-dialog>\r\n"
+module.exports = "<div class=\"user-profile\" *ngIf=\"user\">\r\n  <div class=\"person-icon\">\r\n    <img [src]=\"profileImage\" style=\"max-width: 100%; max-height:\r\n     100%;\">\r\n    <input (change)=\"onPersonEdit($event)\" required accept=\".jpg\"\r\n     type=\"file\" style=\"opacity: 0.0; position: absolute; top:200px;\r\n     left: 30px; bottom: 0; right:0; width: 200px; height:200px;\" />\r\n  </div>\r\n    <div class=\"user-profile-name\">\r\n        <label>Name: </label>\r\n        <div class=\"user-profile-name-value\">{{user?.name}}</div>\r\n        <button (click)=\"onNameChange()\" data-toggle=\"modal\" data-target=\"#editModal\"\r\n                class=\"btn btn-default btn-sm user-profile-name-btn\">\r\n            Edit\r\n        </button>\r\n    </div>\r\n    <div class=\"user-profile-email\">\r\n        <label>Email: </label>\r\n        <div class=\"user-profile-email-value\">{{user?.email}}</div>\r\n        <button (click)=\"onEmailChange()\" data-toggle=\"modal\" data-target=\"#editModal\" type=\"button\"\r\n                class=\"btn btn-default btn-sm\">\r\n            Edit\r\n        </button>\r\n    </div>\r\n    <div class=\"user-profile-mobile\">\r\n        <label>Mobile: </label>\r\n        <div class=\"user-profile-mobile-value\">{{user?.mobile}}</div>\r\n        <button (click)=\"onMobileChange()\" data-toggle=\"modal\" data-target=\"#editModal\" type=\"button\"\r\n                class=\"btn btn-default btn-sm user-profile-mobile-btn\">\r\n            Edit\r\n        </button>\r\n    </div>\r\n\r\n    <div class=\"user-profile-password\">\r\n        <label>Password: </label>\r\n        <div class=\"user-profile-password-value\">****</div>\r\n        <button (click)=\"onPasswordChange()\" data-toggle=\"modal\" data-target=\"#editModal\" type=\"button\"\r\n                class=\"btn btn-default btn-sm user-profile-password-btn\">\r\n            Edit\r\n        </button>\r\n    </div>\r\n\r\n</div>\r\n<app-edit-dialog></app-edit-dialog>\r\n"
 
 /***/ }),
 

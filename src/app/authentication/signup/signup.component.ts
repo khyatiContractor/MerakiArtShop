@@ -25,15 +25,14 @@ export class SignupComponent {
             // Register the new user
 
             const user: User = new User(signupFormData.value.email,
-                                        signupFormData.value.name, 
-                                        signupFormData.value.mobile, 
-                                        userInfo.user.uid, 
-                                        0, 
+                                        signupFormData.value.name,
+                                        signupFormData.value.mobile,
+                                        userInfo.user.uid,
+                                        0,
                                         '');
                 console.log("UserInfo: "+userInfo.user.uid);
-                
                 this.writeNewUser(user);
-                this.router.navigate(['/welcome']);
+                this.router.navigate(['/products']);
         }).catch((error) => {
             this.showError = true;
             this.errorMessage = error.message;

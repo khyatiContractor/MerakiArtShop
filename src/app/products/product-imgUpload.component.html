@@ -1,0 +1,6 @@
+<div class="form-group">
+  <label for="Art">Art Image</label>
+  <input (change)="onArtEdit($event)" required accept=".jpg" name="fileName"
+  type="file" class="form-control-file" id="Art" >
+</div>
+<button type="button" (click)='onUpload()' class="btn btn-info">Upload</button>
