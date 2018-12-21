@@ -23,6 +23,8 @@ import { ProductService } from './products/product.service';
 import { AuthenticationService } from './services/authentication.service';
 import { UserService } from './services/user.service';
 import { HttpModule } from '@angular/http';
+import { AngularFireStorage } from 'angularfire2/storage';
+import { ProductUploadComponent } from './products/product-upload.component';
 
 const APP_ID = 'PhotoSale';
 
@@ -32,7 +34,8 @@ const APP_ID = 'PhotoSale';
     ProductListComponent,
     StarComponent,
     ProductDetailComponent,
-    WelcomeComponent
+    WelcomeComponent,
+    ProductUploadComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId : APP_ID }) ,
@@ -52,6 +55,7 @@ const APP_ID = 'PhotoSale';
     AngularFireDatabase,
     ProductService,
     AuthenticationService,
+    AngularFireStorage,
         UserService,
         AuthenticationGuard,
         { provide: CookieService, useClass: CookieBackendService }

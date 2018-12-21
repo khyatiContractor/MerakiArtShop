@@ -4,13 +4,18 @@ import { Observable, throwError } from 'rxjs';
 import { catchError, tap, map } from 'rxjs/operators';
 import { Products } from './product-list';
 import { HttpModule } from '@angular/http';
+import { AngularFireStorage } from 'angularfire2/storage';
 
 @Injectable()
 export class ProductService {
   private productUrl = 'api/products/products.json';
+  private fbStorage: AngularFireStorage;
+  private basePath = '/art';
 
-constructor(private http: HttpClient){}
-
+constructor(private http: HttpClient, private afStorage: AngularFireStorage
+  ) {
+    this.fbStorage = afStorage;
+}
   getProducts(): Observable<Products[]>{
     return this.http.get<Products[]>(this.productUrl).pipe(
       tap(data => console.log('All: '+ JSON.stringify(data))),
@@ -39,4 +44,27 @@ constructor(private http: HttpClient){}
       console.error(errorMessage);
       return throwError(errorMessage);
     }
+
+
+    public addArtImage( file: File) {
+      this.fbStorage.ref(`${this.basePath}/${file.name}`).put(file).then(
+          snapshot => {
+            snapshot.ref.getDownloadURL().then(((downloadURL) =>   {
+              console.log("User Servicce Dowload Url: ");
+              console.log(  downloadURL);
+              /* this.fireDb.object(`${USERS_CHILD}/${user.uid}`).update({image: downloadURL});
+              user.image = downloadURL;
+              this.saveUser(user); */
+
+            })).catch(
+              (error)=>alert(error)
+            );
+              //ref.getDownloadURL().then((downloadURL) => console.log(downloadURL));
+
+
+          }).catch((error) => {
+          const errorMessage = error.message;
+          alert(errorMessage);
+      });
+  }
 }

@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Products} from './product-list';
 import {ProductService} from './product.service';
 
@@ -7,13 +7,20 @@ import {ProductService} from './product.service';
   styleUrls: ['./product-list.component.css']
 })
 
-export class ProductListComponent{
+export class ProductListComponent implements OnInit{
   title: string='Art List';
   imagewidth:number= 100;
   imagemargin:number=2;
   showPrice: boolean = false;
   _listFilter: string ;
   errorMessage: string;
+  filterproducts : Products[];
+  products : Products[] = [];
+
+constructor(private productService:ProductService){
+
+}
+
 
   get listFilter():string{
     return this._listFilter;
@@ -22,12 +29,7 @@ export class ProductListComponent{
     this._listFilter=value;
     this.filterproducts=this.listFilter ? this.performeFilter(this.listFilter) : this.products;
   }
-    filterproducts : Products[];
-  products : Products[] = [];
 
-constructor(private productService:ProductService){
-
-}
   togglePrice():void{
     this.showPrice = !this.showPrice;
   }
@@ -49,4 +51,7 @@ constructor(private productService:ProductService){
     );
 
   }
+
+
+
 }

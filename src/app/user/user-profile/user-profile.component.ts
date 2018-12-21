@@ -32,17 +32,22 @@ export class UserProfileComponent implements OnInit, AfterViewInit {
 
 
     ngOnInit() {
-        this.user = this.userService.getSavedUser().getValue();
-        console.log("USerProfile:"+this.user);
-    }
+      this.user = this.userService.getSavedUser().getValue();
+      this.userService.getSavedUser().subscribe(
+          (user) => {
+              if (this.user.image) {
+                  this.profileImage = this.user.image;
+              }
+          }
+      );
+  }
 
 
-
-    /* onPersonEdit(event) {
+     onPersonEdit(event) {
         const selectedFiles: FileList = event.target.files;
         const file = selectedFiles.item(0);
         this.userService.addProfileImage(this.user, file);
-    } */
+    }
 
     onNameChange() {
         console.log("In name change: "+this.editDialog);

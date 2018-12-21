@@ -51,8 +51,8 @@ export class LoginComponent {
       this.showError = true;
     });
   }
-  private navigateToUserProfile() {
-    this.router.navigateByUrl('/app-friends-userprofile');
+  private navigateToProcts() {
+    this.router.navigateByUrl('/products');
 }
 
 private getUserInfo(uid: string) {
@@ -61,7 +61,7 @@ private getUserInfo(uid: string) {
         this.userService.saveUser(this.user);
         console.log("snap:");
         console.log(snapshot);
-        this.navigateToUserProfile();
+        this.navigateToProcts();
     });
 }
 }

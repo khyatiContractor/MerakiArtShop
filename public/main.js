@@ -41,7 +41,7 @@ module.exports = ".nav-link {\n  font-size: large;\n  text-align: center;\n}\n\n
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n<!--\n<nav class=\"navbar navbar-expand-sm bg-light navbar-light fixed-top\" style=\"padding-left:50px;\">\n\n  <a class=\"navbar-brand\" href=\"#\">\n    <img src=\"./assets/images/art_palette.png\" alt=\"logo\" style=\"width:40px;\">\n  </a>\n\n\n  <ul class=\"navbar-nav \">\n    <li class=\"nav-item \" >\n      <a class=\"nav-link\" [routerLink]=\"['/welcome']\">Home</a>\n    </li>\n    <li class=\"nav-item  \">\n      <a class=\"nav-link\"  [routerLink]=\"['/products']\">Product List</a>\n    </li>\n  </ul>\n</nav>\n-->\n<h1 class=\"title\">Meraki Art - Buy Amazing Artwork</h1>\n<div class=\"nav-container\">\n<nav class=\"navbar navbar-expand-lg navbar-light bg-color\">\n  <div class=\"collapse navbar-collapse\" id=\"navbarNav\">\n    <ul class=\"navbar-nav\">\n      <li class=\"nav-item\" *ngIf=\"authenticationService?.isAuthenticated()\"><a class=\"nav-link\" routerLink=\"/app-friends-userprofile\" routerLinkActive=\"active\">My Profile</a></li>\n      <li class=\"nav-item\" *ngIf=\"authenticationService?.isAuthenticated()\"><a class=\"nav-link\" routerLink=\"/products\" routerLinkActive=\"active\">Art</a></li>\n      <li class=\"nav-item\" active *ngIf=\"!authenticationService?.isAuthenticated()\"><a class=\"nav-link\" routerLink=\"/app-friends-login\" routerLinkActive=\"active\">Login</a></li>\n      <li class=\"nav-item\" *ngIf=\"authenticationService?.isAuthenticated()\"><button type=\"button\" (click)='onLogout()' class=\"btn btn-info\">Logout</button></li>\n    </ul>\n  </div>\n</nav>\n</div>\n<router-outlet></router-outlet>\n\n"
+module.exports = "\n<!--\n<nav class=\"navbar navbar-expand-sm bg-light navbar-light fixed-top\" style=\"padding-left:50px;\">\n\n  <a class=\"navbar-brand\" href=\"#\">\n    <img src=\"./assets/images/art_palette.png\" alt=\"logo\" style=\"width:40px;\">\n  </a>\n\n\n  <ul class=\"navbar-nav \">\n    <li class=\"nav-item \" >\n      <a class=\"nav-link\" [routerLink]=\"['/welcome']\">Home</a>\n    </li>\n    <li class=\"nav-item  \">\n      <a class=\"nav-link\"  [routerLink]=\"['/products']\">Product List</a>\n    </li>\n  </ul>\n</nav>\n-->\n<h1 class=\"title\">Meraki Art - Buy Amazing Artwork</h1>\n<div class=\"nav-container\">\n<nav class=\"navbar navbar-expand-lg navbar-light bg-color\">\n  <div class=\"collapse navbar-collapse\" id=\"navbarNav\">\n    <ul class=\"navbar-nav\">\n      <li class=\"nav-item\" *ngIf=\"authenticationService?.isAuthenticated()\"><a class=\"nav-link\" routerLink=\"/app-friends-userprofile\" routerLinkActive=\"active\">My Profile</a></li>\n      <li class=\"nav-item\" *ngIf=\"authenticationService?.isAuthenticated()\"><a class=\"nav-link\" routerLink=\"/products\" routerLinkActive=\"active\">Art</a></li>\n      <li class=\"nav-item\" *ngIf=\"authenticationService?.isAuthenticated()\"><a class=\"nav-link\" routerLink=\"/pm-upload-art\" routerLinkActive=\"active\">Upload</a></li>\n      <li class=\"nav-item\" active *ngIf=\"!authenticationService?.isAuthenticated()\"><a class=\"nav-link\" routerLink=\"/app-friends-login\" routerLinkActive=\"active\">Login</a></li>\n      <li class=\"nav-item\" *ngIf=\"authenticationService?.isAuthenticated()\"><button type=\"button\" (click)='onLogout()' class=\"btn btn-info\">Logout</button></li>\n    </ul>\n  </div>\n</nav>\n</div>\n<router-outlet></router-outlet>\n\n"
 
 /***/ }),
 
@@ -132,6 +132,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _services_authentication_service__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./services/authentication.service */ "./src/app/services/authentication.service.ts");
 /* harmony import */ var _services_user_service__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./services/user.service */ "./src/app/services/user.service.ts");
 /* harmony import */ var _angular_http__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! @angular/http */ "./node_modules/@angular/http/fesm5/http.js");
+/* harmony import */ var angularfire2_storage__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! angularfire2/storage */ "./node_modules/angularfire2/storage/index.js");
+/* harmony import */ var angularfire2_storage__WEBPACK_IMPORTED_MODULE_25___default = /*#__PURE__*/__webpack_require__.n(angularfire2_storage__WEBPACK_IMPORTED_MODULE_25__);
+/* harmony import */ var _products_product_upload_component__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./products/product-upload.component */ "./src/app/products/product-upload.component.ts");
+
+
 
 
 
@@ -168,7 +173,8 @@ var AppModule = /** @class */ (function () {
                 _products_product_list_component__WEBPACK_IMPORTED_MODULE_10__["ProductListComponent"],
                 _shared_star_component__WEBPACK_IMPORTED_MODULE_11__["StarComponent"],
                 _products_product_detail_component__WEBPACK_IMPORTED_MODULE_13__["ProductDetailComponent"],
-                _home_welcome_component__WEBPACK_IMPORTED_MODULE_12__["WelcomeComponent"]
+                _home_welcome_component__WEBPACK_IMPORTED_MODULE_12__["WelcomeComponent"],
+                _products_product_upload_component__WEBPACK_IMPORTED_MODULE_26__["ProductUploadComponent"]
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"].withServerTransition({ appId: APP_ID }),
@@ -188,6 +194,7 @@ var AppModule = /** @class */ (function () {
                 angularfire2_database__WEBPACK_IMPORTED_MODULE_17__["AngularFireDatabase"],
                 _products_product_service__WEBPACK_IMPORTED_MODULE_21__["ProductService"],
                 _services_authentication_service__WEBPACK_IMPORTED_MODULE_22__["AuthenticationService"],
+                angularfire2_storage__WEBPACK_IMPORTED_MODULE_25__["AngularFireStorage"],
                 _services_user_service__WEBPACK_IMPORTED_MODULE_23__["UserService"],
                 _services_authentication_guard__WEBPACK_IMPORTED_MODULE_6__["AuthenticationGuard"],
                 { provide: ngx_cookie__WEBPACK_IMPORTED_MODULE_5__["CookieService"], useClass: ngx_cookie__WEBPACK_IMPORTED_MODULE_5__["CookieBackendService"] }
@@ -220,6 +227,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _products_product_list_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./products/product-list.component */ "./src/app/products/product-list.component.ts");
 /* harmony import */ var _products_product_detail_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./products/product-detail.component */ "./src/app/products/product-detail.component.ts");
 /* harmony import */ var _services_authentication_guard__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./services/authentication.guard */ "./src/app/services/authentication.guard.ts");
+/* harmony import */ var _products_product_upload_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./products/product-upload.component */ "./src/app/products/product-upload.component.ts");
+
 
 
 
@@ -230,6 +239,7 @@ __webpack_require__.r(__webpack_exports__);
 var ROUTES = [
     { path: 'welcome', component: _home_welcome_component__WEBPACK_IMPORTED_MODULE_3__["WelcomeComponent"] },
     { path: 'products', component: _products_product_list_component__WEBPACK_IMPORTED_MODULE_4__["ProductListComponent"], canActivate: [_services_authentication_guard__WEBPACK_IMPORTED_MODULE_6__["AuthenticationGuard"]] },
+    { path: 'pm-upload-art', component: _products_product_upload_component__WEBPACK_IMPORTED_MODULE_7__["ProductUploadComponent"], canActivate: [_services_authentication_guard__WEBPACK_IMPORTED_MODULE_6__["AuthenticationGuard"]] },
     { path: 'products/:id', component: _products_product_detail_component__WEBPACK_IMPORTED_MODULE_5__["ProductDetailComponent"], canActivate: [_services_authentication_guard__WEBPACK_IMPORTED_MODULE_6__["AuthenticationGuard"]] }
 ];
 var AppRouting = /** @class */ (function () {
@@ -459,8 +469,8 @@ var LoginComponent = /** @class */ (function () {
             _this.showError = true;
         });
     };
-    LoginComponent.prototype.navigateToUserProfile = function () {
-        this.router.navigateByUrl('/app-friends-userprofile');
+    LoginComponent.prototype.navigateToProcts = function () {
+        this.router.navigateByUrl('/products');
     };
     LoginComponent.prototype.getUserInfo = function (uid) {
         var _this = this;
@@ -469,7 +479,7 @@ var LoginComponent = /** @class */ (function () {
             _this.userService.saveUser(_this.user);
             console.log("snap:");
             console.log(snapshot);
-            _this.navigateToUserProfile();
+            _this.navigateToProcts();
         });
     };
     LoginComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
@@ -881,7 +891,7 @@ module.exports = ".jumbotron{\r\n  width:100%;\r\n  background-image: url(\"/ass
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div>\r\n  <div class=\"jumbotron\"></div>\r\n  <div class=\"productPageTitle\">\r\n    <h1>~ Meraki Art ~</h1>\r\n\r\n</div>\r\n<div class=\"form-group\">\r\n  <label for=\"usr\">Search:</label>\r\n  <input type=\"text\" class=\"form-control\" id=\"usr\"\r\n        [(ngModel)]='listFilter'>\r\n</div>\r\n<div class=\"row\" *ngIf='products && products.length'>\r\n<!-- <table class=\"table table-dark table-hover\"\r\n        *ngIf='products && products.length'>\r\n    <thead>\r\n       <tr>\r\n        <th>Art</th>\r\n        <th>Product Name</th>\r\n        <th>Description</th>\r\n        <th>Rating</th>\r\n        <th>\r\n          <button  type=\"button\" class=\"btn btn-dark\"(click)='togglePrice()'>\r\n            {{showPrice ? 'Hide' : 'Show'}} Price\r\n          </button>\r\n        </th>\r\n      </tr> \r\n    </thead>\r\n    <tbody> -->\r\n        <div class=\"card col-sm-3\" style=\"width:400px\"\r\n        *ngFor='let product of filterproducts'\r\n        [routerLink]=\"['/products',product.productId]\">\r\n        <div class=\"imgClass\">\r\n            <img class=\"card-img-top\"  \r\n            [src]='product.imageUrl'\r\n            style=\"width:100%; height: 500px;\">\r\n        </div>  \r\n            <div class=\"card-body\">\r\n              <h4 class=\"card-title\">{{product.productName}}</h4>\r\n              <p class=\"card-text\">{{product.description}}</p>\r\n              <p><pm-star [rating]='product.starRating'></pm-star></p>\r\n              <br>\r\n              <span >{{product.price | currency :'USD':'symbol':'1.2-2'}}</span>\r\n              <a href=\"#\" class=\"btn btn-primary\">See Profile</a>\r\n            </div>\r\n          </div>\r\n            <!--  <tr *ngFor='let product of filterproducts'[routerLink]=\"['/products',product.productId]\">\r\n        <td><img\r\n          [src]='product.imageUrl'\r\n          [style.width.px]='imagewidth'\r\n          [style.margin.px]='imagemargin'></td>\r\n        <td>{{product.productName}}</td>\r\n        <td>{{product.description}}</td>\r\n        <td><pm-star [rating]='product.starRating'></pm-star></td>\r\n        <td>\r\n          <span >{{product.price | currency :'USD':'symbol':'1.2-2'}}</span>\r\n        </td>\r\n\r\n      </tr>\r\n    </tbody>\r\n  </table> -->\r\n  </div>\r\n</div>"
+module.exports = "<div>\r\n  <div class=\"jumbotron\"></div>\r\n  <div class=\"productPageTitle\">\r\n    <h1>~ Meraki Art ~</h1>\r\n\r\n</div>\r\n<div class=\"form-group\">\r\n  <label for=\"usr\">Search:</label>\r\n  <input type=\"text\" class=\"form-control\" id=\"usr\"\r\n        [(ngModel)]='listFilter'>\r\n</div>\r\n\r\n\r\n<div class=\"row\" *ngIf='products && products.length'>\r\n<!-- <table class=\"table table-dark table-hover\"\r\n        *ngIf='products && products.length'>\r\n    <thead>\r\n       <tr>\r\n        <th>Art</th>\r\n        <th>Product Name</th>\r\n        <th>Description</th>\r\n        <th>Rating</th>\r\n        <th>\r\n          <button  type=\"button\" class=\"btn btn-dark\"(click)='togglePrice()'>\r\n            {{showPrice ? 'Hide' : 'Show'}} Price\r\n          </button>\r\n        </th>\r\n      </tr>\r\n    </thead>\r\n    <tbody> -->\r\n        <div class=\"card col-sm-3\" style=\"width:400px\"\r\n        *ngFor='let product of filterproducts'\r\n        [routerLink]=\"['/products',product.productId]\">\r\n        <div class=\"imgClass\">\r\n            <img class=\"card-img-top\"\r\n            [src]='product.imageUrl'\r\n            style=\"width:100%; height: 500px;\">\r\n        </div>\r\n            <div class=\"card-body\">\r\n              <h4 class=\"card-title\">{{product.productName}}</h4>\r\n              <p class=\"card-text\">{{product.description}}</p>\r\n              <p><pm-star [rating]='product.starRating'></pm-star></p>\r\n              <br>\r\n              <span >{{product.price | currency :'USD':'symbol':'1.2-2'}}</span>\r\n              <a href=\"#\" class=\"btn btn-primary\">See Profile</a>\r\n            </div>\r\n          </div>\r\n            <!--  <tr *ngFor='let product of filterproducts'[routerLink]=\"['/products',product.productId]\">\r\n        <td><img\r\n          [src]='product.imageUrl'\r\n          [style.width.px]='imagewidth'\r\n          [style.margin.px]='imagemargin'></td>\r\n        <td>{{product.productName}}</td>\r\n        <td>{{product.description}}</td>\r\n        <td><pm-star [rating]='product.starRating'></pm-star></td>\r\n        <td>\r\n          <span >{{product.price | currency :'USD':'symbol':'1.2-2'}}</span>\r\n        </td>\r\n\r\n      </tr>\r\n    </tbody>\r\n  </table> -->\r\n  </div>\r\n</div>\r\n"
 
 /***/ }),
 
@@ -951,6 +961,56 @@ var ProductListComponent = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/products/product-upload.component.html":
+/*!********************************************************!*\
+  !*** ./src/app/products/product-upload.component.html ***!
+  \********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<form>\r\n  <div class=\"form-group\">\r\n    <label for=\"Art\">Art</label>\r\n    <input (change)=\"onArtEdit($event)\" required accept=\".jpg\"\r\n    type=\"file\" class=\"form-control-file\" id=\"Art\" >\r\n  </div>\r\n</form>\r\n"
+
+/***/ }),
+
+/***/ "./src/app/products/product-upload.component.ts":
+/*!******************************************************!*\
+  !*** ./src/app/products/product-upload.component.ts ***!
+  \******************************************************/
+/*! exports provided: ProductUploadComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ProductUploadComponent", function() { return ProductUploadComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _product_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./product.service */ "./src/app/products/product.service.ts");
+
+
+
+var ProductUploadComponent = /** @class */ (function () {
+    function ProductUploadComponent(productService) {
+        this.productService = productService;
+    }
+    ProductUploadComponent.prototype.onArtEdit = function (event) {
+        var selectedFiles = event.target.files;
+        var file = selectedFiles.item(0);
+        this.productService.addArtImage(file);
+    };
+    ProductUploadComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'pm-upload-art',
+            template: __webpack_require__(/*! ./product-upload.component.html */ "./src/app/products/product-upload.component.html"),
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_product_service__WEBPACK_IMPORTED_MODULE_2__["ProductService"]])
+    ], ProductUploadComponent);
+    return ProductUploadComponent;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/products/product.service.ts":
 /*!*********************************************!*\
   !*** ./src/app/products/product.service.ts ***!
@@ -966,15 +1026,21 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
 /* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm5/index.js");
 /* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm5/operators/index.js");
+/* harmony import */ var angularfire2_storage__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! angularfire2/storage */ "./node_modules/angularfire2/storage/index.js");
+/* harmony import */ var angularfire2_storage__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(angularfire2_storage__WEBPACK_IMPORTED_MODULE_5__);
+
 
 
 
 
 
 var ProductService = /** @class */ (function () {
-    function ProductService(http) {
+    function ProductService(http, afStorage) {
         this.http = http;
+        this.afStorage = afStorage;
         this.productUrl = 'api/products/products.json';
+        this.basePath = '/art';
+        this.fbStorage = afStorage;
     }
     ProductService.prototype.getProducts = function () {
         return this.http.get(this.productUrl).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["tap"])(function (data) { return console.log('All: ' + JSON.stringify(data)); }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["catchError"])(this.handleError));
@@ -998,9 +1064,24 @@ var ProductService = /** @class */ (function () {
         console.error(errorMessage);
         return Object(rxjs__WEBPACK_IMPORTED_MODULE_3__["throwError"])(errorMessage);
     };
+    ProductService.prototype.addArtImage = function (file) {
+        this.fbStorage.ref(this.basePath + "/" + file.name).put(file).then(function (snapshot) {
+            snapshot.ref.getDownloadURL().then((function (downloadURL) {
+                console.log("User Servicce Dowload Url: ");
+                console.log(downloadURL);
+                /* this.fireDb.object(`${USERS_CHILD}/${user.uid}`).update({image: downloadURL});
+                user.image = downloadURL;
+                this.saveUser(user); */
+            })).catch(function (error) { return alert(error); });
+            //ref.getDownloadURL().then((downloadURL) => console.log(downloadURL));
+        }).catch(function (error) {
+            var errorMessage = error.message;
+            alert(errorMessage);
+        });
+    };
     ProductService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])(),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"]])
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"], angularfire2_storage__WEBPACK_IMPORTED_MODULE_5__["AngularFireStorage"]])
     ], ProductService);
     return ProductService;
 }());
@@ -1143,9 +1224,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var angularfire2_database__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! angularfire2/database */ "./node_modules/angularfire2/database/index.js");
 /* harmony import */ var angularfire2_database__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(angularfire2_database__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var firebase_storage__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! firebase/storage */ "./node_modules/firebase/storage/dist/index.esm.js");
-/* harmony import */ var _database_constants__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./database-constants */ "./src/app/services/database-constants.ts");
-/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm5/index.js");
+/* harmony import */ var angularfire2_storage__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! angularfire2/storage */ "./node_modules/angularfire2/storage/index.js");
+/* harmony import */ var angularfire2_storage__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(angularfire2_storage__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var firebase_storage__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! firebase/storage */ "./node_modules/firebase/storage/dist/index.esm.js");
+/* harmony import */ var _database_constants__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./database-constants */ "./src/app/services/database-constants.ts");
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm5/index.js");
+
 
 
 
@@ -1162,20 +1246,20 @@ var UserService = /** @class */ (function () {
      *
      * @param {AngularFireDatabase} fireDb provides the functionality for Firebase Database
      */
-    function UserService(fireDb) {
+    function UserService(fireDb, afStorage) {
         this.fireDb = fireDb;
-        this.subject = new rxjs__WEBPACK_IMPORTED_MODULE_5__["BehaviorSubject"](null);
-        //private fbStorage: AngularFireStorage;
+        this.afStorage = afStorage;
+        this.subject = new rxjs__WEBPACK_IMPORTED_MODULE_6__["BehaviorSubject"](null);
         this.basePath = '/profile';
-        //this.fbStorage = afStorage;
+        this.fbStorage = afStorage;
     }
     UserService.prototype.addUser = function (user) {
-        this.fireDb.object(_database_constants__WEBPACK_IMPORTED_MODULE_4__["USERS_CHILD"] + "/" + user.uid).set(user);
+        this.fireDb.object(_database_constants__WEBPACK_IMPORTED_MODULE_5__["USERS_CHILD"] + "/" + user.uid).set(user);
         this.saveUser(user);
     };
     UserService.prototype.getUser = function (uid) {
         console.log("get user service: " + uid);
-        return this.fireDb.object(_database_constants__WEBPACK_IMPORTED_MODULE_4__["USERS_CHILD"] + "/" + uid).valueChanges();
+        return this.fireDb.object(_database_constants__WEBPACK_IMPORTED_MODULE_5__["USERS_CHILD"] + "/" + uid).valueChanges();
     };
     UserService.prototype.saveUser = function (user) {
         this.subject.next(user);
@@ -1184,20 +1268,37 @@ var UserService = /** @class */ (function () {
         return this.subject;
     };
     UserService.prototype.updateEmail = function (user, newEmail) {
-        this.fireDb.object(_database_constants__WEBPACK_IMPORTED_MODULE_4__["USERS_CHILD"] + "/" + user.uid).update({ email: newEmail });
+        this.fireDb.object(_database_constants__WEBPACK_IMPORTED_MODULE_5__["USERS_CHILD"] + "/" + user.uid).update({ email: newEmail });
         this.saveUser(user);
     };
     UserService.prototype.updateMobile = function (user, mobile) {
-        this.fireDb.object(_database_constants__WEBPACK_IMPORTED_MODULE_4__["USERS_CHILD"] + "/" + user.uid).update({ mobile: mobile });
+        this.fireDb.object(_database_constants__WEBPACK_IMPORTED_MODULE_5__["USERS_CHILD"] + "/" + user.uid).update({ mobile: mobile });
         this.saveUser(user);
     };
     UserService.prototype.updateName = function (user, name) {
-        this.fireDb.object(_database_constants__WEBPACK_IMPORTED_MODULE_4__["USERS_CHILD"] + "/" + user.uid).update({ name: name });
+        this.fireDb.object(_database_constants__WEBPACK_IMPORTED_MODULE_5__["USERS_CHILD"] + "/" + user.uid).update({ name: name });
         this.saveUser(user);
+    };
+    UserService.prototype.addProfileImage = function (user, file) {
+        var _this = this;
+        this.fbStorage.ref(this.basePath + "/" + file.name).put(file).then(function (snapshot) {
+            snapshot.ref.getDownloadURL().then((function (downloadURL) {
+                console.log("User Servicce Dowload Url: ");
+                console.log(downloadURL);
+                _this.fireDb.object(_database_constants__WEBPACK_IMPORTED_MODULE_5__["USERS_CHILD"] + "/" + user.uid).update({ image: downloadURL });
+                user.image = downloadURL;
+                _this.saveUser(user);
+            })).catch(function (error) { return alert(error); });
+            //ref.getDownloadURL().then((downloadURL) => console.log(downloadURL));
+        }).catch(function (error) {
+            var errorMessage = error.message;
+            alert(errorMessage);
+        });
     };
     UserService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])(),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [angularfire2_database__WEBPACK_IMPORTED_MODULE_2__["AngularFireDatabase"]])
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [angularfire2_database__WEBPACK_IMPORTED_MODULE_2__["AngularFireDatabase"],
+            angularfire2_storage__WEBPACK_IMPORTED_MODULE_3__["AngularFireStorage"]])
     ], UserService);
     return UserService;
 }());
@@ -1356,7 +1457,7 @@ var StarComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"user-profile\" *ngIf=\"user\">\r\n  <div class=\"person-icon\">\r\n    <img [src]=\"profileImage\" style=\"max-width: 100%; max-height: 100%;\">\r\n  </div>\r\n    <div class=\"user-profile-name\">\r\n        <label>Name: </label>\r\n        <div class=\"user-profile-name-value\">{{user?.name}}</div>\r\n        <button (click)=\"onNameChange()\" data-toggle=\"modal\" data-target=\"#editModal\"\r\n                class=\"btn btn-default btn-sm user-profile-name-btn\">\r\n            Edit\r\n        </button>\r\n    </div>\r\n    <div class=\"user-profile-email\">\r\n        <label>Email: </label>\r\n        <div class=\"user-profile-email-value\">{{user?.email}}</div>\r\n        <button (click)=\"onEmailChange()\" data-toggle=\"modal\" data-target=\"#editModal\" type=\"button\"\r\n                class=\"btn btn-default btn-sm\">\r\n            Edit\r\n        </button>\r\n    </div>\r\n    <div class=\"user-profile-mobile\">\r\n        <label>Mobile: </label>\r\n        <div class=\"user-profile-mobile-value\">{{user?.mobile}}</div>\r\n        <button (click)=\"onMobileChange()\" data-toggle=\"modal\" data-target=\"#editModal\" type=\"button\"\r\n                class=\"btn btn-default btn-sm user-profile-mobile-btn\">\r\n            Edit\r\n        </button>\r\n    </div>\r\n\r\n    <div class=\"user-profile-password\">\r\n        <label>Password: </label>\r\n        <div class=\"user-profile-password-value\">****</div>\r\n        <button (click)=\"onPasswordChange()\" data-toggle=\"modal\" data-target=\"#editModal\" type=\"button\"\r\n                class=\"btn btn-default btn-sm user-profile-password-btn\">\r\n            Edit\r\n        </button>\r\n    </div>\r\n    <div class=\"user-profile-btn\">\r\n        <button type=\"button\" (click)='onLogout()' class=\"btn btn-info\">LOGOUT</button>\r\n    </div>\r\n</div>\r\n<app-edit-dialog></app-edit-dialog>\r\n"
+module.exports = "<div class=\"user-profile\" *ngIf=\"user\">\r\n  <div class=\"person-icon\">\r\n    <img [src]=\"profileImage\" style=\"max-width: 100%; max-height:\r\n     100%;\">\r\n    <input (change)=\"onPersonEdit($event)\" required accept=\".jpg\"\r\n     type=\"file\" style=\"opacity: 0.0; position: absolute; top:120px;\r\n     left: 30px; bottom: 0; right:0; width: 200px; height:200px;\" />\r\n  </div>\r\n    <div class=\"user-profile-name\">\r\n        <label>Name: </label>\r\n        <div class=\"user-profile-name-value\">{{user?.name}}</div>\r\n        <button (click)=\"onNameChange()\" data-toggle=\"modal\" data-target=\"#editModal\"\r\n                class=\"btn btn-default btn-sm user-profile-name-btn\">\r\n            Edit\r\n        </button>\r\n    </div>\r\n    <div class=\"user-profile-email\">\r\n        <label>Email: </label>\r\n        <div class=\"user-profile-email-value\">{{user?.email}}</div>\r\n        <button (click)=\"onEmailChange()\" data-toggle=\"modal\" data-target=\"#editModal\" type=\"button\"\r\n                class=\"btn btn-default btn-sm\">\r\n            Edit\r\n        </button>\r\n    </div>\r\n    <div class=\"user-profile-mobile\">\r\n        <label>Mobile: </label>\r\n        <div class=\"user-profile-mobile-value\">{{user?.mobile}}</div>\r\n        <button (click)=\"onMobileChange()\" data-toggle=\"modal\" data-target=\"#editModal\" type=\"button\"\r\n                class=\"btn btn-default btn-sm user-profile-mobile-btn\">\r\n            Edit\r\n        </button>\r\n    </div>\r\n\r\n    <div class=\"user-profile-password\">\r\n        <label>Password: </label>\r\n        <div class=\"user-profile-password-value\">****</div>\r\n        <button (click)=\"onPasswordChange()\" data-toggle=\"modal\" data-target=\"#editModal\" type=\"button\"\r\n                class=\"btn btn-default btn-sm user-profile-password-btn\">\r\n            Edit\r\n        </button>\r\n    </div>\r\n\r\n</div>\r\n<app-edit-dialog></app-edit-dialog>\r\n"
 
 /***/ }),
 
@@ -1407,23 +1508,19 @@ var UserProfileComponent = /** @class */ (function () {
         // this.editDialog=this.editDialog;
     };
     UserProfileComponent.prototype.ngOnInit = function () {
-        this.user = this.userService.getSavedUser().getValue();
-        console.log("USerProfile:" + this.user);
-    };
-    UserProfileComponent.prototype.onLogout = function () {
         var _this = this;
-        this.authService.signout().then(function () {
-            _this.navigateToLogin();
+        this.user = this.userService.getSavedUser().getValue();
+        this.userService.getSavedUser().subscribe(function (user) {
+            if (_this.user.image) {
+                _this.profileImage = _this.user.image;
+            }
         });
     };
-    UserProfileComponent.prototype.navigateToLogin = function () {
-        this.router.navigateByUrl('/app-friends-login');
-    };
-    /* onPersonEdit(event) {
-        const selectedFiles: FileList = event.target.files;
-        const file = selectedFiles.item(0);
+    UserProfileComponent.prototype.onPersonEdit = function (event) {
+        var selectedFiles = event.target.files;
+        var file = selectedFiles.item(0);
         this.userService.addProfileImage(this.user, file);
-    } */
+    };
     UserProfileComponent.prototype.onNameChange = function () {
         console.log("In name change: " + this.editDialog);
         this.editDialog.setTitle('Do you want to edit name?')
