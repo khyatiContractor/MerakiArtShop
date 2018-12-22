@@ -9,10 +9,23 @@ Upload Art work with necessary details. Display list of Art for which details ar
 Filter Funcnality is present for the list of Art.
 Firebase Authentication and hosting is used. 
 
+# FireStore Structure
+![FireStore Structure](https://github.com/khyatiContractor/MerakiArtShop/blob/master/Firestore.PNG)
+
+# Firebase Realtime Databse Structure
+![FireStore Structure](https://github.com/khyatiContractor/MerakiArtShop/blob/master/Firebase Realtime Database.PNG)
+
+# Working Application Url : [MerakiArt](https://merakiart-35689.firebaseapp.com/)
 
 ## Build
-
+npm install to install all the required dependencies on the root folder. 
 Run `ng build ` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+
+## Deploy on Firebase
+You need to create Environment varible file in the "src" folder with your firebase project web setup credentials. 
+firebase init for functions and hosting.
+firebase deploy to deploy the application.
+Enable Realtime Database and firestore on Firebase.
 
 ## Running unit tests
 
