@@ -3,14 +3,12 @@ import {Products} from './product-list';
 import {ProductService} from './product.service';
 import { AuthenticationService } from '../services/authentication.service';
 import { Router } from '@angular/router';
-import { error } from '@angular/compiler/src/util';
 import { AngularFireStorage } from 'angularfire2/storage';
 import { Observable } from 'rxjs';
 
 @Component({
   selector: 'pm-upload-art',
   templateUrl:'./product-upload.component.html'
-  //styleUrls: ['./product-upload.component.css']
 })
 
 export class ProductUploadComponent {
@@ -29,9 +27,7 @@ constructor(private authService: AuthenticationService,
 }
 
 onArtAdd(artData): void {
-   // tslint:disable-next-line:no-shadowed-variable
-
-     const products: Products = new Products(
+                         const products: Products = new Products(
                                   artData.value.productName,
                                   artData.value.releaseDate,
                                   artData.value.description,
@@ -39,9 +35,6 @@ onArtAdd(artData): void {
                                   artData.value.price,
                                   artData.value.starRating,
                                   '');
-                                  //products.imageUrl=this.imageUrl;
-      //console.log("products Details");
-      //console.log(products.imageUrl);
       this.writeNewProducts(products);
       this.router.navigate(['/pm-upload-img']);
       }

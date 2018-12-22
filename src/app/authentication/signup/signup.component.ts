@@ -30,7 +30,6 @@ export class SignupComponent {
                                         userInfo.user.uid,
                                         0,
                                         '');
-                console.log("UserInfo: "+userInfo.user.uid);
                 this.writeNewUser(user);
                 this.router.navigate(['/products']);
         }).catch((error) => {

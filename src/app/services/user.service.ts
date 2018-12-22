@@ -33,7 +33,6 @@ export class UserService {
     }
 
     public getUser(uid: string): Observable<User> {
-      console.log("get user service: "+uid);
       return this.fireDb.object<User>(`${USERS_CHILD}/${uid}`).valueChanges();
   }
 
@@ -66,8 +65,6 @@ export class UserService {
       this.fbStorage.ref(`${this.basePath}/${file.name}`).put(file).then(
           snapshot => {
             snapshot.ref.getDownloadURL().then(((downloadURL) =>   {
-              console.log("User Servicce Dowload Url: ");
-              console.log(  downloadURL);
               this.fireDb.object(`${USERS_CHILD}/${user.uid}`).update({image: downloadURL});
               user.image = downloadURL;
               this.saveUser(user);
@@ -75,9 +72,6 @@ export class UserService {
             })).catch(
               (error)=>alert(error)
             );
-              //ref.getDownloadURL().then((downloadURL) => console.log(downloadURL));
-
-
           }).catch((error) => {
           const errorMessage = error.message;
           alert(errorMessage);

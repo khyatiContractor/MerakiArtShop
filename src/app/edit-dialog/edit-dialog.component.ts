@@ -28,7 +28,6 @@ export class EditDialogComponent {
 
    public setTitle(title: string): EditDialogComponent {
       this.titleMessage = title;
-      console.log("In set Title"+this.titleMessage);
       return this;
    }
 
@@ -50,7 +49,6 @@ export class EditDialogComponent {
 
    public show() {
       this.isVisible = true;
-      console.log(this.isVisible);
    }
 
    public hide() {
@@ -58,7 +56,7 @@ export class EditDialogComponent {
    }
 
    public onSubmit(editFormData): void {
-      this.editDetails.edit(this.editType, 
+      this.editDetails.edit(this.editType,
       editFormData.value.editValue);
    }
 }

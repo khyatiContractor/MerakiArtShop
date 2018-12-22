@@ -24,7 +24,6 @@ export class LoginComponent {
               private angularFireAuth: AngularFireAuth) {
     this.angularFireAuth.auth.onAuthStateChanged(user => {
       if (user) {
-        console.log("on authentication:"+user.uid);
         this.getUserInfo(user.uid);
       }
     });
@@ -32,11 +31,8 @@ export class LoginComponent {
 
   onLogin(loginFormData): void {
     this.authService.login(loginFormData.value.email, loginFormData.value.password).then((user) => {
-      // Login user
       const uid: string = user.user.uid;
-      console.log("on login:"+ user.user);
       this.getUserInfo(uid);
-      //this.router.navigate(['/welcome']);
     }).catch((error) => {
       this.errorMessage = error.message;
       this.showError = true;
@@ -59,8 +55,6 @@ private getUserInfo(uid: string) {
     this.userService.getUser(uid).subscribe(snapshot => {
         this.user = snapshot;
         this.userService.saveUser(this.user);
-        console.log("snap:");
-        console.log(snapshot);
         this.navigateToProcts();
     });
 }

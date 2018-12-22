@@ -11,7 +11,7 @@ import {EditType} from '../../edit-dialog/edit-details';
    styleUrls: ['user-profile.component.scss'],
     templateUrl: 'user-profile.component.html'
 })
-export class UserProfileComponent implements OnInit, AfterViewInit {
+export class UserProfileComponent implements OnInit {
 
     profileImage: any = '../../../assets/images/person_edit.png';
 
@@ -24,11 +24,6 @@ export class UserProfileComponent implements OnInit, AfterViewInit {
                 private router: Router) {
     }
 
-
-    ngAfterViewInit(): void{
-        console.log("After View Init:"+this.editDialog);
-       // this.editDialog=this.editDialog;
-    }
 
 
     ngOnInit() {
@@ -50,7 +45,6 @@ export class UserProfileComponent implements OnInit, AfterViewInit {
     }
 
     onNameChange() {
-        console.log("In name change: "+this.editDialog);
         this.editDialog.setTitle('Do you want to edit name?')
             .setBodyTitle('name')
             .setBodyLabel('Enter new name')

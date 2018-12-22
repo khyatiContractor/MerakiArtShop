@@ -41,7 +41,7 @@ module.exports = ".nav-link {\n  font-size: large;\n  text-align: center;\n}\n\n
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n<!--\n<nav class=\"navbar navbar-expand-sm bg-light navbar-light fixed-top\" style=\"padding-left:50px;\">\n\n  <a class=\"navbar-brand\" href=\"#\">\n    <img src=\"./assets/images/art_palette.png\" alt=\"logo\" style=\"width:40px;\">\n  </a>\n\n\n  <ul class=\"navbar-nav \">\n    <li class=\"nav-item \" >\n      <a class=\"nav-link\" [routerLink]=\"['/welcome']\">Home</a>\n    </li>\n    <li class=\"nav-item  \">\n      <a class=\"nav-link\"  [routerLink]=\"['/products']\">Product List</a>\n    </li>\n  </ul>\n</nav>\n-->\n<h1 class=\"title\">Meraki Art - Buy Amazing Artwork</h1>\n<div class=\"nav-container\">\n<nav class=\"navbar navbar-expand-lg navbar-light bg-color\">\n  <div class=\"collapse navbar-collapse\" id=\"navbarNav\">\n    <ul class=\"navbar-nav\">\n      <li class=\"nav-item\" *ngIf=\"authenticationService?.isAuthenticated()\"><a class=\"nav-link\" routerLink=\"/app-friends-userprofile\" routerLinkActive=\"active\">My Profile</a></li>\n      <li class=\"nav-item\" *ngIf=\"authenticationService?.isAuthenticated()\"><a class=\"nav-link\" routerLink=\"/products\" routerLinkActive=\"active\">Art</a></li>\n      <li class=\"nav-item\" *ngIf=\"authenticationService?.isAuthenticated()\"><a class=\"nav-link\" routerLink=\"/pm-upload-art\" routerLinkActive=\"active\">Upload</a></li>\n      <li class=\"nav-item\" active *ngIf=\"!authenticationService?.isAuthenticated()\"><a class=\"nav-link\" routerLink=\"/app-friends-login\" routerLinkActive=\"active\">Login</a></li>\n      <li class=\"nav-item\" *ngIf=\"authenticationService?.isAuthenticated()\"><button type=\"button\" (click)='onLogout()' class=\"btn btn-info\">Logout</button></li>\n    </ul>\n  </div>\n</nav>\n</div>\n<router-outlet></router-outlet>\n\n"
+module.exports = "\n<h1 class=\"title\">Meraki Art - Buy Amazing Artwork</h1>\n<div class=\"nav-container\">\n<nav class=\"navbar navbar-expand-lg navbar-light bg-color\">\n  <div class=\"collapse navbar-collapse\" id=\"navbarNav\">\n    <ul class=\"navbar-nav\">\n      <li class=\"nav-item\" *ngIf=\"authenticationService?.isAuthenticated()\"><a class=\"nav-link\" routerLink=\"/app-friends-userprofile\" routerLinkActive=\"active\">My Profile</a></li>\n      <li class=\"nav-item\" *ngIf=\"authenticationService?.isAuthenticated()\"><a class=\"nav-link\" routerLink=\"/products\" routerLinkActive=\"active\">Art</a></li>\n      <li class=\"nav-item\" *ngIf=\"authenticationService?.isAuthenticated()\"><a class=\"nav-link\" routerLink=\"/pm-upload-art\" routerLinkActive=\"active\">Upload</a></li>\n      <li class=\"nav-item\" active *ngIf=\"!authenticationService?.isAuthenticated()\"><a class=\"nav-link\" routerLink=\"/app-friends-login\" routerLinkActive=\"active\">Login</a></li>\n      <li class=\"nav-item\" *ngIf=\"authenticationService?.isAuthenticated()\"><a type=\"button\" (click)='onLogout()' class=\"btn btn-info\">Logout</a></li>\n    </ul>\n  </div>\n</nav>\n</div>\n<router-outlet></router-outlet>\n\n"
 
 /***/ }),
 
@@ -448,7 +448,6 @@ var LoginComponent = /** @class */ (function () {
         this.angularFireAuth = angularFireAuth;
         this.angularFireAuth.auth.onAuthStateChanged(function (user) {
             if (user) {
-                console.log("on authentication:" + user.uid);
                 _this.getUserInfo(user.uid);
             }
         });
@@ -456,11 +455,8 @@ var LoginComponent = /** @class */ (function () {
     LoginComponent.prototype.onLogin = function (loginFormData) {
         var _this = this;
         this.authService.login(loginFormData.value.email, loginFormData.value.password).then(function (user) {
-            // Login user
             var uid = user.user.uid;
-            console.log("on login:" + user.user);
             _this.getUserInfo(uid);
-            //this.router.navigate(['/welcome']);
         }).catch(function (error) {
             _this.errorMessage = error.message;
             _this.showError = true;
@@ -483,8 +479,6 @@ var LoginComponent = /** @class */ (function () {
         this.userService.getUser(uid).subscribe(function (snapshot) {
             _this.user = snapshot;
             _this.userService.saveUser(_this.user);
-            console.log("snap:");
-            console.log(snapshot);
             _this.navigateToProcts();
         });
     };
@@ -561,7 +555,6 @@ var SignupComponent = /** @class */ (function () {
         this.authService.signup(signupFormData.value.email, signupFormData.value.password).then(function (userInfo) {
             // Register the new user
             var user = new _services_user__WEBPACK_IMPORTED_MODULE_2__["User"](signupFormData.value.email, signupFormData.value.name, signupFormData.value.mobile, userInfo.user.uid, 0, '');
-            console.log("UserInfo: " + userInfo.user.uid);
             _this.writeNewUser(user);
             _this.router.navigate(['/products']);
         }).catch(function (error) {
@@ -707,7 +700,6 @@ var EditDialogComponent = /** @class */ (function () {
     }
     EditDialogComponent.prototype.setTitle = function (title) {
         this.titleMessage = title;
-        console.log("In set Title" + this.titleMessage);
         return this;
     };
     EditDialogComponent.prototype.setBodyTitle = function (bodyTitle) {
@@ -724,7 +716,6 @@ var EditDialogComponent = /** @class */ (function () {
     };
     EditDialogComponent.prototype.show = function () {
         this.isVisible = true;
-        console.log(this.isVisible);
     };
     EditDialogComponent.prototype.hide = function () {
         this.isVisible = false;
@@ -754,7 +745,7 @@ var EditDialogComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".temp{\r\n  width:100%;\r\n  background-image: url(\"/assets/images/sunset-3689760_1920.jpeg\");\r\n  /* Full height */\r\n  height: 100%;\r\n   opacity: 1;\r\n   filter:blur(2px);\r\n   -webkit-filter: blur(2px);\r\n\r\n\r\n\r\n  /* Center and scale the image nicely */\r\n  background-position: center;\r\n  background-repeat: no-repeat;\r\n  background-size: cover;\r\n  }\r\n\r\n  .PageTitle{\r\n    \r\n    color: #17a2b8;\r\n    font-weight: bold;\r\n    border: 3px solid #17a2b8;\r\n    position: absolute;\r\n    top: 40%;\r\n    left: 50%;\r\n    -webkit-transform: translate(-50%, -50%);\r\n            transform: translate(-50%, -50%);\r\n    z-index: 2;\r\n    width: 60%;\r\n    padding: 60px;\r\n    text-align: center;\r\nborder-radius:10px;\r\n    font: 400 90px/1.3 'Oleo Script', Helvetica, sans-serif;\r\n    -webkit-text-decoration: double underline;\r\n            text-decoration: double underline;\r\n   /* background-color: rgb(0,0,0); /* Fallback color */\r\n    /*background-color: rgba(255,255,255, 0.5); /* Black w/opacity/see-through */\r\n    /*-webkit-text-decoration: hotpink double underline;\r\n  \r\n  -webkit-filter: drop-shadow(0px 3px 10px rgba(255,255,255,.8));\r\n       filter: drop-shadow(0px 0px 10px rgba(0,0,0,.8));*/\r\n  }\r\n\r\n  .gallery, .gallery1, .gallery2{\r\n    color: #117a8b;\r\n\r\n    border: 1px solid #17a2b8;\r\n    position: absolute;\r\n    top: 70%;\r\n\r\n    -webkit-transform: translate(-50%, -50%);\r\n\r\n            transform: translate(-50%, -50%);\r\n    z-index: 2;\r\n    width: 15%;\r\n    padding: 30px;\r\n    text-align: center;\r\n    border-radius:5px;\r\n   /* font: 100 50px/1.3 'Oleo Script', Helvetica, sans-serif;*/\r\n       /*background-color: rgb(0,0,0); /* Fallback color */\r\n   /* background-color: rgba(255, 255, 255, 0.4);  Black w/opacity/see-through */\r\n  /*  background-position: center; /* Center the image */\r\n  /*  background-repeat: no-repeat; /* Do not repeat the image */\r\n  /*  background-size: cover; /* Resize the background image to cover the entire container\r\n    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.59); */\r\n\r\n  }\r\n\r\n  .gallery1{\r\n    /*background-image: url(\"/assets/images/WhatsApp Image 2018-10-07 at 9.46.51 PM.jpeg\");*/\r\n    left: 25%;\r\n  }\r\n\r\n  .gallery{\r\n    /*background-image: url(\"/assets/images/WhatsApp Image 2018-09-11 at 5.29.31 PM.jpeg\");*/\r\n    left: 50%\r\n  }\r\n\r\n  .gallery2{\r\n    /*background-image: url(\"/assets/images/WhatsApp Image 2018-09-11 at 5.29.31 PM.jpeg\");*/\r\n    left: 75%\r\n  }\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvaG9tZS93ZWxjb21lLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxXQUFXO0VBQ1gsaUVBQWlFO0VBQ2pFLGlCQUFpQjtFQUNqQixhQUFhO0dBQ1osV0FBVztHQUNYLGlCQUFpQjtHQUNqQiwwQkFBMEI7Ozs7RUFJM0IsdUNBQXVDO0VBQ3ZDLDRCQUE0QjtFQUM1Qiw2QkFBNkI7RUFDN0IsdUJBQXVCO0dBQ3RCOztFQUVEOztJQUVFLGVBQWU7SUFDZixrQkFBa0I7SUFDbEIsMEJBQTBCO0lBQzFCLG1CQUFtQjtJQUNuQixTQUFTO0lBQ1QsVUFBVTtJQUNWLHlDQUFpQztZQUFqQyxpQ0FBaUM7SUFDakMsV0FBVztJQUNYLFdBQVc7SUFDWCxjQUFjO0lBQ2QsbUJBQW1CO0FBQ3ZCLG1CQUFtQjtJQUNmLHdEQUF3RDtJQUN4RCwwQ0FBa0M7WUFBbEMsa0NBQWtDO0dBQ25DLHFEQUFxRDtJQUNwRCw2RUFBNkU7SUFDN0U7OzswREFHc0Q7R0FDdkQ7O0VBQ0Q7SUFDRSxlQUFlOztJQUVmLDBCQUEwQjtJQUMxQixtQkFBbUI7SUFDbkIsU0FBUzs7SUFFVCx5Q0FBaUM7O1lBQWpDLGlDQUFpQztJQUNqQyxXQUFXO0lBQ1gsV0FBVztJQUNYLGNBQWM7SUFDZCxtQkFBbUI7SUFDbkIsa0JBQWtCO0dBQ25CLDZEQUE2RDtPQUN6RCxvREFBb0Q7R0FDeEQsOEVBQThFO0VBQy9FLHVEQUF1RDtFQUN2RCwrREFBK0Q7RUFDL0Q7b0ZBQ2tGOztHQUVqRjs7RUFHRDtJQUNFLHlGQUF5RjtJQUN6RixVQUFVO0dBQ1g7O0VBQ0Q7SUFDRSx5RkFBeUY7SUFDekYsU0FBUztHQUNWOztFQUNEO0lBQ0UseUZBQXlGO0lBQ3pGLFNBQVM7R0FDViIsImZpbGUiOiJzcmMvYXBwL2hvbWUvd2VsY29tZS5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLnRlbXB7XHJcbiAgd2lkdGg6MTAwJTtcclxuICBiYWNrZ3JvdW5kLWltYWdlOiB1cmwoXCIvYXNzZXRzL2ltYWdlcy9zdW5zZXQtMzY4OTc2MF8xOTIwLmpwZWdcIik7XHJcbiAgLyogRnVsbCBoZWlnaHQgKi9cclxuICBoZWlnaHQ6IDEwMCU7XHJcbiAgIG9wYWNpdHk6IDE7XHJcbiAgIGZpbHRlcjpibHVyKDJweCk7XHJcbiAgIC13ZWJraXQtZmlsdGVyOiBibHVyKDJweCk7XHJcblxyXG5cclxuXHJcbiAgLyogQ2VudGVyIGFuZCBzY2FsZSB0aGUgaW1hZ2UgbmljZWx5ICovXHJcbiAgYmFja2dyb3VuZC1wb3NpdGlvbjogY2VudGVyO1xyXG4gIGJhY2tncm91bmQtcmVwZWF0OiBuby1yZXBlYXQ7XHJcbiAgYmFja2dyb3VuZC1zaXplOiBjb3ZlcjtcclxuICB9XHJcblxyXG4gIC5QYWdlVGl0bGV7XHJcbiAgICBcclxuICAgIGNvbG9yOiAjMTdhMmI4O1xyXG4gICAgZm9udC13ZWlnaHQ6IGJvbGQ7XHJcbiAgICBib3JkZXI6IDNweCBzb2xpZCAjMTdhMmI4O1xyXG4gICAgcG9zaXRpb246IGFic29sdXRlO1xyXG4gICAgdG9wOiA0MCU7XHJcbiAgICBsZWZ0OiA1MCU7XHJcbiAgICB0cmFuc2Zvcm06IHRyYW5zbGF0ZSgtNTAlLCAtNTAlKTtcclxuICAgIHotaW5kZXg6IDI7XHJcbiAgICB3aWR0aDogNjAlO1xyXG4gICAgcGFkZGluZzogNjBweDtcclxuICAgIHRleHQtYWxpZ246IGNlbnRlcjtcclxuYm9yZGVyLXJhZGl1czoxMHB4O1xyXG4gICAgZm9udDogNDAwIDkwcHgvMS4zICdPbGVvIFNjcmlwdCcsIEhlbHZldGljYSwgc2Fucy1zZXJpZjtcclxuICAgIHRleHQtZGVjb3JhdGlvbjogZG91YmxlIHVuZGVybGluZTtcclxuICAgLyogYmFja2dyb3VuZC1jb2xvcjogcmdiKDAsMCwwKTsgLyogRmFsbGJhY2sgY29sb3IgKi9cclxuICAgIC8qYmFja2dyb3VuZC1jb2xvcjogcmdiYSgyNTUsMjU1LDI1NSwgMC41KTsgLyogQmxhY2sgdy9vcGFjaXR5L3NlZS10aHJvdWdoICovXHJcbiAgICAvKi13ZWJraXQtdGV4dC1kZWNvcmF0aW9uOiBob3RwaW5rIGRvdWJsZSB1bmRlcmxpbmU7XHJcbiAgXHJcbiAgLXdlYmtpdC1maWx0ZXI6IGRyb3Atc2hhZG93KDBweCAzcHggMTBweCByZ2JhKDI1NSwyNTUsMjU1LC44KSk7XHJcbiAgICAgICBmaWx0ZXI6IGRyb3Atc2hhZG93KDBweCAwcHggMTBweCByZ2JhKDAsMCwwLC44KSk7Ki9cclxuICB9XHJcbiAgLmdhbGxlcnksIC5nYWxsZXJ5MSwgLmdhbGxlcnkye1xyXG4gICAgY29sb3I6ICMxMTdhOGI7XHJcblxyXG4gICAgYm9yZGVyOiAxcHggc29saWQgIzE3YTJiODtcclxuICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcclxuICAgIHRvcDogNzAlO1xyXG5cclxuICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlKC01MCUsIC01MCUpO1xyXG4gICAgei1pbmRleDogMjtcclxuICAgIHdpZHRoOiAxNSU7XHJcbiAgICBwYWRkaW5nOiAzMHB4O1xyXG4gICAgdGV4dC1hbGlnbjogY2VudGVyO1xyXG4gICAgYm9yZGVyLXJhZGl1czo1cHg7XHJcbiAgIC8qIGZvbnQ6IDEwMCA1MHB4LzEuMyAnT2xlbyBTY3JpcHQnLCBIZWx2ZXRpY2EsIHNhbnMtc2VyaWY7Ki9cclxuICAgICAgIC8qYmFja2dyb3VuZC1jb2xvcjogcmdiKDAsMCwwKTsgLyogRmFsbGJhY2sgY29sb3IgKi9cclxuICAgLyogYmFja2dyb3VuZC1jb2xvcjogcmdiYSgyNTUsIDI1NSwgMjU1LCAwLjQpOyAgQmxhY2sgdy9vcGFjaXR5L3NlZS10aHJvdWdoICovXHJcbiAgLyogIGJhY2tncm91bmQtcG9zaXRpb246IGNlbnRlcjsgLyogQ2VudGVyIHRoZSBpbWFnZSAqL1xyXG4gIC8qICBiYWNrZ3JvdW5kLXJlcGVhdDogbm8tcmVwZWF0OyAvKiBEbyBub3QgcmVwZWF0IHRoZSBpbWFnZSAqL1xyXG4gIC8qICBiYWNrZ3JvdW5kLXNpemU6IGNvdmVyOyAvKiBSZXNpemUgdGhlIGJhY2tncm91bmQgaW1hZ2UgdG8gY292ZXIgdGhlIGVudGlyZSBjb250YWluZXJcclxuICAgIGJveC1zaGFkb3c6IDAgNHB4IDhweCAwIHJnYmEoMCwgMCwgMCwgMC41KSwgMCA2cHggMjBweCAwIHJnYmEoMCwgMCwgMCwgMC41OSk7ICovXHJcblxyXG4gIH1cclxuXHJcblxyXG4gIC5nYWxsZXJ5MXtcclxuICAgIC8qYmFja2dyb3VuZC1pbWFnZTogdXJsKFwiL2Fzc2V0cy9pbWFnZXMvV2hhdHNBcHAgSW1hZ2UgMjAxOC0xMC0wNyBhdCA5LjQ2LjUxIFBNLmpwZWdcIik7Ki9cclxuICAgIGxlZnQ6IDI1JTtcclxuICB9XHJcbiAgLmdhbGxlcnl7XHJcbiAgICAvKmJhY2tncm91bmQtaW1hZ2U6IHVybChcIi9hc3NldHMvaW1hZ2VzL1doYXRzQXBwIEltYWdlIDIwMTgtMDktMTEgYXQgNS4yOS4zMSBQTS5qcGVnXCIpOyovXHJcbiAgICBsZWZ0OiA1MCVcclxuICB9XHJcbiAgLmdhbGxlcnkye1xyXG4gICAgLypiYWNrZ3JvdW5kLWltYWdlOiB1cmwoXCIvYXNzZXRzL2ltYWdlcy9XaGF0c0FwcCBJbWFnZSAyMDE4LTA5LTExIGF0IDUuMjkuMzEgUE0uanBlZ1wiKTsqL1xyXG4gICAgbGVmdDogNzUlXHJcbiAgfVxyXG4iXX0= */"
+module.exports = ".temp{\r\n  width:100%;\r\n  background-image: url(\"/assets/images/sunset-3689760_1920.jpeg\");\r\n  /* Full height */\r\n  height: 100%;\r\n   opacity: 1;\r\n   filter:blur(2px);\r\n   -webkit-filter: blur(2px);\r\n  /* Center and scale the image nicely */\r\n  background-position: center;\r\n  background-repeat: no-repeat;\r\n  background-size: cover;\r\n  }\r\n\r\n  .PageTitle{\r\n\r\n    color: #17a2b8;\r\n    font-weight: bold;\r\n    border: 3px solid #17a2b8;\r\n    position: absolute;\r\n    top: 40%;\r\n    left: 50%;\r\n    -webkit-transform: translate(-50%, -50%);\r\n            transform: translate(-50%, -50%);\r\n    z-index: 2;\r\n    width: 60%;\r\n    padding: 60px;\r\n    text-align: center;\r\nborder-radius:10px;\r\n    font: 400 90px/1.3 'Oleo Script', Helvetica, sans-serif;\r\n    -webkit-text-decoration: double underline;\r\n            text-decoration: double underline;\r\n  }\r\n\r\n\r\n\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvaG9tZS93ZWxjb21lLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxXQUFXO0VBQ1gsaUVBQWlFO0VBQ2pFLGlCQUFpQjtFQUNqQixhQUFhO0dBQ1osV0FBVztHQUNYLGlCQUFpQjtHQUNqQiwwQkFBMEI7RUFDM0IsdUNBQXVDO0VBQ3ZDLDRCQUE0QjtFQUM1Qiw2QkFBNkI7RUFDN0IsdUJBQXVCO0dBQ3RCOztFQUVEOztJQUVFLGVBQWU7SUFDZixrQkFBa0I7SUFDbEIsMEJBQTBCO0lBQzFCLG1CQUFtQjtJQUNuQixTQUFTO0lBQ1QsVUFBVTtJQUNWLHlDQUFpQztZQUFqQyxpQ0FBaUM7SUFDakMsV0FBVztJQUNYLFdBQVc7SUFDWCxjQUFjO0lBQ2QsbUJBQW1CO0FBQ3ZCLG1CQUFtQjtJQUNmLHdEQUF3RDtJQUN4RCwwQ0FBa0M7WUFBbEMsa0NBQWtDO0dBQ25DIiwiZmlsZSI6InNyYy9hcHAvaG9tZS93ZWxjb21lLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIudGVtcHtcclxuICB3aWR0aDoxMDAlO1xyXG4gIGJhY2tncm91bmQtaW1hZ2U6IHVybChcIi9hc3NldHMvaW1hZ2VzL3N1bnNldC0zNjg5NzYwXzE5MjAuanBlZ1wiKTtcclxuICAvKiBGdWxsIGhlaWdodCAqL1xyXG4gIGhlaWdodDogMTAwJTtcclxuICAgb3BhY2l0eTogMTtcclxuICAgZmlsdGVyOmJsdXIoMnB4KTtcclxuICAgLXdlYmtpdC1maWx0ZXI6IGJsdXIoMnB4KTtcclxuICAvKiBDZW50ZXIgYW5kIHNjYWxlIHRoZSBpbWFnZSBuaWNlbHkgKi9cclxuICBiYWNrZ3JvdW5kLXBvc2l0aW9uOiBjZW50ZXI7XHJcbiAgYmFja2dyb3VuZC1yZXBlYXQ6IG5vLXJlcGVhdDtcclxuICBiYWNrZ3JvdW5kLXNpemU6IGNvdmVyO1xyXG4gIH1cclxuXHJcbiAgLlBhZ2VUaXRsZXtcclxuXHJcbiAgICBjb2xvcjogIzE3YTJiODtcclxuICAgIGZvbnQtd2VpZ2h0OiBib2xkO1xyXG4gICAgYm9yZGVyOiAzcHggc29saWQgIzE3YTJiODtcclxuICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcclxuICAgIHRvcDogNDAlO1xyXG4gICAgbGVmdDogNTAlO1xyXG4gICAgdHJhbnNmb3JtOiB0cmFuc2xhdGUoLTUwJSwgLTUwJSk7XHJcbiAgICB6LWluZGV4OiAyO1xyXG4gICAgd2lkdGg6IDYwJTtcclxuICAgIHBhZGRpbmc6IDYwcHg7XHJcbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XHJcbmJvcmRlci1yYWRpdXM6MTBweDtcclxuICAgIGZvbnQ6IDQwMCA5MHB4LzEuMyAnT2xlbyBTY3JpcHQnLCBIZWx2ZXRpY2EsIHNhbnMtc2VyaWY7XHJcbiAgICB0ZXh0LWRlY29yYXRpb246IGRvdWJsZSB1bmRlcmxpbmU7XHJcbiAgfVxyXG5cclxuXHJcblxyXG4iXX0= */"
 
 /***/ }),
 
@@ -765,7 +756,7 @@ module.exports = ".temp{\r\n  width:100%;\r\n  background-image: url(\"/assets/i
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n    <div class=\"container-fluid\" style=\"width:100% !important; height: 100%; margin:0! padding-top:60px;\">\n      <div class=\"row temp\"  >  </div>\n        <div class=\" pageDiv\">\n           <a  [routerLink]=\"['/welcome']\"><h1 class=\"PageTitle\">{{pageTitle}}</h1></a>\n         </div>\n        <div class=\"row\">\n          <a  [routerLink]=\"['/about']\">\n            <h1 class=\"gallery1\">About</h1>\n          </a>\n           <a  [routerLink]=\"['/products']\">\n              <h1 class=\"gallery \" >Gallery</h1>\n            </a>\n\n\n            <a  [routerLink]=\"['/contact']\">\n              <h1 class=\"gallery2\">Contact</h1>\n            </a>\n      </div>\n"
+module.exports = "\n    <div class=\"container-fluid\" style=\"width:100% !important; height: 100%; margin:0! padding-top:60px;\">\n        <div class=\" pageDiv\">\n           <a  [routerLink]=\"['/welcome']\"><h1 class=\"PageTitle\">{{pageTitle}}</h1></a>\n         </div>\n      </div>\n"
 
 /***/ }),
 
@@ -852,7 +843,7 @@ var ProductDetailComponent = /** @class */ (function () {
     ProductDetailComponent.prototype.ngOnInit = function () {
         var param = this.route.snapshot.paramMap.get('id');
         if (param) {
-            var id = +param;
+            var id = param;
             this.getProduct(id);
         }
     };
@@ -975,7 +966,7 @@ module.exports = ".jumbotron{\r\n  width:100%;\r\n  background-image: url(\"/ass
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div>\r\n  <div class=\"jumbotron\"></div>\r\n  <div class=\"productPageTitle\">\r\n    <h1>~ Meraki Art ~</h1>\r\n\r\n</div>\r\n<div class=\"form-group\">\r\n  <label for=\"usr\">Search:</label>\r\n  <input type=\"text\" class=\"form-control\" id=\"usr\"\r\n        [(ngModel)]='listFilter'>\r\n</div>\r\n\r\n\r\n<div class=\"row\" *ngIf='products && products.length'>\r\n<!-- <table class=\"table table-dark table-hover\"\r\n        *ngIf='products && products.length'>\r\n    <thead>\r\n       <tr>\r\n        <th>Art</th>\r\n        <th>Product Name</th>\r\n        <th>Description</th>\r\n        <th>Rating</th>\r\n        <th>\r\n          <button  type=\"button\" class=\"btn btn-dark\"(click)='togglePrice()'>\r\n            {{showPrice ? 'Hide' : 'Show'}} Price\r\n          </button>\r\n        </th>\r\n      </tr>\r\n    </thead>\r\n    <tbody> -->\r\n        <div class=\"card col-sm-3\" style=\"width:400px\"\r\n        *ngFor='let product of filterproducts'\r\n        [routerLink]=\"['/products',product.productId]\">\r\n        <div class=\"imgClass\">\r\n            <img class=\"card-img-top\"\r\n            [src]='product.imageUrl'\r\n            style=\"width:100%; height: 500px;\">\r\n        </div>\r\n            <div class=\"card-body\">\r\n              <h4 class=\"card-title\">{{product.productName}}</h4>\r\n              <p class=\"card-text\">{{product.description}}</p>\r\n              <p><pm-star [rating]='product.starRating'></pm-star></p>\r\n              <br>\r\n              <span >{{product.price | currency :'USD':'symbol':'1.2-2'}}</span>\r\n              <a href=\"#\" class=\"btn btn-primary\">See Profile</a>\r\n            </div>\r\n          </div>\r\n            <!--  <tr *ngFor='let product of filterproducts'[routerLink]=\"['/products',product.productId]\">\r\n        <td><img\r\n          [src]='product.imageUrl'\r\n          [style.width.px]='imagewidth'\r\n          [style.margin.px]='imagemargin'></td>\r\n        <td>{{product.productName}}</td>\r\n        <td>{{product.description}}</td>\r\n        <td><pm-star [rating]='product.starRating'></pm-star></td>\r\n        <td>\r\n          <span >{{product.price | currency :'USD':'symbol':'1.2-2'}}</span>\r\n        </td>\r\n\r\n      </tr>\r\n    </tbody>\r\n  </table> -->\r\n  </div>\r\n</div>\r\n"
+module.exports = "<div>\r\n  <div class=\"jumbotron\"></div>\r\n  <div class=\"productPageTitle\">\r\n    <h1>~ Meraki Art ~</h1>\r\n\r\n</div>\r\n<div class=\"form-group\">\r\n  <label for=\"usr\">Search:</label>\r\n  <input type=\"text\" class=\"form-control\" id=\"usr\"\r\n        [(ngModel)]='listFilter'>\r\n</div>\r\n\r\n\r\n<div class=\"row\" *ngIf='products && products.length'>\r\n        <div class=\"card col-sm-3\" style=\"width:400px\"\r\n        *ngFor='let product of filterproducts'\r\n        [routerLink]=\"['/products',product.productId]\">\r\n        <div class=\"imgClass\">\r\n            <img class=\"card-img-top\"\r\n            [src]='product.imageUrl'\r\n            style=\"width:100%; height: 500px;\">\r\n        </div>\r\n            <div class=\"card-body\">\r\n              <h4 class=\"card-title\">{{product.productName}}</h4>\r\n              <p class=\"card-text\">{{product.description}}</p>\r\n              <p><pm-star [rating]='product.starRating'></pm-star></p>\r\n              <br>\r\n              <span >{{product.price | currency :'USD':'symbol':'1.2-2'}}</span>\r\n\r\n            </div>\r\n          </div>\r\n\r\n  </div>\r\n</div>\r\n"
 
 /***/ }),
 
@@ -1117,11 +1108,7 @@ var ProductUploadComponent = /** @class */ (function () {
         this.fbStorage = afStorage;
     }
     ProductUploadComponent.prototype.onArtAdd = function (artData) {
-        // tslint:disable-next-line:no-shadowed-variable
         var products = new _product_list__WEBPACK_IMPORTED_MODULE_2__["Products"](artData.value.productName, artData.value.releaseDate, artData.value.description, '', artData.value.price, artData.value.starRating, '');
-        //products.imageUrl=this.imageUrl;
-        //console.log("products Details");
-        //console.log(products.imageUrl);
         this.writeNewProducts(products);
         this.router.navigate(['/pm-upload-img']);
     };
@@ -1132,7 +1119,6 @@ var ProductUploadComponent = /** @class */ (function () {
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
             selector: 'pm-upload-art',
             template: __webpack_require__(/*! ./product-upload.component.html */ "./src/app/products/product-upload.component.html")
-            //styleUrls: ['./product-upload.component.css']
         }),
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_services_authentication_service__WEBPACK_IMPORTED_MODULE_4__["AuthenticationService"],
             _angular_router__WEBPACK_IMPORTED_MODULE_5__["Router"],
@@ -1162,10 +1148,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
 /* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm5/index.js");
-/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm5/operators/index.js");
-/* harmony import */ var angularfire2_storage__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! angularfire2/storage */ "./node_modules/angularfire2/storage/index.js");
-/* harmony import */ var angularfire2_storage__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(angularfire2_storage__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var _services_database_constants__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! .././services/database-constants */ "./src/app/services/database-constants.ts");
+/* harmony import */ var angularfire2_storage__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! angularfire2/storage */ "./node_modules/angularfire2/storage/index.js");
+/* harmony import */ var angularfire2_storage__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(angularfire2_storage__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _services_database_constants__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! .././services/database-constants */ "./src/app/services/database-constants.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
 
 
 
@@ -1175,10 +1161,11 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var ProductService = /** @class */ (function () {
-    function ProductService(http, afStorage, fireDb) {
+    function ProductService(http, afStorage, fireDb, router) {
         this.http = http;
         this.afStorage = afStorage;
         this.fireDb = fireDb;
+        this.router = router;
         this.productUrl = 'api/products/products.json';
         this.basePath = '/art';
         this.subject = new rxjs__WEBPACK_IMPORTED_MODULE_4__["BehaviorSubject"](null);
@@ -1186,19 +1173,16 @@ var ProductService = /** @class */ (function () {
         this.productArt = this.fireDb.list(this.basePath);
     }
     ProductService.prototype.getProducts = function () {
-        return this.http.get(this.productUrl).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["tap"])(function (data) { return console.log('All: ' + JSON.stringify(data)); }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["catchError"])(this.handleError));
+        return this.fireDb.list(_services_database_constants__WEBPACK_IMPORTED_MODULE_6__["PRODUCT_CHILD"] + "/").valueChanges();
     };
     ProductService.prototype.addArt = function (product) {
-        //this.productId=this.fireDb.createPushId();
-        //this.fireDb.object(`${PRODUCT_CHILD }/${this.productId}`).set(product);
         var ref = this.productArt.push(product);
         this.productArt.update(ref.key, { productId: ref.key });
         product.productId = ref.key;
         this.saveproduct(product);
     };
     ProductService.prototype.getProduct = function (id) {
-        return this.getProducts().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["map"])(function (products) { return products.find(function (p) { return true; } //p.productId === id
-        ); }));
+        return this.fireDb.object(_services_database_constants__WEBPACK_IMPORTED_MODULE_6__["PRODUCT_CHILD"] + "/" + id).valueChanges();
     };
     ProductService.prototype.getSavedProduct = function () {
         return this.subject;
@@ -1207,11 +1191,8 @@ var ProductService = /** @class */ (function () {
         this.subject.next(product);
     };
     ProductService.prototype.handleError = function (err) {
-        // in a real world app, we may send the server to some remote logging infrastructure
-        // instead of just logging it to the console
         var errorMessage = '';
         if (err.error instanceof ErrorEvent) {
-            // A client-side or network error occurred. Handle it accordingly.
             errorMessage = "An error occurred: " + err.error.message;
         }
         else {
@@ -1226,13 +1207,7 @@ var ProductService = /** @class */ (function () {
         var _this = this;
         this.fbStorage.ref(this.basePath + "/" + file.name).put(file).then(function (snapshot) {
             snapshot.ref.getDownloadURL().then(function (downloadURL) {
-                //console.log(product.productId);
-                console.log(downloadURL);
-                console.log(product);
-                _this.fireDb.object(_services_database_constants__WEBPACK_IMPORTED_MODULE_7__["PRODUCT_CHILD"] + "/" + product.productId).update({ imageUrl: downloadURL });
-                //this.productArt.update(`${this.productId}`,{imageUrl: downloadURL});
-                //product.imageUrl = downloadURL;
-                //console.log(product.imageUrl);
+                _this.fireDb.object(_services_database_constants__WEBPACK_IMPORTED_MODULE_6__["PRODUCT_CHILD"] + "/" + product.productId).update({ imageUrl: downloadURL });
                 _this.saveproduct(product);
             });
         });
@@ -1240,8 +1215,9 @@ var ProductService = /** @class */ (function () {
     ProductService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Injectable"])(),
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClient"],
-            angularfire2_storage__WEBPACK_IMPORTED_MODULE_6__["AngularFireStorage"],
-            angularfire2_database__WEBPACK_IMPORTED_MODULE_1__["AngularFireDatabase"]])
+            angularfire2_storage__WEBPACK_IMPORTED_MODULE_5__["AngularFireStorage"],
+            angularfire2_database__WEBPACK_IMPORTED_MODULE_1__["AngularFireDatabase"],
+            _angular_router__WEBPACK_IMPORTED_MODULE_7__["Router"]])
     ], ProductService);
     return ProductService;
 }());
@@ -1420,7 +1396,6 @@ var UserService = /** @class */ (function () {
         this.saveUser(user);
     };
     UserService.prototype.getUser = function (uid) {
-        console.log("get user service: " + uid);
         return this.fireDb.object(_database_constants__WEBPACK_IMPORTED_MODULE_5__["USERS_CHILD"] + "/" + uid).valueChanges();
     };
     UserService.prototype.saveUser = function (user) {
@@ -1445,13 +1420,10 @@ var UserService = /** @class */ (function () {
         var _this = this;
         this.fbStorage.ref(this.basePath + "/" + file.name).put(file).then(function (snapshot) {
             snapshot.ref.getDownloadURL().then((function (downloadURL) {
-                console.log("User Servicce Dowload Url: ");
-                console.log(downloadURL);
                 _this.fireDb.object(_database_constants__WEBPACK_IMPORTED_MODULE_5__["USERS_CHILD"] + "/" + user.uid).update({ image: downloadURL });
                 user.image = downloadURL;
                 _this.saveUser(user);
             })).catch(function (error) { return alert(error); });
-            //ref.getDownloadURL().then((downloadURL) => console.log(downloadURL));
         }).catch(function (error) {
             var errorMessage = error.message;
             alert(errorMessage);
@@ -1630,7 +1602,7 @@ module.exports = "<div class=\"user-profile\" *ngIf=\"user\">\r\n  <div class=\"
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".user-profile {\n  width: 50%;\n  margin-left: 24px;\n  margin-top: 10px; }\n  .user-profile .person-icon {\n    width: 200px;\n    height: 200px; }\n  .user-profile .user-profile-name {\n    text-align: left;\n    margin-top: 10px; }\n  .user-profile .user-profile-name .user-profile-name-value {\n      display: inline-block;\n      margin-left: 10px; }\n  .user-profile .user-profile-name .user-profile-name-btn {\n      margin-left: 100px; }\n  .user-profile .user-profile-email {\n    text-align: left;\n    margin-top: 20px; }\n  .user-profile .user-profile-email .user-profile-email-value {\n      display: inline-block;\n      margin-left: 10px; }\n  .user-profile .user-profile-mobile {\n    text-align: left;\n    margin-top: 20px; }\n  .user-profile .user-profile-mobile .user-profile-mobile-value {\n      display: inline-block;\n      margin-left: 10px; }\n  .user-profile .user-profile-mobile .user-profile-mobile-btn {\n      margin-left: 110px; }\n  .user-profile .user-profile-password {\n    text-align: left;\n    margin-top: 20px; }\n  .user-profile .user-profile-password .user-profile-password-value {\n      display: inline-block;\n      margin-left: 10px; }\n  .user-profile .user-profile-password .user-profile-password-btn {\n      margin-left: 154px; }\n  .user-profile .user-profile-btn {\n    margin-top: 20px; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9tbnQvYy9Vc2Vycy9raHlhdC9EZXNrdG9wL0dpdEh1Yi9NZXJha2lBcnRTaG9wL3NyYy9hcHAvdXNlci91c2VyLXByb2ZpbGUvdXNlci1wcm9maWxlLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsV0FBVTtFQUNWLGtCQUFpQjtFQUNqQixpQkFBZ0IsRUFpRGpCO0VBcEREO0lBS00sYUFBWTtJQUNaLGNBQWEsRUFDaEI7RUFQSDtJQVNNLGlCQUFnQjtJQUNoQixpQkFBZ0IsRUFRbkI7RUFsQkg7TUFZVSxzQkFBcUI7TUFDckIsa0JBQWlCLEVBQ3BCO0VBZFA7TUFnQlUsbUJBQWtCLEVBQ3JCO0VBakJQO0lBb0JNLGlCQUFnQjtJQUNoQixpQkFBZ0IsRUFLbkI7RUExQkg7TUF1QlUsc0JBQXFCO01BQ3JCLGtCQUFpQixFQUNwQjtFQXpCUDtJQTRCTSxpQkFBZ0I7SUFDaEIsaUJBQWdCLEVBUW5CO0VBckNIO01BK0JVLHNCQUFxQjtNQUNyQixrQkFBaUIsRUFDcEI7RUFqQ1A7TUFtQ1UsbUJBQWtCLEVBQ3JCO0VBcENQO0lBdUNNLGlCQUFnQjtJQUNoQixpQkFBZ0IsRUFRbkI7RUFoREg7TUEwQ1Usc0JBQXFCO01BQ3JCLGtCQUFpQixFQUNwQjtFQTVDUDtNQThDVSxtQkFBa0IsRUFDckI7RUEvQ1A7SUFrRE0saUJBQWdCLEVBQ25CIiwiZmlsZSI6InNyYy9hcHAvdXNlci91c2VyLXByb2ZpbGUvdXNlci1wcm9maWxlLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLnVzZXItcHJvZmlsZXtcclxuICB3aWR0aDogNTAlO1xyXG4gIG1hcmdpbi1sZWZ0OiAyNHB4O1xyXG4gIG1hcmdpbi10b3A6IDEwcHg7XHJcbiAgLnBlcnNvbi1pY29ue1xyXG4gICAgICB3aWR0aDogMjAwcHg7XHJcbiAgICAgIGhlaWdodDogMjAwcHg7XHJcbiAgfVxyXG4gIC51c2VyLXByb2ZpbGUtbmFtZXtcclxuICAgICAgdGV4dC1hbGlnbjogbGVmdDtcclxuICAgICAgbWFyZ2luLXRvcDogMTBweDtcclxuICAgICAgLnVzZXItcHJvZmlsZS1uYW1lLXZhbHVle1xyXG4gICAgICAgICAgZGlzcGxheTogaW5saW5lLWJsb2NrO1xyXG4gICAgICAgICAgbWFyZ2luLWxlZnQ6IDEwcHg7XHJcbiAgICAgIH1cclxuICAgICAgLnVzZXItcHJvZmlsZS1uYW1lLWJ0bntcclxuICAgICAgICAgIG1hcmdpbi1sZWZ0OiAxMDBweDtcclxuICAgICAgfVxyXG4gIH1cclxuICAudXNlci1wcm9maWxlLWVtYWlse1xyXG4gICAgICB0ZXh0LWFsaWduOiBsZWZ0O1xyXG4gICAgICBtYXJnaW4tdG9wOiAyMHB4O1xyXG4gICAgICAudXNlci1wcm9maWxlLWVtYWlsLXZhbHVle1xyXG4gICAgICAgICAgZGlzcGxheTogaW5saW5lLWJsb2NrO1xyXG4gICAgICAgICAgbWFyZ2luLWxlZnQ6IDEwcHg7XHJcbiAgICAgIH1cclxuICB9XHJcbiAgLnVzZXItcHJvZmlsZS1tb2JpbGV7XHJcbiAgICAgIHRleHQtYWxpZ246IGxlZnQ7XHJcbiAgICAgIG1hcmdpbi10b3A6IDIwcHg7XHJcbiAgICAgIC51c2VyLXByb2ZpbGUtbW9iaWxlLXZhbHVle1xyXG4gICAgICAgICAgZGlzcGxheTogaW5saW5lLWJsb2NrO1xyXG4gICAgICAgICAgbWFyZ2luLWxlZnQ6IDEwcHg7XHJcbiAgICAgIH1cclxuICAgICAgLnVzZXItcHJvZmlsZS1tb2JpbGUtYnRue1xyXG4gICAgICAgICAgbWFyZ2luLWxlZnQ6IDExMHB4O1xyXG4gICAgICB9XHJcbiAgfVxyXG4gIC51c2VyLXByb2ZpbGUtcGFzc3dvcmR7XHJcbiAgICAgIHRleHQtYWxpZ246IGxlZnQ7XHJcbiAgICAgIG1hcmdpbi10b3A6IDIwcHg7XHJcbiAgICAgIC51c2VyLXByb2ZpbGUtcGFzc3dvcmQtdmFsdWV7XHJcbiAgICAgICAgICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XHJcbiAgICAgICAgICBtYXJnaW4tbGVmdDogMTBweDtcclxuICAgICAgfVxyXG4gICAgICAudXNlci1wcm9maWxlLXBhc3N3b3JkLWJ0bntcclxuICAgICAgICAgIG1hcmdpbi1sZWZ0OiAxNTRweDtcclxuICAgICAgfVxyXG4gIH1cclxuICAudXNlci1wcm9maWxlLWJ0bntcclxuICAgICAgbWFyZ2luLXRvcDogMjBweDtcclxuICB9XHJcbn0iXX0= */"
+module.exports = ".user-profile {\n  width: 50%;\n  margin-left: 24px;\n  margin-top: 10px; }\n  .user-profile .person-icon {\n    width: 200px;\n    height: 200px; }\n  .user-profile .user-profile-name {\n    text-align: left;\n    margin-top: 10px; }\n  .user-profile .user-profile-name .user-profile-name-value {\n      display: inline-block;\n      margin-left: 10px; }\n  .user-profile .user-profile-name .user-profile-name-btn {\n      margin-left: 100px; }\n  .user-profile .user-profile-email {\n    text-align: left;\n    margin-top: 20px; }\n  .user-profile .user-profile-email .user-profile-email-value {\n      display: inline-block;\n      margin-left: 10px; }\n  .user-profile .user-profile-mobile {\n    text-align: left;\n    margin-top: 20px; }\n  .user-profile .user-profile-mobile .user-profile-mobile-value {\n      display: inline-block;\n      margin-left: 10px; }\n  .user-profile .user-profile-mobile .user-profile-mobile-btn {\n      margin-left: 110px; }\n  .user-profile .user-profile-password {\n    text-align: left;\n    margin-top: 20px; }\n  .user-profile .user-profile-password .user-profile-password-value {\n      display: inline-block;\n      margin-left: 10px; }\n  .user-profile .user-profile-password .user-profile-password-btn {\n      margin-left: 154px; }\n  .user-profile .user-profile-btn {\n    margin-top: 20px; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9tbnQvYy9Vc2Vycy9raHlhdC9EZXNrdG9wL0dpdEh1Yi9NZXJha2lBcnRTaG9wL3NyYy9hcHAvdXNlci91c2VyLXByb2ZpbGUvdXNlci1wcm9maWxlLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsV0FBVTtFQUNWLGtCQUFpQjtFQUNqQixpQkFBZ0IsRUFpRGpCO0VBcEREO0lBS00sYUFBWTtJQUNaLGNBQWEsRUFDaEI7RUFQSDtJQVNNLGlCQUFnQjtJQUNoQixpQkFBZ0IsRUFRbkI7RUFsQkg7TUFZVSxzQkFBcUI7TUFDckIsa0JBQWlCLEVBQ3BCO0VBZFA7TUFnQlUsbUJBQWtCLEVBQ3JCO0VBakJQO0lBb0JNLGlCQUFnQjtJQUNoQixpQkFBZ0IsRUFLbkI7RUExQkg7TUF1QlUsc0JBQXFCO01BQ3JCLGtCQUFpQixFQUNwQjtFQXpCUDtJQTRCTSxpQkFBZ0I7SUFDaEIsaUJBQWdCLEVBUW5CO0VBckNIO01BK0JVLHNCQUFxQjtNQUNyQixrQkFBaUIsRUFDcEI7RUFqQ1A7TUFtQ1UsbUJBQWtCLEVBQ3JCO0VBcENQO0lBdUNNLGlCQUFnQjtJQUNoQixpQkFBZ0IsRUFRbkI7RUFoREg7TUEwQ1Usc0JBQXFCO01BQ3JCLGtCQUFpQixFQUNwQjtFQTVDUDtNQThDVSxtQkFBa0IsRUFDckI7RUEvQ1A7SUFrRE0saUJBQWdCLEVBQ25CIiwiZmlsZSI6InNyYy9hcHAvdXNlci91c2VyLXByb2ZpbGUvdXNlci1wcm9maWxlLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLnVzZXItcHJvZmlsZXtcclxuICB3aWR0aDogNTAlO1xyXG4gIG1hcmdpbi1sZWZ0OiAyNHB4O1xyXG4gIG1hcmdpbi10b3A6IDEwcHg7XHJcbiAgLnBlcnNvbi1pY29ue1xyXG4gICAgICB3aWR0aDogMjAwcHg7XHJcbiAgICAgIGhlaWdodDogMjAwcHg7XHJcbiAgfVxyXG4gIC51c2VyLXByb2ZpbGUtbmFtZXtcclxuICAgICAgdGV4dC1hbGlnbjogbGVmdDtcclxuICAgICAgbWFyZ2luLXRvcDogMTBweDtcclxuICAgICAgLnVzZXItcHJvZmlsZS1uYW1lLXZhbHVle1xyXG4gICAgICAgICAgZGlzcGxheTogaW5saW5lLWJsb2NrO1xyXG4gICAgICAgICAgbWFyZ2luLWxlZnQ6IDEwcHg7XHJcbiAgICAgIH1cclxuICAgICAgLnVzZXItcHJvZmlsZS1uYW1lLWJ0bntcclxuICAgICAgICAgIG1hcmdpbi1sZWZ0OiAxMDBweDtcclxuICAgICAgfVxyXG4gIH1cclxuICAudXNlci1wcm9maWxlLWVtYWlse1xyXG4gICAgICB0ZXh0LWFsaWduOiBsZWZ0O1xyXG4gICAgICBtYXJnaW4tdG9wOiAyMHB4O1xyXG4gICAgICAudXNlci1wcm9maWxlLWVtYWlsLXZhbHVle1xyXG4gICAgICAgICAgZGlzcGxheTogaW5saW5lLWJsb2NrO1xyXG4gICAgICAgICAgbWFyZ2luLWxlZnQ6IDEwcHg7XHJcbiAgICAgIH1cclxuICB9XHJcbiAgLnVzZXItcHJvZmlsZS1tb2JpbGV7XHJcbiAgICAgIHRleHQtYWxpZ246IGxlZnQ7XHJcbiAgICAgIG1hcmdpbi10b3A6IDIwcHg7XHJcbiAgICAgIC51c2VyLXByb2ZpbGUtbW9iaWxlLXZhbHVle1xyXG4gICAgICAgICAgZGlzcGxheTogaW5saW5lLWJsb2NrO1xyXG4gICAgICAgICAgbWFyZ2luLWxlZnQ6IDEwcHg7XHJcbiAgICAgIH1cclxuICAgICAgLnVzZXItcHJvZmlsZS1tb2JpbGUtYnRue1xyXG4gICAgICAgICAgbWFyZ2luLWxlZnQ6IDExMHB4O1xyXG4gICAgICB9XHJcbiAgfVxyXG4gIC51c2VyLXByb2ZpbGUtcGFzc3dvcmR7XHJcbiAgICAgIHRleHQtYWxpZ246IGxlZnQ7XHJcbiAgICAgIG1hcmdpbi10b3A6IDIwcHg7XHJcbiAgICAgIC51c2VyLXByb2ZpbGUtcGFzc3dvcmQtdmFsdWV7XHJcbiAgICAgICAgICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XHJcbiAgICAgICAgICBtYXJnaW4tbGVmdDogMTBweDtcclxuICAgICAgfVxyXG4gICAgICAudXNlci1wcm9maWxlLXBhc3N3b3JkLWJ0bntcclxuICAgICAgICAgIG1hcmdpbi1sZWZ0OiAxNTRweDtcclxuICAgICAgfVxyXG4gIH1cclxuICAudXNlci1wcm9maWxlLWJ0bntcclxuICAgICAgbWFyZ2luLXRvcDogMjBweDtcclxuICB9XHJcbn1cclxuIl19 */"
 
 /***/ }),
 
@@ -1665,10 +1637,6 @@ var UserProfileComponent = /** @class */ (function () {
         this.router = router;
         this.profileImage = '../../../assets/images/person_edit.png';
     }
-    UserProfileComponent.prototype.ngAfterViewInit = function () {
-        console.log("After View Init:" + this.editDialog);
-        // this.editDialog=this.editDialog;
-    };
     UserProfileComponent.prototype.ngOnInit = function () {
         var _this = this;
         this.user = this.userService.getSavedUser().getValue();
@@ -1684,7 +1652,6 @@ var UserProfileComponent = /** @class */ (function () {
         this.userService.addProfileImage(this.user, file);
     };
     UserProfileComponent.prototype.onNameChange = function () {
-        console.log("In name change: " + this.editDialog);
         this.editDialog.setTitle('Do you want to edit name?')
             .setBodyTitle('name')
             .setBodyLabel('Enter new name')
@@ -1754,7 +1721,6 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var ROUTES = [
-    //{path: '', redirectTo: '/app-friends-userprofile', pathMatch: 'full' , canActivate: [AuthenticationGuard]},
     { path: 'app-friends-userprofile', component: _user_profile_user_profile_component__WEBPACK_IMPORTED_MODULE_3__["UserProfileComponent"], canActivate: [_services_authentication_guard__WEBPACK_IMPORTED_MODULE_4__["AuthenticationGuard"]] }
 ];
 var UserRoutingModule = /** @class */ (function () {
