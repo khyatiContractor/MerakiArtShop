@@ -1,11 +1,14 @@
-What is the product
-Who is the audiance
-what are the functionality
-
-
 # MerakiArtShop
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.8 ,Firebase version 5.0.3 and angularfire2 version 5.0.0. 
+![MerakiArt](MerakiArt.gif "MerakiArt")
+
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.8 ,Firebase version 5.0.3 and angularfire2 version 5.0.0. Angular routing, forms, component communication is used.  
+This Application is used to display Portfolio Art website Using Angular. 
+It has SignUp and LogIn functionality where user can signup using prefered email id. Validation of all the fiels is available. User can visit User profile page. 
+Upload Art work with necessary details. Display list of Art for which details are stored on and retrived from the Realtime firebase database. All the images are stored on Firestore on Firebase. 
+Filter Funcnality is present for the list of Art.
+Firebase Authentication and hosting is used. 
+
 
 ## Build
 
