@@ -13,7 +13,7 @@ Firebase Authentication and hosting is used.
 ![FireStore Structure](https://github.com/khyatiContractor/MerakiArtShop/blob/master/Firestore.PNG)
 
 # Firebase Realtime Databse Structure
-![FireStore Structure](https://github.com/khyatiContractor/MerakiArtShop/blob/master/Firebase Realtime Database.PNG)
+![FireStore Structure](https://github.com/khyatiContractor/MerakiArtShop/blob/master/Firebase%20%Realtime Database.PNG)
 
 # Working Application Url : [MerakiArt](https://merakiart-35689.firebaseapp.com/)
 
