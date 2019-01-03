@@ -8,6 +8,7 @@ It has SignUp and LogIn functionality where user can signup using prefered email
 Upload Art work with necessary details. Display list of Art for which details are stored on and retrived from the Realtime firebase database. All the images are stored on Firestore on Firebase. 
 Filter Funcnality is present for the list of Art.
 Firebase Authentication and hosting is used. 
+# Working Application Url : [MerakiArt](https://merakiart-35689.firebaseapp.com/)
 
 # FireStore Structure
 ![FireStore Structure](https://github.com/khyatiContractor/MerakiArtShop/blob/master/Firestore.PNG)
@@ -15,7 +16,7 @@ Firebase Authentication and hosting is used.
 # Firebase Realtime Databse Structure
 ![FireStore Structure](https://github.com/khyatiContractor/MerakiArtShop/blob/master/FirebaseRealtimeDatabase.PNG)
 
-# Working Application Url : [MerakiArt](https://merakiart-35689.firebaseapp.com/)
+
 
 ## Build
 npm install to install all the required dependencies on the root folder. 
